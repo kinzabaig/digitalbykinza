@@ -13,22 +13,35 @@
 
 body{
 font-family:Poppins,sans-serif;
-background:#0b1120;
+background: radial-gradient(circle at top, #1e3a8a 0%, #020617 70%);
 color:white;
-line-height:1.6;
+overflow-x:hidden;
 }
 
-/* NAV */
+/* Glow Background */
+body::before{
+content:"";
+position:absolute;
+width:600px;
+height:600px;
+background:radial-gradient(circle, rgba(59,130,246,0.4), transparent 70%);
+top:-100px;
+left:50%;
+transform:translateX(-50%);
+filter:blur(120px);
+z-index:-1;
+}
+
+/* Navbar */
 header{
 position:fixed;
 top:0;
 width:100%;
-padding:18px 8%;
+padding:20px 8%;
 display:flex;
 justify-content:space-between;
-align-items:center;
-background:rgba(10,15,30,0.85);
-backdrop-filter:blur(10px);
+background:rgba(15,23,42,0.6);
+backdrop-filter:blur(12px);
 z-index:1000;
 }
 
@@ -36,19 +49,15 @@ nav a{
 margin:0 15px;
 color:#cbd5e1;
 text-decoration:none;
-font-weight:500;
 }
-
-nav a:hover{color:white;}
 
 .cta{
-background:#7c3aed;
+background:#3b82f6;
 padding:10px 18px;
 border-radius:8px;
-color:white;
 }
 
-/* HERO */
+/* Hero */
 .hero{
 min-height:100vh;
 display:flex;
@@ -60,38 +69,42 @@ padding:120px 20px;
 }
 
 .hero h1{
-font-size:54px;
-max-width:900px;
-margin-bottom:20px;
+font-size:56px;
+}
+
+.hero span{
+color:#60a5fa;
 }
 
 .hero p{
 color:#94a3b8;
-max-width:650px;
-font-size:18px;
+max-width:600px;
+margin-top:20px;
 }
 
+/* Button */
 .btn{
-background:linear-gradient(45deg,#7c3aed,#ff2ea6);
+background:linear-gradient(45deg,#3b82f6,#6366f1);
 padding:14px 28px;
 border-radius:10px;
 color:white;
 text-decoration:none;
 display:inline-block;
-margin-top:30px;
-font-weight:600;
+margin-top:25px;
+box-shadow:0 0 20px rgba(59,130,246,0.6);
 transition:0.3s;
 }
 
 .btn:hover{
 transform:translateY(-5px);
+box-shadow:0 0 40px rgba(59,130,246,1);
 }
 
-/* SECTIONS */
+/* Sections */
 section{padding:90px 8%;}
-h2{text-align:center;margin-bottom:50px;font-size:36px;}
+h2{text-align:center;margin-bottom:50px;font-size:34px;}
 
-/* CARDS */
+/* Cards */
 .cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
@@ -99,35 +112,20 @@ gap:30px;
 }
 
 .card{
-background:#111827;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(20px);
+border:1px solid rgba(255,255,255,0.1);
 padding:30px;
-border-radius:14px;
+border-radius:16px;
 transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-8px);
+transform:translateY(-10px);
+box-shadow:0 0 40px rgba(59,130,246,0.4);
 }
 
-/* PRICE */
-.price{
-margin-top:15px;
-font-weight:700;
-color:#ff2ea6;
-}
-
-/* LIST */
-ul{margin-top:10px;}
-li{margin:6px 0;color:#cbd5e1;}
-
-/* PORTFOLIO */
-iframe{
-width:100%;
-height:220px;
-border-radius:10px;
-}
-
-/* CONTACT */
+/* Contact */
 input, textarea{
 padding:14px;
 width:100%;
@@ -136,7 +134,7 @@ border-radius:8px;
 border:none;
 }
 
-/* FOOTER */
+/* Footer */
 footer{
 background:#020617;
 padding:50px;
@@ -144,12 +142,6 @@ text-align:center;
 color:#94a3b8;
 }
 </style>
-
-<script>
-function showPayment(){
-alert("Send payment via Wise: @muhammadb8897\n\nAfter payment send screenshot on:\nWhatsApp: +923472105484\nInstagram: @digitalbykinza");
-}
-</script>
 
 </head>
 
@@ -166,57 +158,50 @@ alert("Send payment via Wise: @muhammadb8897\n\nAfter payment send screenshot on
 
 <!-- HERO -->
 <section class="hero">
-<h1>We Create High-Converting SaaS Videos That Drive Signups</h1>
-<p>Explainer, demo, and ad creatives designed to turn your product into a conversion machine.</p>
+<h1>Smart Control <br><span>Customized SaaS Videos</span></h1>
+<p>We create high-converting explainer, demo, and ad videos that simplify your SaaS product and drive growth.</p>
 <a href="#services" class="btn">Explore Services</a>
 </section>
 
 <!-- SERVICES -->
 <section id="services">
-<h2>Services & Pricing</h2>
+<h2>Our Services</h2>
 
 <div class="cards">
 
 <div class="card">
 <h3>SaaS Explainer Videos</h3>
-<p>Explain your product clearly and increase conversions.</p>
-<p class="price">Starting from $300</p>
-<button onclick="showPayment()" class="btn">Order Now</button>
+<p>We transform complex SaaS products into simple, engaging, and conversion-focused stories that drive user understanding and signups.</p>
 </div>
 
 <div class="card">
-<h3>YouTube Editing</h3>
-<p>High-retention professional editing.</p>
-<p class="price">
-10min $150 → 20min $350
-</p>
-<button onclick="showPayment()" class="btn">Order Now</button>
+<h3>Demo / Product Walkthrough</h3>
+<p>Showcase your product dashboard, features, and workflows with clean visuals, zoom effects, and easy-to-follow structure.</p>
+</div>
+
+<div class="card">
+<h3>SaaS Ads (Meta / LinkedIn)</h3>
+<p>Short-form high-converting ad creatives designed to capture attention and turn viewers into users.</p>
+</div>
+
+<div class="card">
+<h3>YouTube Video Editing</h3>
+<p>High-retention editing for long-form and short-form content with professional pacing and storytelling.</p>
 </div>
 
 <div class="card">
 <h3>VSL Production</h3>
-<p>Sales-driven video funnels.</p>
-<p class="price">$300</p>
-<button onclick="showPayment()" class="btn">Order Now</button>
-</div>
-
-<div class="card">
-<h3>Cinematic / Music Video</h3>
-<p>Creative storytelling edits.</p>
-<p class="price">$100</p>
-<button onclick="showPayment()" class="btn">Order Now</button>
+<p>Sales-driven video letters designed to increase conversions and maximize funnel performance.</p>
 </div>
 
 <div class="card">
 <h3>SaaS Retainer</h3>
-<p>Scale your SaaS with monthly video system.</p>
+<p>Ongoing video production system for scaling SaaS companies with consistent, high-quality content delivery.</p>
 <ul>
-<li>8 videos/month</li>
-<li>Ads + demo clips</li>
-<li>Priority delivery</li>
+<li>Monthly video content</li>
+<li>Ad creatives + demos</li>
+<li>Priority support</li>
 </ul>
-<p class="price">Custom Pricing</p>
-<button onclick="showPayment()" class="btn">Get Started</button>
 </div>
 
 </div>
@@ -226,10 +211,10 @@ alert("Send payment via Wise: @muhammadb8897\n\nAfter payment send screenshot on
 <section>
 <h2>Why Choose Us</h2>
 <div class="cards">
-<div class="card"><h3>Conversion Focused</h3><p>We focus on results, not just visuals.</p></div>
-<div class="card"><h3>SaaS Experts</h3><p>We understand SaaS dashboards & flows.</p></div>
-<div class="card"><h3>Fast Delivery</h3><p>Quick turnaround with premium quality.</p></div>
-<div class="card"><h3>Scalable</h3><p>Perfect for growing SaaS brands.</p></div>
+<div class="card"><h3>Conversion Focused</h3><p>We create videos that drive results, not just views.</p></div>
+<div class="card"><h3>SaaS Specialists</h3><p>Deep understanding of SaaS products and user journeys.</p></div>
+<div class="card"><h3>Modern Visual Style</h3><p>Futuristic and premium design aligned with SaaS brands.</p></div>
+<div class="card"><h3>Fast Delivery</h3><p>Efficient workflow with quick turnaround time.</p></div>
 </div>
 </section>
 
@@ -237,9 +222,9 @@ alert("Send payment via Wise: @muhammadb8897\n\nAfter payment send screenshot on
 <section id="portfolio">
 <h2>Our Work</h2>
 <div class="cards">
-<div class="card"><iframe src="YOUTUBE-VIDEO-LINK"></iframe></div>
-<div class="card"><iframe src="YOUTUBE-VIDEO-LINK"></iframe></div>
-<div class="card"><iframe src="YOUTUBE-VIDEO-LINK"></iframe></div>
+<div class="card"><p>Add your SaaS video here</p></div>
+<div class="card"><p>Add your SaaS video here</p></div>
+<div class="card"><p>Add your SaaS video here</p></div>
 </div>
 </section>
 
@@ -258,8 +243,7 @@ alert("Send payment via Wise: @muhammadb8897\n\nAfter payment send screenshot on
 
 <footer>
 <p><strong>DIGITALBYKINZA</strong></p>
-<p>Payments via Wise: @muhammadb8897</p>
-<p>Send proof on WhatsApp: +923472105484</p>
+<p>Contact on WhatsApp: +923472105484</p>
 <p>Instagram: @digitalbykinza</p>
 <p>© 2026 DigitalByKinza</p>
 </footer>
