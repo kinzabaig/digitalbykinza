@@ -40,12 +40,7 @@ text-decoration:none;
 background:#3b82f6;
 padding:10px 18px;
 border-radius:8px;
-box-shadow:0 0 20px rgba(59,130,246,0.7);
-transition:0.3s;
-}
-
-.cta:hover{
-box-shadow:0 0 40px rgba(59,130,246,1);
+box-shadow:0 0 20px rgba(59,130,246,0.6);
 }
 
 /* HERO */
@@ -59,27 +54,18 @@ text-align:center;
 padding:100px 20px;
 }
 
-.hero h1{
-font-size:54px;
-max-width:800px;
-}
-
+.hero h1{font-size:52px;}
 .hero span{color:#60a5fa;}
-
-.hero p{
-margin-top:20px;
-color:#94a3b8;
-max-width:600px;
-}
+.hero p{color:#94a3b8;margin-top:15px;}
 
 /* BUTTON */
 .btn{
 background:#3b82f6;
 padding:14px 28px;
 border-radius:10px;
-margin-top:25px;
+margin-top:20px;
 display:inline-block;
-box-shadow:0 0 25px rgba(59,130,246,0.7);
+box-shadow:0 0 25px rgba(59,130,246,0.6);
 transition:0.3s;
 }
 
@@ -90,7 +76,7 @@ box-shadow:0 0 45px rgba(59,130,246,1);
 
 /* SECTION */
 section{padding:90px 8%;}
-h2{text-align:center;margin-bottom:50px;font-size:32px;}
+h2{text-align:center;margin-bottom:50px;}
 
 /* GRID */
 .grid{
@@ -102,23 +88,26 @@ gap:25px;
 /* CARD */
 .card{
 background:rgba(255,255,255,0.04);
-padding:22px;
+padding:20px;
 border-radius:12px;
-border:1px solid rgba(255,255,255,0.05);
 }
 
-/* VIDEO */
-.video iframe{
-width:100%;
-height:250px;
+/* PORTFOLIO */
+.portfolio-box{
+height:220px;
+display:flex;
+align-items:center;
+justify-content:center;
 border-radius:12px;
+background:rgba(255,255,255,0.03);
+color:#64748b;
 }
 
 /* CASE */
 .case{
 background:rgba(59,130,246,0.1);
 padding:25px;
-border-radius:15px;
+border-radius:12px;
 text-align:center;
 }
 
@@ -131,12 +120,15 @@ border-radius:12px;
 
 .stars{color:gold;}
 
-/* INSTAGRAM */
-.insta{
-text-align:center;
-background:rgba(255,255,255,0.03);
-padding:40px;
-border-radius:12px;
+/* FORM */
+input, textarea{
+width:100%;
+padding:14px;
+margin:10px 0;
+border:none;
+border-radius:10px;
+background:#111827;
+color:white;
 }
 
 /* FOOTER */
@@ -168,34 +160,6 @@ color:#94a3b8;
 <a href="#book" class="btn">Book a Free Call</a>
 </section>
 
-<!-- WHY CHOOSE US -->
-<section>
-<h2>Why Choose Us</h2>
-<div class="grid">
-
-<div class="card">
-<h3>Conversion Focused</h3>
-<p>Every video is designed to turn viewers into customers.</p>
-</div>
-
-<div class="card">
-<h3>Fast Delivery</h3>
-<p>Quick turnaround without compromising quality.</p>
-</div>
-
-<div class="card">
-<h3>Premium Quality</h3>
-<p>High-end visuals, smooth editing, and modern style.</p>
-</div>
-
-<div class="card">
-<h3>SaaS Specialized</h3>
-<p>We understand SaaS funnels and user psychology.</p>
-</div>
-
-</div>
-</section>
-
 <!-- SERVICES -->
 <section id="services">
 <h2>Services</h2>
@@ -209,46 +173,32 @@ color:#94a3b8;
 </div>
 </section>
 
-<!-- VIDEO -->
+<!-- PORTFOLIO -->
 <section id="work">
 <h2>Our Work</h2>
 <div class="grid">
-
-<div class="video">
-<iframe src="https://www.youtube.com/embed/ysz5S6PUM-U"></iframe>
-</div>
-
-<div class="video">
-<iframe src="https://www.youtube.com/embed/ScMzIvxBSi4"></iframe>
-</div>
-
-<div class="video">
-<iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
-</div>
-
+<div class="portfolio-box">Your SaaS Video 1</div>
+<div class="portfolio-box">Your SaaS Video 2</div>
+<div class="portfolio-box">Your SaaS Video 3</div>
 </div>
 </section>
 
-<!-- CASE -->
+<!-- CASE STUDY -->
 <section id="case">
 <h2>Case Study</h2>
 <div class="grid">
-
 <div class="case">
 <h3>+38% Conversion</h3>
 <p>SaaS explainer increased signups.</p>
 </div>
-
 <div class="case">
 <h3>3X Engagement</h3>
 <p>Ads boosted retention.</p>
 </div>
-
 <div class="case">
 <h3>$120K Revenue</h3>
 <p>VSL generated strong revenue.</p>
 </div>
-
 </div>
 </section>
 
@@ -260,19 +210,32 @@ color:#94a3b8;
 <div class="review"><b>mandelaonline</b><div class="stars">★★★★★</div>Always top quality work.</div>
 <div class="review"><b>lukepriceee</b><div class="stars">★★★★★</div>Fast and great results.</div>
 <div class="review"><b>pbojanic</b><div class="stars">★★★★★</div>Perfect delivery.</div>
+<div class="review"><b>charlessmith</b><div class="stars">★★★★★</div>Better than expected.</div>
 <div class="review"><b>david</b><div class="stars">★★★★★</div>Amazing work.</div>
 <div class="review"><b>bretty</b><div class="stars">★★★★★</div>Great communication.</div>
 
 </div>
 </section>
 
+<!-- LEAD FUNNEL -->
+<section>
+<h2>Get Free Video Strategy</h2>
+
+<form action="https://formsubmit.co/kinzakhalid1524@gmail.com" method="POST">
+<input type="text" name="Name" placeholder="Your Name" required>
+<input type="email" name="Email" placeholder="Your Email" required>
+<input type="text" name="Website" placeholder="Your SaaS Website">
+<button class="btn">Get Free Strategy</button>
+</form>
+
+</section>
+
 <!-- INSTAGRAM -->
 <section>
-<h2>Follow Us</h2>
-<div class="insta">
-<p>See our latest work & updates</p>
+<h2>Follow Our Work</h2>
+<div style="text-align:center;">
 <a href="https://www.instagram.com/digitalbykinza/" target="_blank" class="btn">
-@digitalbykinza
+Follow @digitalbykinza
 </a>
 </div>
 </section>
