@@ -67,9 +67,6 @@ align-items:center;
 gap:40px;
 }
 
-/* ALT */
-.reverse{flex-direction:row-reverse;}
-
 /* LOGOS */
 .logos{
 display:flex;
@@ -91,6 +88,27 @@ border-radius:10px;
 display:grid;
 grid-template-columns:1fr 1fr;
 gap:40px;
+}
+
+.process-list{
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.process-item{
+background:rgba(255,255,255,0.05);
+padding:14px 18px;
+border-radius:10px;
+border:1px solid rgba(255,255,255,0.08);
+transition:0.3s;
+cursor:pointer;
+}
+
+.process-item:hover{
+background:#ec4899;
+transform:translateX(8px);
+box-shadow:0 0 20px rgba(236,72,153,0.5);
 }
 
 /* CASE */
@@ -170,16 +188,6 @@ We create high-converting SaaS videos that turn viewers into users.
 </div>
 </section>
 
-<!-- BLOCK -->
-<section class="light">
-<div class="block">
-<div>
-<h2>Strategy-led video production</h2>
-<p>We don’t just make videos — we design content that converts.</p>
-</div>
-</div>
-</section>
-
 <!-- FEATURES -->
 <section class="light">
 <h2>Why choose us</h2>
@@ -203,16 +211,18 @@ We follow a proven structure to deliver high-converting videos for SaaS brands, 
 </p>
 </div>
 
-<div>
-<p>01 Discovery</p>
-<p>02 Script Writing</p>
-<p>03 Storyboard</p>
-<p>04 SaaS Explainer / Product Demo</p>
-<p>05 VSL (Video Sales Letter)</p>
-<p>06 Reels & Short Form Content</p>
-<p>07 YouTube Video Editing</p>
-<p>08 Sound Design & Final Polish</p>
-<p>09 Delivery</p>
+<div class="process-list">
+
+<div class="process-item">01 Discovery</div>
+<div class="process-item">02 Script Writing</div>
+<div class="process-item">03 Storyboard</div>
+<div class="process-item">04 SaaS Explainer / Product Demo</div>
+<div class="process-item">05 VSL (Video Sales Letter)</div>
+<div class="process-item">06 Reels & Short Form Content</div>
+<div class="process-item">07 YouTube Video Editing</div>
+<div class="process-item">08 Sound Design & Final Polish</div>
+<div class="process-item">09 Delivery</div>
+
 </div>
 
 </div>
@@ -227,27 +237,14 @@ We follow a proven structure to deliver high-converting videos for SaaS brands, 
 </div>
 </section>
 
-<!-- PORTFOLIO -->
-<section class="dark">
-<h2>Featured Work</h2>
-<div class="grid">
-<div class="card">SaaS Explainer Video</div>
-<div class="card">Product Demo</div>
-<div class="card">VSL Project</div>
-<div class="card">YouTube Editing</div>
-</div>
-</section>
-
 <!-- REVIEWS -->
 <section class="light">
 <h2>Client Reviews</h2>
 <div class="grid">
-
 <div class="review">★★★★★ Excellent work</div>
 <div class="review">★★★★★ Amazing experience</div>
 <div class="review">★★★★★ Fast delivery</div>
 <div class="review">★★★★★ Highly recommended</div>
-
 </div>
 </section>
 
