@@ -6,271 +6,154 @@
 
 <title>DigitalByKinza</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:Poppins;}
 
-/* COLORS */
-.dark{background:#0b0f19;color:white;}
-.light{background:#f5f5f5;color:#111;}
-
-section{padding:90px 8%;}
+body{
+font-family:Poppins;
+background:#020617;
+color:white;
+}
 
 /* NAV */
 header{
 position:fixed;
-top:0;width:100%;
-background:#0b0f19;
-color:white;
+top:0;
+width:100%;
+padding:20px 8%;
 display:flex;
 justify-content:space-between;
-padding:18px 8%;
+align-items:center;
+background:rgba(2,6,23,0.9);
 z-index:1000;
 }
 
-nav a{margin:0 15px;color:#ccc;text-decoration:none;}
+nav a{
+margin:0 15px;
+color:#cbd5e1;
+text-decoration:none;
+}
 
-.btn{
+.cta{
 background:#ec4899;
+padding:10px 18px;
+border-radius:8px;
 color:white;
-padding:12px 20px;
-border-radius:6px;
-display:inline-block;
-margin-top:20px;
 }
 
 /* HERO */
 .hero{
+min-height:100vh;
 display:flex;
 align-items:center;
 justify-content:space-between;
-gap:40px;
-padding-top:140px;
-}
-
-.hero h1{font-size:48px;}
-.hero span{color:#ec4899;}
-
-.hero-img{
-width:450px;height:280px;
-background:#ccc;
-border-radius:10px;
-}
-
-/* GRID */
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
-}
-
-/* IMAGE BLOCK */
-.block{
-display:flex;
-align-items:center;
+padding:120px 8%;
 gap:40px;
 }
 
-.block img{
-width:100%;
-max-width:420px;
-border-radius:10px;
+.hero-left h1{
+font-size:64px;
+line-height:1.2;
 }
 
-/* ALT */
-.reverse{flex-direction:row-reverse;}
-
-/* LOGOS */
-.logos{
-display:flex;
-justify-content:space-around;
-opacity:0.5;
+.hero-left span{
+color:#ec4899;
 }
 
-/* CARDS */
-.card{
-background:white;
-padding:20px;
-border-radius:10px;
+.hero-left p{
+color:#94a3b8;
+margin-top:20px;
+font-size:18px;
+max-width:500px;
 }
 
-.dark .card{background:#111827;color:white;}
-
-/* PROCESS */
-.process{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:40px;
-}
-
-/* CASE */
-.case{
+/* BUTTON */
+.btn{
 background:#ec4899;
-color:white;
-padding:30px;
+padding:14px 28px;
 border-radius:10px;
+display:inline-block;
+margin-top:30px;
+font-weight:600;
+box-shadow:0 0 30px rgba(236,72,153,0.6);
+transition:0.3s;
+}
+
+.btn:hover{
+transform:translateY(-5px);
+box-shadow:0 0 60px rgba(236,72,153,1);
+}
+
+/* IMAGE SIDE */
+.hero-right{
+width:520px;
+height:320px;
+border-radius:18px;
+background:
+linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+url('https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1600&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
+box-shadow:0 0 80px rgba(59,130,246,0.4);
+transition:0.4s;
+}
+
+/* HOVER EFFECT */
+.hero-right:hover{
+transform:scale(1.04);
+box-shadow:0 0 120px rgba(59,130,246,0.9);
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+.hero{
+flex-direction:column;
 text-align:center;
 }
 
-/* REVIEW */
-.review{
-background:#111827;
-color:white;
-padding:20px;
-border-radius:10px;
+.hero-right{
+width:100%;
 }
-
-/* FAQ */
-.faq{
-background:white;
-padding:15px;
-border-radius:8px;
-margin:10px 0;
-}
-
-/* FOOTER */
-footer{
-background:#0b0f19;
-color:#aaa;
-padding:40px;
-text-align:center;
 }
 </style>
+
 </head>
 
 <body>
 
 <header>
-<h3>DIGITALBYKINZA</h3>
+<h2>DIGITALBYKINZA</h2>
 <nav>
 <a href="#">Work</a>
 <a href="#">Services</a>
 <a href="#">Process</a>
 <a href="#">Reviews</a>
-<a href="#" class="btn">Book a Call</a>
+<a href="#" class="cta">Book a Call</a>
 </nav>
 </header>
 
 <!-- HERO -->
-<section class="dark hero">
-<div>
-<h1>Most SaaS Video Agencies <br> Blend In <br><span>Yours Won’t.</span></h1>
-<p>We create high-converting SaaS videos that turn viewers into users.</p>
-<a class="btn">Book a Call</a>
+<section class="hero">
+
+<div class="hero-left">
+<h1>
+Most SaaS Video <br>
+Agencies Blend In <br>
+<span>Yours Won’t.</span>
+</h1>
+
+<p>
+We create high-converting SaaS videos that turn viewers into users.
+</p>
+
+<a href="#" class="btn">Book a Call</a>
 </div>
-<div class="hero-img"></div>
+
+<div class="hero-right"></div>
+
 </section>
-
-<!-- LOGOS -->
-<section class="light">
-<div class="logos">
-<p>Stripe</p><p>Hubspot</p><p>Notion</p><p>Slack</p><p>Zapier</p>
-</div>
-</section>
-
-<!-- BLOCK 1 -->
-<section class="light">
-<div class="block">
-<div>
-<h2>Strategy-led video production</h2>
-<p>We don’t just make videos — we design content that converts.</p>
-</div>
-<img src="https://images.unsplash.com/photo-1551434678-e076c223a692">
-</div>
-</section>
-
-<!-- BLOCK 2 -->
-<section class="dark">
-<div class="block reverse">
-<div>
-<h2>Why most SaaS videos fail</h2>
-<p>No strategy, no clarity, no conversion focus.</p>
-</div>
-<img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a">
-</div>
-</section>
-
-<!-- FEATURES -->
-<section class="light">
-<h2>Why choose us</h2>
-<div class="grid">
-<div class="card">Conversion focused</div>
-<div class="card">Fast delivery</div>
-<div class="card">Clear storytelling</div>
-<div class="card">Premium quality</div>
-</div>
-</section>
-
-<!-- PROCESS -->
-<section class="dark">
-<h2>SaaS Video Process</h2>
-<div class="process">
-<div>
-<p>We follow a proven structure to deliver results.</p>
-</div>
-<div>
-<p>01 Discovery</p>
-<p>02 Script</p>
-<p>03 Storyboard</p>
-<p>04 Editing</p>
-<p>05 Sound Design</p>
-<p>06 Delivery</p>
-</div>
-</div>
-</section>
-
-<!-- CASE -->
-<section class="light">
-<h2>Case Study</h2>
-<div class="grid">
-<div class="case"><h2>$805,200</h2><p>Revenue</p></div>
-<div class="case"><h2>98,200</h2><p>Users</p></div>
-</div>
-</section>
-
-<!-- PORTFOLIO -->
-<section class="dark">
-<h2>Featured Work</h2>
-<div class="grid">
-<div class="card">Video 1</div>
-<div class="card">Video 2</div>
-<div class="card">Video 3</div>
-<div class="card">Video 4</div>
-</div>
-</section>
-
-<!-- REVIEWS -->
-<section class="light">
-<h2>Client Reviews</h2>
-<div class="grid">
-
-<div class="review">★★★★★ Excellent work</div>
-<div class="review">★★★★★ Amazing experience</div>
-<div class="review">★★★★★ Fast delivery</div>
-<div class="review">★★★★★ Highly recommended</div>
-
-</div>
-</section>
-
-<!-- FAQ -->
-<section class="light">
-<h2>FAQ</h2>
-<div class="faq">How long delivery?</div>
-<div class="faq">Pricing?</div>
-<div class="faq">Revisions?</div>
-</section>
-
-<!-- CTA -->
-<section class="dark">
-<h2>Fully booked? Don’t stop the timing.</h2>
-<a class="btn">Book a Call</a>
-</section>
-
-<footer>
-<p>© DigitalByKinza</p>
-</footer>
 
 </body>
 </html>
