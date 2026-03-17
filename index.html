@@ -53,12 +53,6 @@ padding-top:140px;
 .hero h1{font-size:48px;}
 .hero span{color:#ec4899;}
 
-.hero-img{
-width:450px;height:280px;
-background:#ccc;
-border-radius:10px;
-}
-
 /* GRID */
 .grid{
 display:grid;
@@ -66,17 +60,11 @@ grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:25px;
 }
 
-/* IMAGE BLOCK */
+/* BLOCK */
 .block{
 display:flex;
 align-items:center;
 gap:40px;
-}
-
-.block img{
-width:100%;
-max-width:420px;
-border-radius:10px;
 }
 
 /* ALT */
@@ -125,9 +113,14 @@ border-radius:10px;
 /* FAQ */
 .faq{
 background:white;
-padding:15px;
+padding:20px;
 border-radius:8px;
 margin:10px 0;
+}
+
+.faq strong{
+display:block;
+margin-bottom:5px;
 }
 
 /* FOOTER */
@@ -160,7 +153,6 @@ text-align:center;
 <p>We create high-converting SaaS videos that turn viewers into users.</p>
 <a class="btn">Book a Call</a>
 </div>
-<div class="hero-img"></div>
 </section>
 
 <!-- LOGOS -->
@@ -177,7 +169,6 @@ text-align:center;
 <h2>Strategy-led video production</h2>
 <p>We don’t just make videos — we design content that converts.</p>
 </div>
-<img src="https://images.unsplash.com/photo-1551434678-e076c223a692">
 </div>
 </section>
 
@@ -188,7 +179,6 @@ text-align:center;
 <h2>Why most SaaS videos fail</h2>
 <p>No strategy, no clarity, no conversion focus.</p>
 </div>
-<img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a">
 </div>
 </section>
 
@@ -245,21 +235,32 @@ text-align:center;
 <section class="light">
 <h2>Client Reviews</h2>
 <div class="grid">
-
 <div class="review">★★★★★ Excellent work</div>
 <div class="review">★★★★★ Amazing experience</div>
 <div class="review">★★★★★ Fast delivery</div>
 <div class="review">★★★★★ Highly recommended</div>
-
 </div>
 </section>
 
 <!-- FAQ -->
 <section class="light">
 <h2>FAQ</h2>
-<div class="faq">How long delivery?</div>
-<div class="faq">Pricing?</div>
-<div class="faq">Revisions?</div>
+
+<div class="faq">
+<strong>How long is delivery?</strong>
+For SaaS videos, delivery typically takes <strong>10–15 days</strong> depending on project complexity.
+</div>
+
+<div class="faq">
+<strong>What is pricing?</strong>
+Pricing depends on your project requirements. We recommend booking a call for an exact quote.
+</div>
+
+<div class="faq">
+<strong>How many revisions?</strong>
+We offer up to <strong>3 revisions</strong> to ensure your satisfaction.
+</div>
+
 </section>
 
 <!-- CTA -->
