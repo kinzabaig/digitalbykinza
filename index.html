@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DigitalByKinza</title>
+
+<title>DigitalByKinza | SaaS Video Agency</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700;800&display=swap" rel="stylesheet">
 
@@ -11,21 +12,37 @@
 *{margin:0;padding:0;box-sizing:border-box;}
 
 body{
-font-family:Poppins;
-background:#020617;
+font-family:Poppins,sans-serif;
+background: radial-gradient(circle at top, #1e3a8a 0%, #020617 70%);
 color:white;
+overflow-x:hidden;
+}
+
+/* Glow Background */
+body::before{
+content:"";
+position:absolute;
+width:700px;
+height:700px;
+background:radial-gradient(circle, rgba(59,130,246,0.35), transparent 70%);
+top:-150px;
+left:50%;
+transform:translateX(-50%);
+filter:blur(140px);
+z-index:-1;
 }
 
 /* NAV */
 header{
 position:fixed;
-width:100%;
 top:0;
+width:100%;
 padding:20px 8%;
 display:flex;
 justify-content:space-between;
-background:rgba(2,6,23,0.6);
-backdrop-filter:blur(10px);
+align-items:center;
+background:rgba(15,23,42,0.6);
+backdrop-filter:blur(12px);
 z-index:1000;
 }
 
@@ -33,121 +50,108 @@ nav a{
 margin:0 15px;
 color:#cbd5e1;
 text-decoration:none;
+transition:0.3s;
 }
 
-nav a:hover{color:#60a5fa;}
+nav a:hover{color:white;}
 
 .cta{
-background:#3b82f6;
+background:linear-gradient(45deg,#3b82f6,#6366f1);
 padding:10px 18px;
 border-radius:8px;
-box-shadow:0 0 15px #3b82f6;
+box-shadow:0 0 20px #3b82f6;
+transition:0.3s;
+}
+
+.cta:hover{
+box-shadow:0 0 40px #3b82f6;
+transform:translateY(-3px);
 }
 
 /* HERO */
 .hero{
-height:100vh;
+min-height:100vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-background:url('bg.jpg') center/cover;
-position:relative;
+padding:120px 20px;
 }
-
-.hero::before{
-content:"";
-position:absolute;
-width:100%;height:100%;
-background:rgba(2,6,23,0.7);
-}
-
-.hero *{position:relative;}
 
 .hero h1{
-font-size:55px;
-text-shadow:0 0 25px #3b82f6;
+font-size:58px;
 }
 
-.btn{
-background:#3b82f6;
-padding:14px 30px;
-border-radius:10px;
+.hero span{color:#60a5fa;}
+
+.hero p{
+color:#94a3b8;
 margin-top:20px;
-box-shadow:0 0 25px #3b82f6;
+max-width:600px;
+}
+
+/* BUTTON */
+.btn{
+background:linear-gradient(45deg,#3b82f6,#6366f1);
+padding:14px 30px;
+border-radius:12px;
+color:white;
+text-decoration:none;
+margin-top:30px;
 display:inline-block;
+box-shadow:0 0 30px #3b82f6;
+transition:0.3s;
 }
 
 .btn:hover{
-box-shadow:0 0 50px #3b82f6;
-transform:translateY(-5px);
+transform:translateY(-6px);
+box-shadow:0 0 60px #3b82f6;
 }
 
-/* SECTION */
+/* SECTIONS */
 section{padding:100px 8%;}
-h2{text-align:center;margin-bottom:50px;}
-
-/* GRID */
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:25px;
-}
+h2{text-align:center;margin-bottom:60px;}
 
 /* CARDS */
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
 .card{
 background:rgba(255,255,255,0.05);
-padding:20px;
-border-radius:12px;
-box-shadow:0 0 15px rgba(59,130,246,0.3);
+padding:25px;
+border-radius:15px;
+transition:0.3s;
+box-shadow:0 0 15px rgba(59,130,246,0.2);
 }
 
-/* VIDEO */
-.video-box{
-position:relative;
-border-radius:12px;
-overflow:hidden;
-box-shadow:0 0 25px #3b82f6;
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 40px #3b82f6;
 }
 
-.video-box img{
-width:100%;
-display:block;
-}
-
-.play{
-position:absolute;
-top:50%;left:50%;
-transform:translate(-50%,-50%);
-font-size:30px;
-background:white;
-color:black;
-padding:10px 15px;
-border-radius:50%;
-}
-
-/* TESTIMONIAL */
-.testimonial{
-background:rgba(255,255,255,0.05);
-padding:20px;
-border-radius:12px;
-box-shadow:0 0 15px rgba(59,130,246,0.3);
-}
-
-.avatar{
-width:35px;height:35px;
-background:#3b82f6;
-border-radius:50%;
+/* PORTFOLIO */
+.portfolio-card{
+height:200px;
 display:flex;
 align-items:center;
 justify-content:center;
-margin-bottom:8px;
+background:rgba(255,255,255,0.05);
+border-radius:12px;
+box-shadow:0 0 20px rgba(59,130,246,0.3);
 }
 
-.stars{color:gold;margin:5px 0;}
-
+/* FOOTER */
+footer{
+text-align:center;
+padding:40px;
+color:#94a3b8;
+}
 </style>
+
 </head>
 
 <body>
@@ -155,99 +159,91 @@ margin-bottom:8px;
 <header>
 <h2>DIGITALBYKINZA</h2>
 <nav>
+<a href="#services">Services</a>
 <a href="#portfolio">Work</a>
-<a href="#reviews">Reviews</a>
-<a href="#book" class="cta">Book Call</a>
+<a href="#book" class="cta">Book a Call</a>
 </nav>
 </header>
 
 <!-- HERO -->
 <section class="hero">
-<h1>High Converting SaaS Videos</h1>
-<p>Explainers, Ads & Product Videos</p>
-<a href="#" class="btn">Book a Call</a>
+<h1>Smart Control <br><span>High-Converting SaaS Videos</span></h1>
+<p>We create explainer videos, product demos, and ad creatives that turn viewers into users.</p>
+<a href="#book" class="btn">Book a Call</a>
 </section>
 
-<!-- VIDEO PORTFOLIO -->
+<!-- SERVICES -->
+<section id="services">
+<h2>Our Services</h2>
+<div class="cards">
+<div class="card">SaaS Explainer Videos</div>
+<div class="card">Product Walkthrough</div>
+<div class="card">SaaS Ads</div>
+<div class="card">Reels / Shorts</div>
+<div class="card">YouTube Editing</div>
+<div class="card">VSL Production</div>
+</div>
+</section>
+
+<!-- PORTFOLIO -->
 <section id="portfolio">
 <h2>Our Work</h2>
-
-<div class="grid">
-
-<div class="video-box">
-<img src="https://via.placeholder.com/400x250">
-<div class="play">▶</div>
-</div>
-
-<div class="video-box">
-<img src="https://via.placeholder.com/400x250">
-<div class="play">▶</div>
-</div>
-
-<div class="video-box">
-<img src="https://via.placeholder.com/400x250">
-<div class="play">▶</div>
-</div>
-
+<div class="cards">
+<div class="portfolio-card">Video 1</div>
+<div class="portfolio-card">Video 2</div>
+<div class="portfolio-card">Video 3</div>
 </div>
 </section>
 
-<!-- TESTIMONIALS -->
+<!-- REVIEWS -->
 <section id="reviews">
 <h2>Client Reviews</h2>
 
-<div class="grid">
+<div class="cards">
 
-<div class="testimonial"><div class="avatar">M</div><b>mandelaonline</b><div class="stars">★★★★★</div>Simply beautiful work every time.</div>
+<div class="card"><b>mandelaonline</b><p>★★★★★</p><p>Simply beautiful work every time.</p></div>
+<div class="card"><b>mandelaonline</b><p>★★★★★</p><p>Definition of excellence.</p></div>
+<div class="card"><b>mandelaonline</b><p>★★★★★</p><p>Always top quality work.</p></div>
 
-<div class="testimonial"><div class="avatar">M</div><b>mandelaonline</b><div class="stars">★★★★★</div>Definition of excellence.</div>
+<div class="card"><b>lukepriceee</b><p>★★★★★</p><p>Fast turnaround and great results.</p></div>
+<div class="card"><b>itsfreaks</b><p>★★★★★</p><p>Best experience ever.</p></div>
+<div class="card"><b>pbojanic</b><p>★★★★★</p><p>Super fast and perfect delivery.</p></div>
 
-<div class="testimonial"><div class="avatar">M</div><b>mandelaonline</b><div class="stars">★★★★★</div>Always top quality work.</div>
+<div class="card"><b>charlessmith582</b><p>★★★★★</p><p>Better than expected.</p></div>
+<div class="card"><b>david_osullivan</b><p>★★★★★</p><p>Amazing and fast work.</p></div>
+<div class="card"><b>brettyspaghetti</b><p>★★★★★</p><p>Excellent communication.</p></div>
 
-<div class="testimonial"><div class="avatar">L</div><b>lukepriceee</b><div class="stars">★★★★★</div>Fast turnaround and great results.</div>
+<div class="card"><b>wigwump</b><p>★★★★★</p><p>Exactly what I needed.</p></div>
+<div class="card"><b>sociosdelvideo</b><p>★★★★☆</p><p>Very professional work.</p></div>
+<div class="card"><b>tracydw</b><p>★★★★★</p><p>Very professional and prompt.</p></div>
 
-<div class="testimonial"><div class="avatar">I</div><b>itsfreaks</b><div class="stars">★★★★★</div>Best experience ever.</div>
+<div class="card"><b>djbillblack</b><p>★★★★★</p><p>Super fast turnaround.</p></div>
+<div class="card"><b>anthonystone</b><p>★★★★★</p><p>Amazing quality work.</p></div>
+<div class="card"><b>larahroberts</b><p>★★★★★</p><p>Absolutely amazing.</p></div>
 
-<div class="testimonial"><div class="avatar">P</div><b>pbojanic</b><div class="stars">★★★★★</div>Super fast and perfect delivery.</div>
+<div class="card"><b>raphiecantor</b><p>★★★★★</p><p>Delivered ahead of time.</p></div>
+<div class="card"><b>calsimmons82</b><p>★★★★★</p><p>Very thorough work.</p></div>
+<div class="card"><b>imisssuga1</b><p>★★★★★</p><p>Amazing experience.</p></div>
 
-<div class="testimonial"><div class="avatar">C</div><b>charlessmith582</b><div class="stars">★★★★★</div>Better than expected.</div>
-
-<div class="testimonial"><div class="avatar">D</div><b>david_osullivan</b><div class="stars">★★★★★</div>Amazing and fast work.</div>
-
-<div class="testimonial"><div class="avatar">B</div><b>brettyspaghetti</b><div class="stars">★★★★★</div>Excellent communication.</div>
-
-<div class="testimonial"><div class="avatar">W</div><b>wigwump</b><div class="stars">★★★★★</div>Exactly what I needed.</div>
-
-<div class="testimonial"><div class="avatar">S</div><b>sociosdelvideo</b><div class="stars">★★★★☆</div>Very professional.</div>
-
-<div class="testimonial"><div class="avatar">T</div><b>tracydw</b><div class="stars">★★★★★</div>Impressed with results.</div>
-
-<div class="testimonial"><div class="avatar">D</div><b>djbillblack</b><div class="stars">★★★★★</div>Super fast turnaround.</div>
-
-<div class="testimonial"><div class="avatar">A</div><b>anthonystone</b><div class="stars">★★★★★</div>Amazing quality work.</div>
-
-<div class="testimonial"><div class="avatar">L</div><b>larahroberts</b><div class="stars">★★★★★</div>Absolutely amazing.</div>
-
-<div class="testimonial"><div class="avatar">R</div><b>raphiecantor</b><div class="stars">★★★★★</div>Delivered ahead of time.</div>
-
-<div class="testimonial"><div class="avatar">C</div><b>calsimmons82</b><div class="stars">★★★★★</div>Very thorough work.</div>
-
-<div class="testimonial"><div class="avatar">I</div><b>imisssuga1</b><div class="stars">★★★★★</div>Amazing experience.</div>
-
-<div class="testimonial"><div class="avatar">K</div><b>kevinlalla</b><div class="stars">★★★★★</div>Love it thanks!</div>
-
-<div class="testimonial"><div class="avatar">P</div><b>psycho02</b><div class="stars">★★★★★</div>AMAZING JOB!</div>
+<div class="card"><b>kevinlalla</b><p>★★★★★</p><p>Love it thanks!</p></div>
+<div class="card"><b>psycho02</b><p>★★★★★</p><p>Amazing job thank you!</p></div>
 
 </div>
 </section>
 
 <!-- BOOK -->
 <section id="book">
-<h2>Book a Call</h2>
+<h2>Book a Free Call</h2>
 <div style="text-align:center;">
-<a href="https://calendly.com/kinzabaig995/30min" class="btn">Book Now</a>
+<a href="https://calendly.com/kinzabaig995/30min" target="_blank" class="btn">Book Now</a>
 </div>
 </section>
+
+<footer>
+<p>DIGITALBYKINZA</p>
+<p>WhatsApp: +923472105484</p>
+<p>Instagram: @digitalbykinza</p>
+</footer>
 
 </body>
 </html>
