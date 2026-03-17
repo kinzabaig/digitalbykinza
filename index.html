@@ -1,91 +1,276 @@
-<!-- FAQ SECTION -->
-<section style="background:#f5f5f5;padding:100px 8%;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<h2 style="text-align:center;font-size:38px;margin-bottom:50px;color:#111;">
-Frequently Asked Questions
-</h2>
+<title>DigitalByKinza</title>
 
-<div class="faq-container">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap" rel="stylesheet">
 
-<!-- Q1 -->
-<div class="faq-item">
-<div class="faq-question">How long is delivery?</div>
-<div class="faq-answer">
-For SaaS video projects, delivery typically takes <strong>10 to 15 days</strong>. 
-The timeline depends on script approval, feedback speed, and project complexity.
-</div>
-</div>
-
-<!-- Q2 -->
-<div class="faq-item">
-<div class="faq-question">What is your pricing?</div>
-<div class="faq-answer">
-Pricing depends on your project requirements such as video length, style, and complexity. 
-We recommend booking a call so we can understand your SaaS product and provide a precise quote.
-</div>
-</div>
-
-<!-- Q3 -->
-<div class="faq-item">
-<div class="faq-question">How many revisions do you offer?</div>
-<div class="faq-answer">
-We offer up to <strong>3 revisions</strong> to ensure your video matches your expectations perfectly 
-and aligns with your brand.
-</div>
-</div>
-
-</div>
-
-</section>
-
-<!-- FAQ STYLE -->
 <style>
-.faq-container{
-max-width:900px;
-margin:auto;
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:Poppins;}
+
+/* COLORS */
+.dark{background:#0b0f19;color:white;}
+.light{background:#f5f5f5;color:#111;}
+
+section{padding:90px 8%;}
+
+/* NAV */
+header{
+position:fixed;
+top:0;width:100%;
+background:#0b0f19;
+color:white;
+display:flex;
+justify-content:space-between;
+padding:18px 8%;
+z-index:1000;
 }
 
-.faq-item{
-background:#ffffff;
-border-radius:12px;
-margin-bottom:15px;
-box-shadow:0 5px 20px rgba(0,0,0,0.05);
-cursor:pointer;
-transition:0.3s;
+nav a{margin:0 15px;color:#ccc;text-decoration:none;}
+
+.btn{
+background:#ec4899;
+color:white;
+padding:12px 20px;
+border-radius:6px;
+display:inline-block;
+margin-top:20px;
 }
 
-.faq-item:hover{
-transform:translateY(-3px);
-box-shadow:0 10px 30px rgba(0,0,0,0.08);
+/* HERO */
+.hero{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:40px;
+padding-top:140px;
 }
 
-.faq-question{
+.hero h1{font-size:48px;}
+.hero span{color:#ec4899;}
+
+.hero-img{
+width:450px;height:280px;
+background:#ccc;
+border-radius:10px;
+}
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+/* IMAGE BLOCK */
+.block{
+display:flex;
+align-items:center;
+gap:40px;
+}
+
+.block img{
+width:100%;
+max-width:420px;
+border-radius:10px;
+}
+
+/* ALT */
+.reverse{flex-direction:row-reverse;}
+
+/* LOGOS */
+.logos{
+display:flex;
+justify-content:space-around;
+opacity:0.5;
+}
+
+/* CARDS */
+.card{
+background:white;
 padding:20px;
-font-size:18px;
-font-weight:600;
-color:#111;
+border-radius:10px;
 }
 
-.faq-answer{
-padding:0 20px;
-max-height:0;
-overflow:hidden;
-color:#555;
-transition:0.4s;
-line-height:1.6;
+.dark .card{background:#111827;color:white;}
+
+/* PROCESS */
+.process{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
 }
 
-.faq-item.active .faq-answer{
-max-height:200px;
+/* CASE */
+.case{
+background:#ec4899;
+color:white;
+padding:30px;
+border-radius:10px;
+text-align:center;
+}
+
+/* REVIEW */
+.review{
+background:#111827;
+color:white;
 padding:20px;
+border-radius:10px;
+}
+
+/* FAQ */
+.faq{
+background:white;
+padding:15px;
+border-radius:8px;
+margin:10px 0;
+}
+
+/* FOOTER */
+footer{
+background:#0b0f19;
+color:#aaa;
+padding:40px;
+text-align:center;
 }
 </style>
+</head>
 
-<!-- FAQ SCRIPT -->
-<script>
-document.querySelectorAll(".faq-item").forEach(item=>{
-item.addEventListener("click",()=>{
-item.classList.toggle("active");
-});
-});
-</script>
+<body>
+
+<header>
+<h3>DIGITALBYKINZA</h3>
+<nav>
+<a href="#">Work</a>
+<a href="#">Services</a>
+<a href="#">Process</a>
+<a href="#">Reviews</a>
+<a href="#" class="btn">Book a Call</a>
+</nav>
+</header>
+
+<!-- HERO -->
+<section class="dark hero">
+<div>
+<h1>Most SaaS Video Agencies <br> Blend In <br><span>Yours Won’t.</span></h1>
+<p>We create high-converting SaaS videos that turn viewers into users.</p>
+<a class="btn">Book a Call</a>
+</div>
+<div class="hero-img"></div>
+</section>
+
+<!-- LOGOS -->
+<section class="light">
+<div class="logos">
+<p>Stripe</p><p>Hubspot</p><p>Notion</p><p>Slack</p><p>Zapier</p>
+</div>
+</section>
+
+<!-- BLOCK 1 -->
+<section class="light">
+<div class="block">
+<div>
+<h2>Strategy-led video production</h2>
+<p>We don’t just make videos — we design content that converts.</p>
+</div>
+<img src="https://images.unsplash.com/photo-1551434678-e076c223a692">
+</div>
+</section>
+
+<!-- BLOCK 2 -->
+<section class="dark">
+<div class="block reverse">
+<div>
+<h2>Why most SaaS videos fail</h2>
+<p>No strategy, no clarity, no conversion focus.</p>
+</div>
+<img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a">
+</div>
+</section>
+
+<!-- FEATURES -->
+<section class="light">
+<h2>Why choose us</h2>
+<div class="grid">
+<div class="card">Conversion focused</div>
+<div class="card">Fast delivery</div>
+<div class="card">Clear storytelling</div>
+<div class="card">Premium quality</div>
+</div>
+</section>
+
+<!-- PROCESS -->
+<section class="dark">
+<h2>SaaS Video Process</h2>
+<div class="process">
+<div>
+<p>We follow a proven structure to deliver results.</p>
+</div>
+<div>
+<p>01 Discovery</p>
+<p>02 Script</p>
+<p>03 Storyboard</p>
+<p>04 Editing</p>
+<p>05 Sound Design</p>
+<p>06 Delivery</p>
+</div>
+</div>
+</section>
+
+<!-- CASE -->
+<section class="light">
+<h2>Case Study</h2>
+<div class="grid">
+<div class="case"><h2>$805,200</h2><p>Revenue</p></div>
+<div class="case"><h2>98,200</h2><p>Users</p></div>
+</div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="dark">
+<h2>Featured Work</h2>
+<div class="grid">
+<div class="card">Video 1</div>
+<div class="card">Video 2</div>
+<div class="card">Video 3</div>
+<div class="card">Video 4</div>
+</div>
+</section>
+
+<!-- REVIEWS -->
+<section class="light">
+<h2>Client Reviews</h2>
+<div class="grid">
+
+<div class="review">★★★★★ Excellent work</div>
+<div class="review">★★★★★ Amazing experience</div>
+<div class="review">★★★★★ Fast delivery</div>
+<div class="review">★★★★★ Highly recommended</div>
+
+</div>
+</section>
+
+<!-- FAQ -->
+<section class="light">
+<h2>FAQ</h2>
+<div class="faq">How long delivery?</div>
+<div class="faq">Pricing?</div>
+<div class="faq">Revisions?</div>
+</section>
+
+<!-- CTA -->
+<section class="dark">
+<h2>Fully booked? Don’t stop the timing.</h2>
+<a class="btn">Book a Call</a>
+</section>
+
+<footer>
+<p>© DigitalByKinza</p>
+</footer>
+
+</body>
+</html>
