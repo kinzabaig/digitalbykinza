@@ -1,159 +1,91 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- FAQ SECTION -->
+<section style="background:#f5f5f5;padding:100px 8%;">
 
-<title>DigitalByKinza</title>
+<h2 style="text-align:center;font-size:38px;margin-bottom:50px;color:#111;">
+Frequently Asked Questions
+</h2>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700;800&display=swap" rel="stylesheet">
+<div class="faq-container">
 
-<style>
-*{margin:0;padding:0;box-sizing:border-box;}
-
-body{
-font-family:Poppins;
-background:#020617;
-color:white;
-}
-
-/* NAV */
-header{
-position:fixed;
-top:0;
-width:100%;
-padding:20px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:rgba(2,6,23,0.9);
-z-index:1000;
-}
-
-nav a{
-margin:0 15px;
-color:#cbd5e1;
-text-decoration:none;
-}
-
-.cta{
-background:#ec4899;
-padding:10px 18px;
-border-radius:8px;
-color:white;
-}
-
-/* HERO */
-.hero{
-min-height:100vh;
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:120px 8%;
-gap:40px;
-}
-
-.hero-left h1{
-font-size:64px;
-line-height:1.2;
-}
-
-.hero-left span{
-color:#ec4899;
-}
-
-.hero-left p{
-color:#94a3b8;
-margin-top:20px;
-font-size:18px;
-max-width:500px;
-}
-
-/* BUTTON */
-.btn{
-background:#ec4899;
-padding:14px 28px;
-border-radius:10px;
-display:inline-block;
-margin-top:30px;
-font-weight:600;
-box-shadow:0 0 30px rgba(236,72,153,0.6);
-transition:0.3s;
-}
-
-.btn:hover{
-transform:translateY(-5px);
-box-shadow:0 0 60px rgba(236,72,153,1);
-}
-
-/* IMAGE SIDE */
-.hero-right{
-width:520px;
-height:320px;
-border-radius:18px;
-background:
-linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
-url('https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1600&auto=format&fit=crop');
-background-size:cover;
-background-position:center;
-box-shadow:0 0 80px rgba(59,130,246,0.4);
-transition:0.4s;
-}
-
-/* HOVER EFFECT */
-.hero-right:hover{
-transform:scale(1.04);
-box-shadow:0 0 120px rgba(59,130,246,0.9);
-}
-
-/* RESPONSIVE */
-@media(max-width:900px){
-.hero{
-flex-direction:column;
-text-align:center;
-}
-
-.hero-right{
-width:100%;
-}
-}
-</style>
-
-</head>
-
-<body>
-
-<header>
-<h2>DIGITALBYKINZA</h2>
-<nav>
-<a href="#">Work</a>
-<a href="#">Services</a>
-<a href="#">Process</a>
-<a href="#">Reviews</a>
-<a href="#" class="cta">Book a Call</a>
-</nav>
-</header>
-
-<!-- HERO -->
-<section class="hero">
-
-<div class="hero-left">
-<h1>
-Most SaaS Video <br>
-Agencies Blend In <br>
-<span>Yours Won’t.</span>
-</h1>
-
-<p>
-We create high-converting SaaS videos that turn viewers into users.
-</p>
-
-<a href="#" class="btn">Book a Call</a>
+<!-- Q1 -->
+<div class="faq-item">
+<div class="faq-question">How long is delivery?</div>
+<div class="faq-answer">
+For SaaS video projects, delivery typically takes <strong>10 to 15 days</strong>. 
+The timeline depends on script approval, feedback speed, and project complexity.
+</div>
 </div>
 
-<div class="hero-right"></div>
+<!-- Q2 -->
+<div class="faq-item">
+<div class="faq-question">What is your pricing?</div>
+<div class="faq-answer">
+Pricing depends on your project requirements such as video length, style, and complexity. 
+We recommend booking a call so we can understand your SaaS product and provide a precise quote.
+</div>
+</div>
+
+<!-- Q3 -->
+<div class="faq-item">
+<div class="faq-question">How many revisions do you offer?</div>
+<div class="faq-answer">
+We offer up to <strong>3 revisions</strong> to ensure your video matches your expectations perfectly 
+and aligns with your brand.
+</div>
+</div>
+
+</div>
 
 </section>
 
-</body>
-</html>
+<!-- FAQ STYLE -->
+<style>
+.faq-container{
+max-width:900px;
+margin:auto;
+}
+
+.faq-item{
+background:#ffffff;
+border-radius:12px;
+margin-bottom:15px;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
+cursor:pointer;
+transition:0.3s;
+}
+
+.faq-item:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.faq-question{
+padding:20px;
+font-size:18px;
+font-weight:600;
+color:#111;
+}
+
+.faq-answer{
+padding:0 20px;
+max-height:0;
+overflow:hidden;
+color:#555;
+transition:0.4s;
+line-height:1.6;
+}
+
+.faq-item.active .faq-answer{
+max-height:200px;
+padding:20px;
+}
+</style>
+
+<!-- FAQ SCRIPT -->
+<script>
+document.querySelectorAll(".faq-item").forEach(item=>{
+item.addEventListener("click",()=>{
+item.classList.toggle("active");
+});
+});
+</script>
