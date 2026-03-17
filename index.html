@@ -17,7 +17,7 @@ background: radial-gradient(circle at top,#1e3a8a 0%,#020617 70%);
 color:white;
 }
 
-/* NAVBAR */
+/* NAV */
 header{
 position:fixed;
 top:0;
@@ -65,9 +65,9 @@ display:inline-block;
 
 /* IMAGE */
 .hero-img{
-width:400px;
+width:420px;
 height:260px;
-background:#111827;
+background:url('https://images.unsplash.com/photo-1559027615-cd4628902d4a') center/cover;
 border-radius:12px;
 }
 
@@ -75,6 +75,7 @@ border-radius:12px;
 section{padding:90px 8%;}
 h2{text-align:center;margin-bottom:50px;}
 
+/* GRID */
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -88,27 +89,11 @@ padding:25px;
 border-radius:12px;
 }
 
-/* VIDEO SECTION */
-.video-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:25px;
-}
-
-.video-box{
-position:relative;
-padding-top:56%;
-background:#000;
-border-radius:12px;
-overflow:hidden;
-}
-
-.video-box iframe{
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
+/* IMAGE CARD */
+.img-card{
+height:180px;
+border-radius:10px;
+background-size:cover;
 }
 
 /* PROCESS */
@@ -124,6 +109,21 @@ background:rgba(236,72,153,0.1);
 padding:25px;
 border-radius:10px;
 text-align:center;
+}
+
+/* REVIEW */
+.review{
+background:rgba(255,255,255,0.05);
+padding:20px;
+border-radius:10px;
+}
+.stars{color:gold;}
+
+/* TESTIMONIAL */
+.testimonial{
+text-align:center;
+max-width:600px;
+margin:auto;
 }
 
 /* FAQ */
@@ -160,11 +160,11 @@ color:#94a3b8;
 <header>
 <h2>DIGITALBYKINZA</h2>
 <nav>
-<a href="#services">Services</a>
-<a href="#portfolio">Work</a>
-<a href="#process">Process</a>
-<a href="#faq">FAQ</a>
-<a href="#book" class="cta">Book a Call</a>
+<a href="#">Services</a>
+<a href="#">Work</a>
+<a href="#">Process</a>
+<a href="#">FAQ</a>
+<a href="#" class="cta">Book a Call</a>
 </nav>
 </header>
 
@@ -172,62 +172,53 @@ color:#94a3b8;
 <section class="hero">
 <div>
 <h1>Leading SaaS <span>Video Production</span> Studio</h1>
-<p>We create high-converting SaaS videos that turn viewers into paying users.</p>
-<a href="#book" class="btn">Book a Call</a>
+<p>We create videos that convert viewers into paying users.</p>
+<a class="btn">Book a Call</a>
 </div>
-
 <div class="hero-img"></div>
 </section>
 
-<!-- SERVICES -->
-<section id="services">
-<h2>Services</h2>
+<!-- ABOUT -->
+<section>
+<h2>About Us</h2>
 <div class="grid">
-<div class="card">SaaS Explainer Videos</div>
-<div class="card">Product Demo Videos</div>
-<div class="card">SaaS Ads</div>
-<div class="card">Reels</div>
-<div class="card">YouTube Editing</div>
-<div class="card">VSL Videos</div>
+<div class="card">We simplify complex SaaS products.</div>
+<div class="card">We focus on conversions not just visuals.</div>
 </div>
 </section>
 
-<!-- VIDEO PORTFOLIO -->
-<section id="portfolio">
-<h2>Our Work</h2>
-
-<div class="video-grid">
-
-<div class="video-box">
-<iframe src="" allowfullscreen></iframe>
+<!-- VALUES -->
+<section>
+<h2>Core Values</h2>
+<div class="grid">
+<div class="card">Attention to Detail</div>
+<div class="card">Creative Quality</div>
+<div class="card">Fast Delivery</div>
+<div class="card">Client First</div>
 </div>
+</section>
 
-<div class="video-box">
-<iframe src="" allowfullscreen></iframe>
-</div>
-
-<div class="video-box">
-<iframe src="" allowfullscreen></iframe>
-</div>
-
+<!-- WORK -->
+<section>
+<h2>Latest Work</h2>
+<div class="grid">
+<div class="img-card" style="background-image:url('https://images.unsplash.com/photo-1522199710521-72d69614c702')"></div>
+<div class="img-card" style="background-image:url('https://images.unsplash.com/photo-1551434678-e076c223a692')"></div>
+<div class="img-card" style="background-image:url('https://images.unsplash.com/photo-1531497865144-0464ef8fb9a9')"></div>
 </div>
 </section>
 
 <!-- PROCESS -->
-<section id="process">
-<h2>SaaS Video Production Process</h2>
-
+<section>
+<h2>Process</h2>
 <div class="process">
-<div>
-<p>We follow a proven system to create high converting videos.</p>
-</div>
-
+<div>We follow a proven system to deliver high converting videos.</div>
 <div>
 <p>01 Discovery</p>
-<p>02 Script Writing</p>
+<p>02 Script</p>
 <p>03 Storyboard</p>
 <p>04 Editing</p>
-<p>05 Sound Design</p>
+<p>05 Sound</p>
 <p>06 Delivery</p>
 </div>
 </div>
@@ -236,46 +227,57 @@ color:#94a3b8;
 <!-- CASE -->
 <section>
 <h2>Success Story</h2>
-
 <div class="grid">
-<div class="case"><h3>$805,200</h3><p>Revenue Generated</p></div>
-<div class="case"><h3>98,200</h3><p>Users Converted</p></div>
+<div class="case"><h3>$805,200</h3><p>Revenue</p></div>
+<div class="case"><h3>98,200</h3><p>Users</p></div>
+</div>
+</section>
+
+<!-- REVIEWS -->
+<section>
+<h2>Client Reviews</h2>
+<div class="grid">
+
+<div class="review"><b>mandelaonline</b><div class="stars">★★★★★</div>Simply beautiful.</div>
+<div class="review"><b>lukepriceee</b><div class="stars">★★★★★</div>Fast delivery.</div>
+<div class="review"><b>itsfreaks</b><div class="stars">★★★★★</div>Best video.</div>
+<div class="review"><b>pbojanic</b><div class="stars">★★★★★</div>Excellent work.</div>
+
+<div class="review"><b>kevinlalla</b><div class="stars">★★★★★</div>Love it.</div>
+<div class="review"><b>psycho02</b><div class="stars">★★★★★</div>Amazing job.</div>
+
+</div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section>
+<h2>Testimonial</h2>
+<div class="testimonial">
+<p>"This video helped us explain our product clearly and increase conversions."</p>
 </div>
 </section>
 
 <!-- FAQ -->
-<section id="faq">
-<h2>Frequently Asked Questions</h2>
-
-<div class="faq">How long does a video take?</div>
+<section>
+<h2>FAQ</h2>
+<div class="faq">How long does it take?</div>
 <div class="faq">Do you offer revisions?</div>
-<div class="faq">What is pricing?</div>
-
+<div class="faq">Pricing?</div>
 </section>
 
 <!-- CONTACT -->
-<section id="book">
-<h2>Get Free Strategy Call</h2>
-
+<section>
+<h2>Contact Us</h2>
 <form>
-<input placeholder="Your Name">
-<input placeholder="Your Email">
-<textarea placeholder="Tell us about your project"></textarea>
+<input placeholder="Name">
+<input placeholder="Email">
+<textarea placeholder="Project details"></textarea>
 <button class="btn">Submit</button>
 </form>
-
-</section>
-
-<!-- INSTAGRAM -->
-<section>
-<h2>Follow @digitalbykinza</h2>
-<div style="text-align:center;">
-<a href="https://www.instagram.com/digitalbykinza/" class="btn">Instagram</a>
-</div>
 </section>
 
 <footer>
-<p>© 2026 DigitalByKinza</p>
+<p>© DigitalByKinza</p>
 </footer>
 
 </body>
