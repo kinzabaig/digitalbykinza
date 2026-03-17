@@ -18,6 +18,7 @@ color:white;
 overflow-x:hidden;
 }
 
+/* Glow */
 body::before{
 content:"";
 position:absolute;
@@ -31,6 +32,7 @@ filter:blur(140px);
 z-index:-1;
 }
 
+/* NAV */
 header{
 position:fixed;
 top:0;
@@ -50,7 +52,10 @@ margin:0 15px;
 color:#cbd5e1;
 text-decoration:none;
 font-weight:500;
+transition:0.3s;
 }
+
+nav a:hover{color:white;}
 
 .cta{
 background:linear-gradient(45deg,#3b82f6,#6366f1);
@@ -58,6 +63,7 @@ padding:10px 18px;
 border-radius:8px;
 }
 
+/* HERO */
 .hero{
 min-height:100vh;
 display:flex;
@@ -84,6 +90,7 @@ margin-top:20px;
 font-size:18px;
 }
 
+/* BUTTON */
 .btn{
 background:linear-gradient(45deg,#3b82f6,#6366f1);
 padding:14px 30px;
@@ -102,9 +109,11 @@ transform:translateY(-6px);
 box-shadow:0 0 50px rgba(59,130,246,1);
 }
 
+/* SECTIONS */
 section{padding:100px 8%;}
 h2{text-align:center;margin-bottom:60px;font-size:38px;}
 
+/* CARDS */
 .cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
@@ -125,6 +134,11 @@ transform:translateY(-12px);
 box-shadow:0 0 50px rgba(59,130,246,0.3);
 }
 
+.card p{
+color:#cbd5e1;
+}
+
+/* PORTFOLIO */
 .portfolio-card{
 height:200px;
 display:flex;
@@ -135,6 +149,14 @@ border-radius:12px;
 color:#94a3b8;
 }
 
+/* BOOK SECTION */
+#book{
+background:linear-gradient(180deg, transparent, rgba(59,130,246,0.08));
+border-top:1px solid rgba(255,255,255,0.05);
+border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+/* CONTACT */
 input, textarea{
 padding:14px;
 width:100%;
@@ -145,6 +167,7 @@ background:#111827;
 color:white;
 }
 
+/* FOOTER */
 footer{
 background:#020617;
 padding:60px;
@@ -177,6 +200,7 @@ margin-top:40px;
 <!-- SERVICES -->
 <section id="services">
 <h2>Our Services</h2>
+
 <div class="cards">
 
 <div class="card"><h3>SaaS Explainer Videos</h3><p>We turn complex products into simple, engaging stories that drive conversions.</p></div>
@@ -196,12 +220,19 @@ margin-top:40px;
 
 <!-- BOOK CALL -->
 <section id="book">
-<h2>Book a Free Call</h2>
+<h2>Get Your Free Strategy Call</h2>
 
-<div style="display:flex;justify-content:center;">
-<iframe src="https://calendly.com/kinzabaig995/30min" width="100%" height="600" style="border:none;border-radius:12px;"></iframe>
+<div style="display:flex;flex-direction:column;align-items:center;text-align:center;">
+
+<p style="color:#94a3b8; max-width:500px;">
+Schedule a quick call to discuss your SaaS video needs and how we can help you grow.
+</p>
+
+<a href="https://calendly.com/kinzabaig995/30min" target="_blank" class="btn">
+Book a Call
+</a>
+
 </div>
-
 </section>
 
 <!-- PORTFOLIO -->
@@ -212,6 +243,19 @@ margin-top:40px;
 <div class="portfolio-card">Add your video</div>
 <div class="portfolio-card">Add your video</div>
 </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<h2>Discuss Your Project</h2>
+
+<form action="https://formsubmit.co/kinzakhalid1524@gmail.com" method="POST">
+<input type="text" name="Name" placeholder="Your Name" required>
+<input type="email" name="Email" placeholder="Your Email" required>
+<textarea name="Details" placeholder="Tell us about your project"></textarea>
+<button type="submit" class="btn">Send Inquiry</button>
+</form>
+
 </section>
 
 <footer>
