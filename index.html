@@ -27,7 +27,7 @@ padding:18px 8%;
 display:flex;
 justify-content:space-between;
 background:rgba(15,23,42,0.7);
-backdrop-filter:blur(12px);
+backdrop-filter:blur(10px);
 z-index:1000;
 }
 
@@ -39,21 +39,11 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-animation:fadeUp 1s ease;
 }
 
-.hero h1{
-font-size:54px;
-}
-
+.hero h1{font-size:52px;}
 .hero span{color:#60a5fa;}
-
 .hero p{color:#94a3b8;margin-top:15px;}
-
-@keyframes fadeUp{
-from{opacity:0;transform:translateY(40px);}
-to{opacity:1;transform:translateY(0);}
-}
 
 /* BUTTON */
 .btn{
@@ -62,20 +52,13 @@ padding:14px 28px;
 border-radius:10px;
 margin-top:20px;
 display:inline-block;
-box-shadow:0 0 25px rgba(59,130,246,0.6);
+box-shadow:0 0 20px rgba(59,130,246,0.6);
 transition:0.3s;
-animation:pulse 2s infinite;
 }
 
 .btn:hover{
-transform:translateY(-5px) scale(1.05);
-box-shadow:0 0 50px #3b82f6;
-}
-
-@keyframes pulse{
-0%{box-shadow:0 0 10px #3b82f6;}
-50%{box-shadow:0 0 35px #3b82f6;}
-100%{box-shadow:0 0 10px #3b82f6;}
+transform:translateY(-4px);
+box-shadow:0 0 40px #3b82f6;
 }
 
 /* SECTION */
@@ -92,68 +75,43 @@ gap:25px;
 /* CARD */
 .card{
 background:rgba(255,255,255,0.05);
-padding:25px;
-border-radius:15px;
-backdrop-filter:blur(15px);
-transition:0.4s;
-opacity:0;
-transform:translateY(40px);
-}
-
-.card.show{
-opacity:1;
-transform:translateY(0);
-}
-
-.card:hover{
-transform:translateY(-10px) scale(1.03);
-box-shadow:0 0 40px rgba(59,130,246,0.5);
-}
-
-/* PORTFOLIO */
-.portfolio-box{
-height:220px;
-border-radius:15px;
-background:linear-gradient(45deg,#0f172a,#1e3a8a);
-display:flex;
-align-items:center;
-justify-content:center;
-position:relative;
-overflow:hidden;
-transition:0.4s;
-}
-
-.portfolio-box:hover{
-transform:scale(1.05);
-}
-
-.portfolio-box::after{
-content:"▶";
-position:absolute;
-font-size:30px;
-background:white;
-color:black;
-padding:10px;
-border-radius:50%;
-opacity:0;
-transition:0.3s;
-}
-
-.portfolio-box:hover::after{
-opacity:1;
-}
-
-/* REVIEWS */
-.review{
-background:rgba(255,255,255,0.05);
 padding:20px;
 border-radius:12px;
 transition:0.3s;
 }
 
-.review:hover{
-box-shadow:0 0 30px #3b82f6;
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 0 25px rgba(59,130,246,0.4);
 }
+
+/* PORTFOLIO */
+.portfolio-box{
+height:220px;
+display:flex;
+align-items:center;
+justify-content:center;
+background:rgba(255,255,255,0.03);
+border-radius:12px;
+color:#64748b;
+}
+
+/* CASE */
+.case{
+background:rgba(59,130,246,0.1);
+padding:25px;
+border-radius:12px;
+text-align:center;
+}
+
+/* REVIEW */
+.review{
+background:rgba(255,255,255,0.05);
+padding:18px;
+border-radius:12px;
+}
+
+.stars{color:gold;}
 
 /* FORM */
 input, textarea{
@@ -169,7 +127,7 @@ color:white;
 /* FOOTER */
 footer{
 text-align:center;
-padding:40px;
+padding:30px;
 color:#94a3b8;
 }
 </style>
@@ -205,9 +163,19 @@ color:#94a3b8;
 <section>
 <h2>Our Work</h2>
 <div class="grid">
-<div class="portfolio-box">Video 1</div>
-<div class="portfolio-box">Video 2</div>
-<div class="portfolio-box">Video 3</div>
+<div class="portfolio-box">Your SaaS Video 1</div>
+<div class="portfolio-box">Your SaaS Video 2</div>
+<div class="portfolio-box">Your SaaS Video 3</div>
+</div>
+</section>
+
+<!-- CASE -->
+<section>
+<h2>Case Study</h2>
+<div class="grid">
+<div class="case"><h3>+38% Conversion</h3><p>Improved SaaS signups.</p></div>
+<div class="case"><h3>3X Engagement</h3><p>Higher retention.</p></div>
+<div class="case"><h3>$120K Revenue</h3><p>Strong VSL results.</p></div>
 </div>
 </section>
 
@@ -215,13 +183,35 @@ color:#94a3b8;
 <section>
 <h2>Client Reviews</h2>
 <div class="grid">
-<div class="review">★★★★★ Great quality work</div>
-<div class="review">★★★★★ Fast delivery</div>
-<div class="review">★★★★★ Amazing results</div>
+
+<div class="review"><b>mandelaonline</b><div class="stars">★★★★★</div>Simply beautiful and consistent quality work.</div>
+<div class="review"><b>lukepriceee</b><div class="stars">★★★★★</div>Exactly what I needed. Fast turnaround.</div>
+<div class="review"><b>itsfreaks</b><div class="stars">★★★★★</div>Best video I've seen. Amazing experience.</div>
+<div class="review"><b>pbojanic</b><div class="stars">★★★★★</div>Delivery was excellent and super fast.</div>
+<div class="review"><b>kevinlalla</b><div class="stars">★★★★★</div>Love it thanks!!</div>
+<div class="review"><b>psycho02</b><div class="stars">★★★★★</div>Amazing job thank you!</div>
+
+<div class="review"><b>charlessmith582</b><div class="stars">★★★★★</div>Better than expected. Will use again.</div>
+<div class="review"><b>david_osullivan</b><div class="stars">★★★★★</div>Amazing and fast delivery.</div>
+<div class="review"><b>originchurch</b><div class="stars">★★★★★</div>Always a pleasure working together.</div>
+<div class="review"><b>brettyspaghetti</b><div class="stars">★★★★★</div>Excellent communication and fast delivery.</div>
+<div class="review"><b>wigwump</b><div class="stars">★★★★★</div>Exactly what I described.</div>
+<div class="review"><b>sociosdelvideo</b><div class="stars">★★★★☆</div>Very professional work.</div>
+
+<div class="review"><b>tracydw</b><div class="stars">★★★★★</div>Impressed with results.</div>
+<div class="review"><b>djbillblack</b><div class="stars">★★★★★</div>Super fast turnaround.</div>
+<div class="review"><b>anthonystone</b><div class="stars">★★★★★</div>Amazing quality work.</div>
+<div class="review"><b>larahroberts</b><div class="stars">★★★★★</div>Absolutely amazing.</div>
+<div class="review"><b>raphiecantor</b><div class="stars">★★★★★</div>Delivered ahead of time.</div>
+<div class="review"><b>calsimmons82</b><div class="stars">★★★★★</div>Very thorough work.</div>
+
+<div class="review"><b>imisssuga1</b><div class="stars">★★★★★</div>Amazing experience overall.</div>
+<div class="review"><b>moyno99</b><div class="stars">★★★★★</div>Top notch work and timely delivery.</div>
+
 </div>
 </section>
 
-<!-- FORM -->
+<!-- LEAD -->
 <section id="book">
 <h2>Get Free Strategy</h2>
 <form>
@@ -231,22 +221,19 @@ color:#94a3b8;
 </form>
 </section>
 
+<!-- INSTAGRAM -->
+<section>
+<h2>Follow @digitalbykinza</h2>
+<div style="text-align:center;">
+<a href="https://www.instagram.com/digitalbykinza/" target="_blank" class="btn">
+Follow Now
+</a>
+</div>
+</section>
+
 <footer>
-<p>Instagram: @digitalbykinza</p>
+<p>DIGITALBYKINZA</p>
 </footer>
-
-<script>
-const cards = document.querySelectorAll(".card");
-
-window.addEventListener("scroll", ()=>{
-cards.forEach(card=>{
-const top = card.getBoundingClientRect().top;
-if(top < window.innerHeight - 50){
-card.classList.add("show");
-}
-});
-});
-</script>
 
 </body>
 </html>
