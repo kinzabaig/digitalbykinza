@@ -15,20 +15,63 @@ body{
 font-family:Poppins;
 background: radial-gradient(circle at top, #1e3a8a 0%, #020617 70%);
 color:white;
-scroll-behavior:smooth;
 }
 
-/* NAV */
-header{
+/* NAVBAR */
+.navbar{
 position:fixed;
 top:0;
 width:100%;
-padding:18px 8%;
+padding:18px 6%;
 display:flex;
 justify-content:space-between;
+align-items:center;
 background:rgba(15,23,42,0.7);
 backdrop-filter:blur(10px);
 z-index:1000;
+}
+
+.logo{font-weight:700;}
+
+.nav-links{
+display:flex;
+gap:25px;
+}
+
+.nav-links a{
+color:#cbd5e1;
+text-decoration:none;
+transition:0.3s;
+}
+
+.nav-links a:hover{
+color:white;
+text-shadow:0 0 10px #3b82f6;
+}
+
+.cta-btn{
+background:#ec4899;
+padding:10px 20px;
+border-radius:6px;
+color:white;
+box-shadow:0 0 20px rgba(236,72,153,0.6);
+}
+
+.menu-icon{display:none;font-size:24px;cursor:pointer;}
+
+@media(max-width:900px){
+.nav-links{
+position:absolute;
+top:70px;
+left:0;
+width:100%;
+background:#020617;
+flex-direction:column;
+align-items:center;
+display:none;
+}
+.nav-links.active{display:flex;}
+.menu-icon{display:block;}
 }
 
 /* HERO */
@@ -39,11 +82,12 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
+padding-top:80px;
 }
 
-.hero h1{font-size:56px;}
+.hero h1{font-size:55px;}
 .hero span{color:#60a5fa;}
-.hero p{color:#94a3b8;margin-top:15px;max-width:600px;}
+.hero p{color:#94a3b8;margin-top:15px;}
 
 .btn{
 background:#3b82f6;
@@ -60,49 +104,40 @@ transform:translateY(-5px);
 box-shadow:0 0 50px #3b82f6;
 }
 
-/* SECTIONS */
+/* SECTION */
 section{padding:100px 8%;}
-h2{text-align:center;margin-bottom:50px;font-size:34px;}
+h2{text-align:center;margin-bottom:50px;}
 
-/* GRID */
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px;
+gap:25px;
 }
 
-/* CARD */
 .card{
 background:rgba(255,255,255,0.05);
 padding:25px;
-border-radius:15px;
+border-radius:12px;
 transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-10px);
-box-shadow:0 0 40px rgba(59,130,246,0.4);
+transform:translateY(-8px);
+box-shadow:0 0 30px rgba(59,130,246,0.5);
 }
 
-/* DARK STRIP */
+/* TRUST STRIP */
 .strip{
-background:rgba(0,0,0,0.4);
-padding:60px 8%;
+background:rgba(0,0,0,0.5);
 text-align:center;
+padding:60px;
 }
 
-/* CASE */
-.case{
-background:rgba(59,130,246,0.1);
-padding:25px;
-border-radius:12px;
-}
-
-/* REVIEW */
+/* REVIEWS */
 .review{
 background:rgba(255,255,255,0.05);
 padding:18px;
-border-radius:12px;
+border-radius:10px;
 }
 .stars{color:gold;}
 
@@ -117,117 +152,104 @@ color:#94a3b8;
 
 <body>
 
-<header>
-<h2>DIGITALBYKINZA</h2>
-<a href="#book" class="btn">Book Call</a>
+<header class="navbar">
+<div class="logo">DIGITALBYKINZA</div>
+
+<nav class="nav-links">
+<a href="#services">Services</a>
+<a href="#portfolio">Work</a>
+<a href="#process">Process</a>
+<a href="#reviews">Reviews</a>
+</nav>
+
+<div>
+<a href="#book" class="cta-btn">Discuss a Project</a>
+<span class="menu-icon" onclick="toggleMenu()">☰</span>
+</div>
 </header>
 
 <!-- HERO -->
 <section class="hero">
 <h1>Most SaaS Videos <span>Don’t Convert</span><br>Ours Do.</h1>
-<p>We create high-converting SaaS videos that simplify your product and turn viewers into paying users.</p>
-<a href="#book" class="btn">Get Free Strategy</a>
+<p>We create videos that turn viewers into users.</p>
+<a href="#book" class="btn">Book a Call</a>
 </section>
 
 <!-- TRUST -->
 <div class="strip">
-<h2>Trusted by 1000+ Satisfied Clients Worldwide</h2>
-<p style="color:#94a3b8;">Startups • SaaS Founders • Agencies</p>
+<h2>Trusted by 1000+ Satisfied Clients</h2>
 </div>
 
 <!-- SERVICES -->
-<section>
-<h2>What We Do</h2>
+<section id="services">
+<h2>Services</h2>
 <div class="grid">
 <div class="card">SaaS Explainer Videos</div>
 <div class="card">Product Demo Videos</div>
-<div class="card">SaaS Ads (Meta / LinkedIn)</div>
-<div class="card">Reels / Short Content</div>
+<div class="card">SaaS Ads</div>
+<div class="card">Reels</div>
 <div class="card">YouTube Editing</div>
-<div class="card">VSL Production</div>
-</div>
-</section>
-
-<!-- WHY US -->
-<section>
-<h2>Why Choose Us</h2>
-<div class="grid">
-<div class="card">Conversion Focused Approach</div>
-<div class="card">Fast Turnaround</div>
-<div class="card">Unlimited Revisions</div>
-<div class="card">Clear Communication</div>
+<div class="card">VSL Videos</div>
 </div>
 </section>
 
 <!-- PROCESS -->
-<section>
+<section id="process">
 <h2>Our Process</h2>
 <div class="grid">
-<div class="card">1. Strategy & Script</div>
-<div class="card">2. Design & Animation</div>
-<div class="card">3. Delivery & Optimization</div>
-</div>
-</section>
-
-<!-- CASE -->
-<section>
-<h2>Case Studies</h2>
-<div class="grid">
-<div class="case"><h3>+42% Conversion</h3><p>SaaS landing video improved signup rate.</p></div>
-<div class="case"><h3>3X Engagement</h3><p>Higher retention on ads.</p></div>
-<div class="case"><h3>$150K Revenue</h3><p>Generated through VSL funnel.</p></div>
+<div class="card">Strategy</div>
+<div class="card">Editing</div>
+<div class="card">Delivery</div>
 </div>
 </section>
 
 <!-- PORTFOLIO -->
-<section>
+<section id="portfolio">
 <h2>Our Work</h2>
 <div class="grid">
-<div class="card">Your Video Here</div>
-<div class="card">Your Video Here</div>
-<div class="card">Your Video Here</div>
+<div class="card">Add Your Video</div>
+<div class="card">Add Your Video</div>
+<div class="card">Add Your Video</div>
 </div>
 </section>
 
 <!-- REVIEWS -->
-<section>
+<section id="reviews">
 <h2>Client Reviews</h2>
 <div class="grid">
 
 <div class="review"><b>mandelaonline</b><div class="stars">★★★★★</div>Simply beautiful work.</div>
-<div class="review"><b>lukepriceee</b><div class="stars">★★★★★</div>Fast turnaround & great quality.</div>
-<div class="review"><b>itsfreaks</b><div class="stars">★★★★★</div>Best video I’ve seen.</div>
+<div class="review"><b>lukepriceee</b><div class="stars">★★★★★</div>Fast turnaround.</div>
+<div class="review"><b>itsfreaks</b><div class="stars">★★★★★</div>Best video ever.</div>
 <div class="review"><b>pbojanic</b><div class="stars">★★★★★</div>Excellent delivery.</div>
 <div class="review"><b>kevinlalla</b><div class="stars">★★★★★</div>Love it!</div>
-<div class="review"><b>psycho02</b><div class="stars">★★★★★</div>Amazing job!</div>
 
+<div class="review"><b>psycho02</b><div class="stars">★★★★★</div>Amazing job.</div>
 <div class="review"><b>charlessmith582</b><div class="stars">★★★★★</div>Better than expected.</div>
-<div class="review"><b>david_osullivan</b><div class="stars">★★★★★</div>Super fast delivery.</div>
-<div class="review"><b>originchurch</b><div class="stars">★★★★★</div>Always a pleasure.</div>
-<div class="review"><b>brettyspaghetti</b><div class="stars">★★★★★</div>Great communication.</div>
+<div class="review"><b>david_osullivan</b><div class="stars">★★★★★</div>Super fast.</div>
+<div class="review"><b>originchurch</b><div class="stars">★★★★★</div>Always great.</div>
+<div class="review"><b>brettyspaghetti</b><div class="stars">★★★★★</div>Excellent communication.</div>
 
 <div class="review"><b>wigwump</b><div class="stars">★★★★★</div>Exactly as described.</div>
-<div class="review"><b>sociosdelvideo</b><div class="stars">★★★★☆</div>Professional work.</div>
-
-<div class="review"><b>tracydw</b><div class="stars">★★★★★</div>Very impressed.</div>
-<div class="review"><b>djbillblack</b><div class="stars">★★★★★</div>Super fast!</div>
+<div class="review"><b>sociosdelvideo</b><div class="stars">★★★★☆</div>Very professional.</div>
+<div class="review"><b>tracydw</b><div class="stars">★★★★★</div>Impressed.</div>
+<div class="review"><b>djbillblack</b><div class="stars">★★★★★</div>Super fast turnaround.</div>
 <div class="review"><b>anthonystone</b><div class="stars">★★★★★</div>Amazing quality.</div>
 
 <div class="review"><b>larahroberts</b><div class="stars">★★★★★</div>Absolutely amazing.</div>
 <div class="review"><b>raphiecantor</b><div class="stars">★★★★★</div>Perfect delivery.</div>
-<div class="review"><b>calsimmons82</b><div class="stars">★★★★★</div>Great attention to detail.</div>
-
-<div class="review"><b>imisssuga1</b><div class="stars">★★★★★</div>Wonderful experience.</div>
-<div class="review"><b>moyno99</b><div class="stars">★★★★★</div>Top notch work.</div>
+<div class="review"><b>calsimmons82</b><div class="stars">★★★★★</div>Very thorough.</div>
+<div class="review"><b>imisssuga1</b><div class="stars">★★★★★</div>Great experience.</div>
+<div class="review"><b>moyno99</b><div class="stars">★★★★★</div>Top notch.</div>
 
 </div>
 </section>
 
-<!-- LEAD -->
+<!-- CTA -->
 <section id="book">
-<h2>Get Your Free Strategy Call</h2>
+<h2>Get Free Strategy Call</h2>
 <div style="text-align:center;">
-<a href="https://calendly.com/kinzabaig995/30min" target="_blank" class="btn">Book a Call</a>
+<a href="https://calendly.com/kinzabaig995/30min" class="btn">Book Now</a>
 </div>
 </section>
 
@@ -235,13 +257,19 @@ color:#94a3b8;
 <section>
 <h2>Follow Us</h2>
 <div style="text-align:center;">
-<a href="https://www.instagram.com/digitalbykinza/" target="_blank" class="btn">Instagram @digitalbykinza</a>
+<a href="https://www.instagram.com/digitalbykinza/" class="btn">Instagram</a>
 </div>
 </section>
 
 <footer>
 <p>© 2026 DigitalByKinza</p>
 </footer>
+
+<script>
+function toggleMenu(){
+document.querySelector(".nav-links").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
