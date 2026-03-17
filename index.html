@@ -3,15 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>DigitalByKinza</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
+
 body{
 font-family:Poppins;
-background:#020617;
+background: radial-gradient(circle at top,#1e3a8a 0%,#020617 70%);
 color:white;
 }
 
@@ -23,14 +25,17 @@ width:100%;
 padding:18px 8%;
 display:flex;
 justify-content:space-between;
-background:#020617;
+background:rgba(2,6,23,0.8);
+backdrop-filter:blur(10px);
 z-index:1000;
 }
-.nav a{
+
+nav a{
 margin:0 15px;
-color:#94a3b8;
+color:#cbd5e1;
 text-decoration:none;
 }
+
 .cta{
 background:#ec4899;
 padding:10px 18px;
@@ -40,54 +45,59 @@ border-radius:6px;
 /* HERO */
 .hero{
 display:flex;
-justify-content:space-between;
 align-items:center;
-padding:150px 8%;
+justify-content:space-between;
+padding:140px 8%;
 gap:40px;
 }
 
-.hero h1{
-font-size:48px;
-}
-.hero span{color:#ec4899;}
-.hero p{color:#94a3b8;margin-top:20px;}
+.hero h1{font-size:48px;}
+.hero span{color:#60a5fa;}
+.hero p{color:#94a3b8;margin-top:15px;}
 
 .btn{
-display:inline-block;
-margin-top:20px;
 background:#3b82f6;
-padding:12px 25px;
+padding:12px 24px;
 border-radius:8px;
+margin-top:20px;
+display:inline-block;
 }
 
+/* IMAGE */
 .hero-img{
 width:400px;
-height:250px;
+height:260px;
 background:#111827;
 border-radius:12px;
 }
 
-/* SECTION */
-section{padding:80px 8%;}
+/* SECTIONS */
+section{padding:90px 8%;}
 h2{text-align:center;margin-bottom:50px;}
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:25px;
 }
 
 /* CARD */
 .card{
-background:#111827;
-padding:20px;
-border-radius:10px;
+background:rgba(255,255,255,0.05);
+padding:25px;
+border-radius:12px;
 }
 
 /* STRIP */
 .strip{
-background:#111827;
+text-align:center;
+background:#020617;
 padding:40px;
+color:#94a3b8;
+}
+
+/* VALUES ICON STYLE */
+.value{
 text-align:center;
 }
 
@@ -98,9 +108,24 @@ grid-template-columns:1fr 1fr;
 gap:40px;
 }
 
+/* CASE BOX */
+.case{
+background:rgba(236,72,153,0.1);
+padding:25px;
+border-radius:10px;
+text-align:center;
+}
+
+/* TESTIMONIAL */
+.testimonial{
+text-align:center;
+max-width:600px;
+margin:auto;
+}
+
 /* FAQ */
 .faq{
-background:#111827;
+background:rgba(255,255,255,0.05);
 padding:20px;
 border-radius:10px;
 margin:10px 0;
@@ -111,8 +136,9 @@ input,textarea{
 width:100%;
 padding:12px;
 margin:10px 0;
-background:#111827;
 border:none;
+border-radius:8px;
+background:#111827;
 color:white;
 }
 
@@ -130,20 +156,20 @@ color:#94a3b8;
 
 <header>
 <h2>DIGITALBYKINZA</h2>
-<div class="nav">
+<nav>
 <a href="#">Services</a>
 <a href="#">Work</a>
 <a href="#">Process</a>
-<a href="#">Contact</a>
+<a href="#">FAQ</a>
 <a href="#" class="cta">Book a Call</a>
-</div>
+</nav>
 </header>
 
 <!-- HERO -->
 <section class="hero">
 <div>
 <h1>Leading SaaS <span>Video Production</span> Studio</h1>
-<p>We help SaaS companies grow with high converting videos.</p>
+<p>We create high-converting videos that help SaaS companies grow faster.</p>
 <a class="btn">Book a Call</a>
 </div>
 
@@ -151,16 +177,16 @@ color:#94a3b8;
 </section>
 
 <!-- LOGOS -->
-<section class="strip">
-Trusted by startups worldwide
-</section>
+<div class="strip">
+Trusted by SaaS founders worldwide
+</div>
 
 <!-- ABOUT -->
 <section>
-<h2>Melbourne’s Most Trusted Video Company</h2>
+<h2>About Us</h2>
 <div class="grid">
-<div class="card">We simplify complex SaaS products.</div>
-<div class="card">We create high converting content.</div>
+<div class="card">We simplify complex SaaS ideas.</div>
+<div class="card">We focus on conversions, not just visuals.</div>
 </div>
 </section>
 
@@ -168,14 +194,14 @@ Trusted by startups worldwide
 <section>
 <h2>Our Core Values</h2>
 <div class="grid">
-<div class="card">Attention to Detail</div>
-<div class="card">Creative Work</div>
-<div class="card">Fast Delivery</div>
-<div class="card">Client First</div>
+<div class="value">Attention to Detail</div>
+<div class="value">Creative Quality</div>
+<div class="value">Fast Delivery</div>
+<div class="value">Client First</div>
 </div>
 </section>
 
-<!-- PORTFOLIO -->
+<!-- WORK -->
 <section>
 <h2>Latest Work</h2>
 <div class="grid">
@@ -187,17 +213,17 @@ Trusted by startups worldwide
 
 <!-- PROCESS -->
 <section>
-<h2>SaaS Video Process</h2>
+<h2>SaaS Video Production Process</h2>
 <div class="process">
 <div>
-<p>We follow a structured process to deliver high quality videos.</p>
+<p>We follow a proven structure to deliver high-performing videos.</p>
 </div>
 
 <div>
 <p>01 Discovery</p>
-<p>02 Script</p>
+<p>02 Script Writing</p>
 <p>03 Storyboard</p>
-<p>04 Editing</p>
+<p>04 Animation</p>
 <p>05 Sound Design</p>
 <p>06 Delivery</p>
 </div>
@@ -208,23 +234,23 @@ Trusted by startups worldwide
 <section>
 <h2>A Million Dollar Success Story</h2>
 <div class="grid">
-<div class="card">$805,200 Generated</div>
-<div class="card">98,200 Users</div>
+<div class="case"><h3>$805,200</h3><p>Revenue Generated</p></div>
+<div class="case"><h3>98,200</h3><p>Users Converted</p></div>
 </div>
 </section>
 
 <!-- TESTIMONIAL -->
 <section>
 <h2>What Clients Say</h2>
-<div class="grid">
-<div class="card">“Amazing work and communication.”</div>
-<div class="card">“Best SaaS video we’ve used.”</div>
+<div class="testimonial">
+<p>"I got to explain the idea of my company clearly and increase conversions."</p>
+<h4>— Happy Client</h4>
 </div>
 </section>
 
 <!-- FAQ -->
 <section>
-<h2>FAQ</h2>
+<h2>Frequently Asked Questions</h2>
 <div class="faq">How long does it take?</div>
 <div class="faq">What is pricing?</div>
 <div class="faq">Do you offer revisions?</div>
@@ -236,13 +262,13 @@ Trusted by startups worldwide
 <form>
 <input placeholder="Name">
 <input placeholder="Email">
-<textarea placeholder="Project Details"></textarea>
+<textarea placeholder="Tell us about your project"></textarea>
 <button class="btn">Submit</button>
 </form>
 </section>
 
 <footer>
-<p>© DigitalByKinza</p>
+<p>© 2026 DigitalByKinza</p>
 </footer>
 
 </body>
