@@ -17,7 +17,7 @@ background: radial-gradient(circle at top,#1e3a8a 0%,#020617 70%);
 color:white;
 }
 
-/* NAV */
+/* NAVBAR */
 header{
 position:fixed;
 top:0;
@@ -71,7 +71,7 @@ background:#111827;
 border-radius:12px;
 }
 
-/* SECTIONS */
+/* SECTION */
 section{padding:90px 8%;}
 h2{text-align:center;margin-bottom:50px;}
 
@@ -88,17 +88,27 @@ padding:25px;
 border-radius:12px;
 }
 
-/* STRIP */
-.strip{
-text-align:center;
-background:#020617;
-padding:40px;
-color:#94a3b8;
+/* VIDEO SECTION */
+.video-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
 }
 
-/* VALUES ICON STYLE */
-.value{
-text-align:center;
+.video-box{
+position:relative;
+padding-top:56%;
+background:#000;
+border-radius:12px;
+overflow:hidden;
+}
+
+.video-box iframe{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
 }
 
 /* PROCESS */
@@ -108,19 +118,12 @@ grid-template-columns:1fr 1fr;
 gap:40px;
 }
 
-/* CASE BOX */
+/* CASE */
 .case{
 background:rgba(236,72,153,0.1);
 padding:25px;
 border-radius:10px;
 text-align:center;
-}
-
-/* TESTIMONIAL */
-.testimonial{
-text-align:center;
-max-width:600px;
-margin:auto;
 }
 
 /* FAQ */
@@ -157,11 +160,11 @@ color:#94a3b8;
 <header>
 <h2>DIGITALBYKINZA</h2>
 <nav>
-<a href="#">Services</a>
-<a href="#">Work</a>
-<a href="#">Process</a>
-<a href="#">FAQ</a>
-<a href="#" class="cta">Book a Call</a>
+<a href="#services">Services</a>
+<a href="#portfolio">Work</a>
+<a href="#process">Process</a>
+<a href="#faq">FAQ</a>
+<a href="#book" class="cta">Book a Call</a>
 </nav>
 </header>
 
@@ -169,61 +172,61 @@ color:#94a3b8;
 <section class="hero">
 <div>
 <h1>Leading SaaS <span>Video Production</span> Studio</h1>
-<p>We create high-converting videos that help SaaS companies grow faster.</p>
-<a class="btn">Book a Call</a>
+<p>We create high-converting SaaS videos that turn viewers into paying users.</p>
+<a href="#book" class="btn">Book a Call</a>
 </div>
 
 <div class="hero-img"></div>
 </section>
 
-<!-- LOGOS -->
-<div class="strip">
-Trusted by SaaS founders worldwide
-</div>
-
-<!-- ABOUT -->
-<section>
-<h2>About Us</h2>
+<!-- SERVICES -->
+<section id="services">
+<h2>Services</h2>
 <div class="grid">
-<div class="card">We simplify complex SaaS ideas.</div>
-<div class="card">We focus on conversions, not just visuals.</div>
-</div>
-</section>
-
-<!-- VALUES -->
-<section>
-<h2>Our Core Values</h2>
-<div class="grid">
-<div class="value">Attention to Detail</div>
-<div class="value">Creative Quality</div>
-<div class="value">Fast Delivery</div>
-<div class="value">Client First</div>
+<div class="card">SaaS Explainer Videos</div>
+<div class="card">Product Demo Videos</div>
+<div class="card">SaaS Ads</div>
+<div class="card">Reels</div>
+<div class="card">YouTube Editing</div>
+<div class="card">VSL Videos</div>
 </div>
 </section>
 
-<!-- WORK -->
-<section>
-<h2>Latest Work</h2>
-<div class="grid">
-<div class="card">Video 1</div>
-<div class="card">Video 2</div>
-<div class="card">Video 3</div>
+<!-- VIDEO PORTFOLIO -->
+<section id="portfolio">
+<h2>Our Work</h2>
+
+<div class="video-grid">
+
+<div class="video-box">
+<iframe src="" allowfullscreen></iframe>
+</div>
+
+<div class="video-box">
+<iframe src="" allowfullscreen></iframe>
+</div>
+
+<div class="video-box">
+<iframe src="" allowfullscreen></iframe>
+</div>
+
 </div>
 </section>
 
 <!-- PROCESS -->
-<section>
+<section id="process">
 <h2>SaaS Video Production Process</h2>
+
 <div class="process">
 <div>
-<p>We follow a proven structure to deliver high-performing videos.</p>
+<p>We follow a proven system to create high converting videos.</p>
 </div>
 
 <div>
 <p>01 Discovery</p>
 <p>02 Script Writing</p>
 <p>03 Storyboard</p>
-<p>04 Animation</p>
+<p>04 Editing</p>
 <p>05 Sound Design</p>
 <p>06 Delivery</p>
 </div>
@@ -232,39 +235,43 @@ Trusted by SaaS founders worldwide
 
 <!-- CASE -->
 <section>
-<h2>A Million Dollar Success Story</h2>
+<h2>Success Story</h2>
+
 <div class="grid">
 <div class="case"><h3>$805,200</h3><p>Revenue Generated</p></div>
 <div class="case"><h3>98,200</h3><p>Users Converted</p></div>
 </div>
 </section>
 
-<!-- TESTIMONIAL -->
-<section>
-<h2>What Clients Say</h2>
-<div class="testimonial">
-<p>"I got to explain the idea of my company clearly and increase conversions."</p>
-<h4>— Happy Client</h4>
-</div>
-</section>
-
 <!-- FAQ -->
-<section>
+<section id="faq">
 <h2>Frequently Asked Questions</h2>
-<div class="faq">How long does it take?</div>
-<div class="faq">What is pricing?</div>
+
+<div class="faq">How long does a video take?</div>
 <div class="faq">Do you offer revisions?</div>
+<div class="faq">What is pricing?</div>
+
 </section>
 
 <!-- CONTACT -->
-<section>
-<h2>Contact Us</h2>
+<section id="book">
+<h2>Get Free Strategy Call</h2>
+
 <form>
-<input placeholder="Name">
-<input placeholder="Email">
+<input placeholder="Your Name">
+<input placeholder="Your Email">
 <textarea placeholder="Tell us about your project"></textarea>
 <button class="btn">Submit</button>
 </form>
+
+</section>
+
+<!-- INSTAGRAM -->
+<section>
+<h2>Follow @digitalbykinza</h2>
+<div style="text-align:center;">
+<a href="https://www.instagram.com/digitalbykinza/" class="btn">Instagram</a>
+</div>
 </section>
 
 <footer>
