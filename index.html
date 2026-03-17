@@ -14,11 +14,10 @@
 body{
 font-family:Poppins,sans-serif;
 color:white;
-overflow-x:hidden;
 background:#020617;
 }
 
-/* HERO BACKGROUND IMAGE */
+/* HERO WITH REAL IMAGE */
 .hero{
 min-height:100vh;
 display:flex;
@@ -28,10 +27,10 @@ align-items:center;
 text-align:center;
 padding:120px 20px;
 position:relative;
-background:url('bg.jpg') center/cover no-repeat;
+background:url('bg.jpg') no-repeat center center/cover;
 }
 
-/* DARK OVERLAY */
+/* LIGHT OVERLAY ONLY FOR TEXT VISIBILITY */
 .hero::before{
 content:"";
 position:absolute;
@@ -39,11 +38,10 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-background:linear-gradient(to bottom, rgba(2,6,23,0.8), rgba(2,6,23,0.95));
+background:rgba(2,6,23,0.4); /* LIGHT overlay */
 z-index:0;
 }
 
-/* CONTENT ABOVE IMAGE */
 .hero *{
 position:relative;
 z-index:1;
@@ -59,7 +57,7 @@ color:#60a5fa;
 }
 
 .hero p{
-color:#cbd5e1;
+color:#e2e8f0;
 max-width:650px;
 margin-top:20px;
 font-size:18px;
@@ -74,8 +72,8 @@ padding:20px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-background:rgba(2,6,23,0.7);
-backdrop-filter:blur(10px);
+background:rgba(2,6,23,0.6);
+backdrop-filter:blur(8px);
 z-index:1000;
 }
 
@@ -86,7 +84,7 @@ text-decoration:none;
 }
 
 .cta{
-background:linear-gradient(45deg,#3b82f6,#6366f1);
+background:#3b82f6;
 padding:10px 18px;
 border-radius:8px;
 }
@@ -100,7 +98,6 @@ color:white;
 text-decoration:none;
 display:inline-block;
 margin-top:30px;
-box-shadow:0 0 25px rgba(59,130,246,0.6);
 }
 
 /* SECTIONS */
@@ -116,37 +113,13 @@ gap:35px;
 
 .card{
 background:rgba(255,255,255,0.05);
-backdrop-filter:blur(20px);
-border:1px solid rgba(255,255,255,0.08);
-padding:35px;
-border-radius:18px;
-}
-
-/* PORTFOLIO */
-.portfolio-card{
-height:200px;
-display:flex;
-align-items:center;
-justify-content:center;
-background:rgba(255,255,255,0.03);
-border-radius:12px;
-color:#94a3b8;
+padding:30px;
+border-radius:16px;
 }
 
 /* BOOK SECTION */
 #book{
 background:linear-gradient(180deg, transparent, rgba(59,130,246,0.08));
-}
-
-/* CONTACT */
-input, textarea{
-padding:14px;
-width:100%;
-margin:10px 0;
-border-radius:10px;
-border:none;
-background:#111827;
-color:white;
 }
 
 /* FOOTER */
@@ -183,45 +156,33 @@ color:#94a3b8;
 <h2>Our Services</h2>
 <div class="cards">
 
-<div class="card"><h3>SaaS Explainer Videos</h3><p>We turn complex products into simple, engaging stories that drive conversions.</p></div>
+<div class="card"><h3>SaaS Explainer Videos</h3><p>We turn complex products into simple stories.</p></div>
 
-<div class="card"><h3>Demo / Product Walkthrough</h3><p>Show your dashboard with clarity and clean visuals.</p></div>
+<div class="card"><h3>Demo / Walkthrough</h3><p>Show your product clearly.</p></div>
 
-<div class="card"><h3>SaaS Ads (Meta / LinkedIn)</h3><p>Short-form videos designed to convert viewers into users.</p></div>
+<div class="card"><h3>SaaS Ads</h3><p>High-converting short videos.</p></div>
 
-<div class="card"><h3>Reels / Short Form Content</h3><p>Engaging content for Instagram, TikTok, and Shorts.</p></div>
+<div class="card"><h3>Reels / Shorts</h3><p>Engaging fast content.</p></div>
 
-<div class="card"><h3>YouTube Editing</h3><p>High-retention editing with storytelling.</p></div>
+<div class="card"><h3>YouTube Editing</h3><p>Retention-focused editing.</p></div>
 
-<div class="card"><h3>VSL Production</h3><p>Sales-focused video funnels that convert.</p></div>
+<div class="card"><h3>VSL Production</h3><p>Sales-driven videos.</p></div>
 
 </div>
 </section>
 
-<!-- BOOK CALL -->
+<!-- BOOK -->
 <section id="book">
 <h2>Get Your Free Strategy Call</h2>
 
-<div style="display:flex;flex-direction:column;align-items:center;text-align:center;">
-<p style="color:#94a3b8; max-width:500px;">
-Schedule a quick call to discuss your SaaS video needs and how we can help you grow.
-</p>
+<div style="text-align:center;">
+<p style="color:#94a3b8;">Book a call and let's grow your SaaS.</p>
 
 <a href="https://calendly.com/kinzabaig995/30min" target="_blank" class="btn">
 Book a Call
 </a>
 </div>
 
-</section>
-
-<!-- PORTFOLIO -->
-<section id="portfolio">
-<h2>Our Work</h2>
-<div class="cards">
-<div class="portfolio-card">Add your video</div>
-<div class="portfolio-card">Add your video</div>
-<div class="portfolio-card">Add your video</div>
-</div>
 </section>
 
 <footer>
