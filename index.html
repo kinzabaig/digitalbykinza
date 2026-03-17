@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>DigitalByKinza | SaaS Video Agency</title>
+<title>DigitalByKinza</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap" rel="stylesheet">
 
@@ -15,6 +15,7 @@ body{
 font-family:Poppins;
 background: radial-gradient(circle at top, #1e3a8a 0%, #020617 70%);
 color:white;
+scroll-behavior:smooth;
 }
 
 /* NAV */
@@ -26,21 +27,8 @@ padding:18px 8%;
 display:flex;
 justify-content:space-between;
 background:rgba(15,23,42,0.7);
-backdrop-filter:blur(10px);
+backdrop-filter:blur(12px);
 z-index:1000;
-}
-
-nav a{
-margin:0 12px;
-color:#cbd5e1;
-text-decoration:none;
-}
-
-.cta{
-background:#3b82f6;
-padding:10px 18px;
-border-radius:8px;
-box-shadow:0 0 20px rgba(59,130,246,0.6);
 }
 
 /* HERO */
@@ -51,12 +39,21 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-padding:100px 20px;
+animation:fadeUp 1s ease;
 }
 
-.hero h1{font-size:52px;}
+.hero h1{
+font-size:54px;
+}
+
 .hero span{color:#60a5fa;}
+
 .hero p{color:#94a3b8;margin-top:15px;}
+
+@keyframes fadeUp{
+from{opacity:0;transform:translateY(40px);}
+to{opacity:1;transform:translateY(0);}
+}
 
 /* BUTTON */
 .btn{
@@ -67,15 +64,22 @@ margin-top:20px;
 display:inline-block;
 box-shadow:0 0 25px rgba(59,130,246,0.6);
 transition:0.3s;
+animation:pulse 2s infinite;
 }
 
 .btn:hover{
-transform:translateY(-4px);
-box-shadow:0 0 45px rgba(59,130,246,1);
+transform:translateY(-5px) scale(1.05);
+box-shadow:0 0 50px #3b82f6;
+}
+
+@keyframes pulse{
+0%{box-shadow:0 0 10px #3b82f6;}
+50%{box-shadow:0 0 35px #3b82f6;}
+100%{box-shadow:0 0 10px #3b82f6;}
 }
 
 /* SECTION */
-section{padding:90px 8%;}
+section{padding:100px 8%;}
 h2{text-align:center;margin-bottom:50px;}
 
 /* GRID */
@@ -87,38 +91,69 @@ gap:25px;
 
 /* CARD */
 .card{
-background:rgba(255,255,255,0.04);
-padding:20px;
-border-radius:12px;
+background:rgba(255,255,255,0.05);
+padding:25px;
+border-radius:15px;
+backdrop-filter:blur(15px);
+transition:0.4s;
+opacity:0;
+transform:translateY(40px);
+}
+
+.card.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.card:hover{
+transform:translateY(-10px) scale(1.03);
+box-shadow:0 0 40px rgba(59,130,246,0.5);
 }
 
 /* PORTFOLIO */
 .portfolio-box{
 height:220px;
+border-radius:15px;
+background:linear-gradient(45deg,#0f172a,#1e3a8a);
 display:flex;
 align-items:center;
 justify-content:center;
-border-radius:12px;
-background:rgba(255,255,255,0.03);
-color:#64748b;
+position:relative;
+overflow:hidden;
+transition:0.4s;
 }
 
-/* CASE */
-.case{
-background:rgba(59,130,246,0.1);
-padding:25px;
-border-radius:12px;
-text-align:center;
+.portfolio-box:hover{
+transform:scale(1.05);
 }
 
-/* REVIEW */
+.portfolio-box::after{
+content:"▶";
+position:absolute;
+font-size:30px;
+background:white;
+color:black;
+padding:10px;
+border-radius:50%;
+opacity:0;
+transition:0.3s;
+}
+
+.portfolio-box:hover::after{
+opacity:1;
+}
+
+/* REVIEWS */
 .review{
-background:rgba(255,255,255,0.04);
-padding:18px;
+background:rgba(255,255,255,0.05);
+padding:20px;
 border-radius:12px;
+transition:0.3s;
 }
 
-.stars{color:gold;}
+.review:hover{
+box-shadow:0 0 30px #3b82f6;
+}
 
 /* FORM */
 input, textarea{
@@ -134,7 +169,7 @@ color:white;
 /* FOOTER */
 footer{
 text-align:center;
-padding:30px;
+padding:40px;
 color:#94a3b8;
 }
 </style>
@@ -144,24 +179,17 @@ color:#94a3b8;
 
 <header>
 <h2>DIGITALBYKINZA</h2>
-<nav>
-<a href="#services">Services</a>
-<a href="#work">Work</a>
-<a href="#case">Case</a>
-<a href="#reviews">Reviews</a>
-<a href="#book" class="cta">Book Call</a>
-</nav>
 </header>
 
 <!-- HERO -->
 <section class="hero">
 <h1>We Create <span>High-Converting SaaS Videos</span></h1>
-<p>Explainers, Ads & Product Videos designed to increase conversions.</p>
+<p>Explainers, Ads & Product Videos that drive results.</p>
 <a href="#book" class="btn">Book a Free Call</a>
 </section>
 
 <!-- SERVICES -->
-<section id="services">
+<section>
 <h2>Services</h2>
 <div class="grid">
 <div class="card">SaaS Explainer Videos</div>
@@ -174,85 +202,51 @@ color:#94a3b8;
 </section>
 
 <!-- PORTFOLIO -->
-<section id="work">
+<section>
 <h2>Our Work</h2>
 <div class="grid">
-<div class="portfolio-box">Your SaaS Video 1</div>
-<div class="portfolio-box">Your SaaS Video 2</div>
-<div class="portfolio-box">Your SaaS Video 3</div>
-</div>
-</section>
-
-<!-- CASE STUDY -->
-<section id="case">
-<h2>Case Study</h2>
-<div class="grid">
-<div class="case">
-<h3>+38% Conversion</h3>
-<p>SaaS explainer increased signups.</p>
-</div>
-<div class="case">
-<h3>3X Engagement</h3>
-<p>Ads boosted retention.</p>
-</div>
-<div class="case">
-<h3>$120K Revenue</h3>
-<p>VSL generated strong revenue.</p>
-</div>
+<div class="portfolio-box">Video 1</div>
+<div class="portfolio-box">Video 2</div>
+<div class="portfolio-box">Video 3</div>
 </div>
 </section>
 
 <!-- REVIEWS -->
-<section id="reviews">
+<section>
 <h2>Client Reviews</h2>
 <div class="grid">
-
-<div class="review"><b>mandelaonline</b><div class="stars">★★★★★</div>Always top quality work.</div>
-<div class="review"><b>lukepriceee</b><div class="stars">★★★★★</div>Fast and great results.</div>
-<div class="review"><b>pbojanic</b><div class="stars">★★★★★</div>Perfect delivery.</div>
-<div class="review"><b>charlessmith</b><div class="stars">★★★★★</div>Better than expected.</div>
-<div class="review"><b>david</b><div class="stars">★★★★★</div>Amazing work.</div>
-<div class="review"><b>bretty</b><div class="stars">★★★★★</div>Great communication.</div>
-
+<div class="review">★★★★★ Great quality work</div>
+<div class="review">★★★★★ Fast delivery</div>
+<div class="review">★★★★★ Amazing results</div>
 </div>
 </section>
 
-<!-- LEAD FUNNEL -->
-<section>
-<h2>Get Free Video Strategy</h2>
-
-<form action="https://formsubmit.co/kinzakhalid1524@gmail.com" method="POST">
-<input type="text" name="Name" placeholder="Your Name" required>
-<input type="email" name="Email" placeholder="Your Email" required>
-<input type="text" name="Website" placeholder="Your SaaS Website">
-<button class="btn">Get Free Strategy</button>
-</form>
-
-</section>
-
-<!-- INSTAGRAM -->
-<section>
-<h2>Follow Our Work</h2>
-<div style="text-align:center;">
-<a href="https://www.instagram.com/digitalbykinza/" target="_blank" class="btn">
-Follow @digitalbykinza
-</a>
-</div>
-</section>
-
-<!-- BOOK -->
+<!-- FORM -->
 <section id="book">
-<h2>Book a Free Strategy Call</h2>
-<div style="text-align:center;">
-<a href="https://calendly.com/kinzabaig995/30min" class="btn">Schedule Now</a>
-</div>
+<h2>Get Free Strategy</h2>
+<form>
+<input placeholder="Your Name">
+<input placeholder="Email">
+<button class="btn">Submit</button>
+</form>
 </section>
 
 <footer>
-<p>DIGITALBYKINZA</p>
 <p>Instagram: @digitalbykinza</p>
-<p>WhatsApp: +923472105484</p>
 </footer>
+
+<script>
+const cards = document.querySelectorAll(".card");
+
+window.addEventListener("scroll", ()=>{
+cards.forEach(card=>{
+const top = card.getBoundingClientRect().top;
+if(top < window.innerHeight - 50){
+card.classList.add("show");
+}
+});
+});
+</script>
 
 </body>
 </html>
