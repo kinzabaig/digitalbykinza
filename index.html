@@ -10,6 +10,7 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
+
 body{
 font-family:Poppins;
 background:#05070d;
@@ -70,7 +71,6 @@ gap:30px;
 align-items:center;
 }
 
-/* STACK */
 .stack{
 position:relative;
 width:300px;
@@ -112,7 +112,6 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 }
-
 .work-card{
 background:#111827;
 padding:20px;
@@ -132,14 +131,60 @@ padding:20px;
 border-radius:10px;
 }
 
+/* REVIEWS */
+.reviews{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+.review{
+background:#111827;
+padding:20px;
+border-radius:10px;
+}
+
 /* CTA */
 .cta{text-align:center;}
 
+/* FOOTER */
 footer{
-background:#000;
-padding:40px;
-text-align:center;
+background:linear-gradient(90deg,#7a1c1c,#1a1a2e,#05070d);
+padding:60px 8%;
+margin-top:50px;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:2fr 1fr 1fr;
+gap:40px;
+}
+
+.footer h2{
+font-size:28px;
+margin-bottom:10px;
+}
+
+.footer p{
+color:#bbb;
+font-size:14px;
+}
+
+.footer-links a{
+display:block;
+color:#aaa;
+margin-bottom:10px;
+text-decoration:none;
+}
+.footer-links a:hover{color:white;}
+
+.bottom{
+margin-top:40px;
+border-top:1px solid rgba(255,255,255,0.1);
+padding-top:20px;
+display:flex;
+justify-content:space-between;
 color:#777;
+font-size:13px;
 }
 </style>
 </head>
@@ -159,7 +204,6 @@ color:#777;
 
 <!-- HERO -->
 <section class="hero">
-
 <div>
 <h1>
 We Create High-Converting <br>
@@ -172,9 +216,7 @@ Viewers Into Users
 
 <div class="right">
 <div class="stack">
-<div></div>
-<div></div>
-<div></div>
+<div></div><div></div><div></div>
 </div>
 
 <div class="stats-box">
@@ -182,7 +224,6 @@ Viewers Into Users
 <p>Client Satisfaction</p>
 </div>
 </div>
-
 </section>
 
 <!-- STATS -->
@@ -200,17 +241,16 @@ Viewers Into Users
 <!-- WORK -->
 <section>
 <div class="work">
-
 <h1>LATEST</h1>
 
 <div class="work-card">
-<h3>SaaS Explainer Video</h3>
-<p>High-converting product video</p>
-<a class="btn">View</a>
+<h3>High-Converting SaaS Explainer</h3>
+<p>Product demo that boosts conversion</p>
+<br>
+<a class="btn">View Project</a>
 </div>
 
 <h1>WORK</h1>
-
 </div>
 </section>
 
@@ -218,17 +258,24 @@ Viewers Into Users
 <section>
 <h2>Video Solutions Designed To Grow SaaS Brands</h2>
 <br><br>
-
 <div class="grid">
-
 <div class="card">SaaS Explainer Videos</div>
 <div class="card">SaaS Product Demo</div>
 <div class="card">SaaS Promo Videos</div>
-
 <div class="card">VSL</div>
 <div class="card">Reels</div>
 <div class="card">YouTube Editing</div>
+</div>
+</section>
 
+<!-- REVIEWS -->
+<section>
+<h2>Client Stories & Feedback</h2>
+<br><br>
+<div class="reviews">
+<div class="review">“Amazing SaaS video. Boosted our signups massively.”</div>
+<div class="review">“Clear storytelling and high-quality visuals.”</div>
+<div class="review">“Best video team we’ve worked with.”</div>
 </div>
 </section>
 
@@ -239,8 +286,40 @@ Viewers Into Users
 <a href="https://calendly.com/kinzabaig995/30min" target="_blank" class="btn">Book a Call</a>
 </section>
 
-<footer>
-<p>© DigitalByKinza</p>
+<!-- FOOTER -->
+<footer class="footer">
+
+<div class="footer-grid">
+
+<div>
+<h2>DigitalByKinza</h2>
+<p>
+We create high-converting SaaS videos that help brands grow, scale, and convert more users.
+</p>
+</div>
+
+<div class="footer-links">
+<h3>Quick Links</h3>
+<a href="#">Home</a>
+<a href="#">Services</a>
+<a href="#">Work</a>
+<a href="#">Contact</a>
+</div>
+
+<div class="footer-links">
+<h3>Contact</h3>
+<a href="#">info@yourdomain.com</a>
+<a href="#">+92 300 0000000</a>
+<a href="#">Pakistan</a>
+</div>
+
+</div>
+
+<div class="bottom">
+<p>© 2026 DigitalByKinza</p>
+<p>Privacy Policy | Terms</p>
+</div>
+
 </footer>
 
 </body>
