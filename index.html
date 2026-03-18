@@ -1,3 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Kinza | SaaS Video Specialist</title>
+
+<style>
+
+/* RESET */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: 'Segoe UI', sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#05070d;
+color:white;
+}
+
+/* HEADER */
+header{
+position:fixed;
+width:100%;
+top:0;
+display:flex;
+justify-content:space-between;
+padding:20px 8%;
+background:rgba(0,0,0,0.5);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+nav a{
+margin-left:25px;
+color:white;
+text-decoration:none;
+font-size:14px;
+}
+
+nav a:hover{
+color:#ff6a3d;
+}
+
+/* HERO */
+.hero{
+height:100vh;
+padding:120px 8%;
+background: radial-gradient(circle at 40% 40%, #a020f0, #05070d 60%);
+display:flex;
+align-items:center;
+}
+
+.hero h1{
+font-size:60px;
+max-width:600px;
+}
+
+.hero p{
+color:#ff6a3d;
+margin-bottom:10px;
+}
+
+.btn{
+background:#ff6a3d;
+padding:12px 25px;
+border-radius:25px;
+display:inline-block;
+margin-top:20px;
+color:white;
+text-decoration:none;
+}
+
+/* SECTION */
+section{
+padding:120px 8%;
+}
+
+/* STATS */
+.stats-grid{
+display:flex;
+justify-content:space-around;
+margin-top:40px;
+}
+
+/* WORK */
+.work{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.card{
+background:#0b0f18;
+padding:30px;
+border-radius:20px;
+display:flex;
+gap:20px;
+}
+
+.img{
+width:250px;
+height:180px;
+background:#ccc;
+border-radius:10px;
+}
+
+/* PORTFOLIO */
+.portfolio-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:30px;
+}
+
+.portfolio-card{
+background:#0b0f18;
+padding:20px;
+border-radius:15px;
+transition:0.3s;
+}
+
+.portfolio-card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 20px rgba(255,106,61,0.3);
+}
+
+.portfolio-img{
+height:200px;
+background:#ccc;
+border-radius:10px;
+margin-bottom:15px;
+}
+
+/* CTA */
+.cta{
+text-align:center;
+}
+
+.cta h1{
+font-size:50px;
+}
+
+/* REVIEWS */
+.reviews{
+display:flex;
+gap:20px;
+}
+
+.review-card{
+background:#0b0f18;
+padding:20px;
+border-radius:10px;
+flex:1;
+}
+
+/* BLOG */
+.blog-grid{
+display:flex;
+gap:20px;
+}
+
+.blog-main{
+flex:2;
+height:300px;
+background:#ccc;
+border-radius:10px;
+}
+
+.blog-small{
+flex:1;
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.blog-card{
+background:#0b0f18;
+padding:15px;
+border-radius:10px;
+}
+
+/* FOOTER */
+footer{
+background:linear-gradient(135deg,#7b1fa2,#05070d);
+padding:80px 8%;
+}
+
+.footer-top{
+display:flex;
+justify-content:space-between;
+}
+
+.footer-left h1{
+font-size:50px;
+}
+
+.footer-links p{
+color:#aaa;
+margin-top:8px;
+}
+
+.footer-bottom{
+margin-top:40px;
+display:flex;
+justify-content:space-between;
+color:#aaa;
+font-size:13px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+<div>KINZA</div>
+
+<nav>
+<a href="#hero">Home</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#services">Services</a>
+<a href="#blog">Blog</a>
+<a href="#contact">Contact</a>
+<a href="https://calendly.com/kinzabaig995/30min" target="_blank">Book Call</a>
+</nav>
+</header>
+
+<!-- HERO -->
+<section id="hero" class="hero">
+<div>
+<p>SaaS Video Specialist</p>
+
+<h1>I Create High-Converting SaaS Videos That Drive Sales & Growth</h1>
+
+<a href="https://calendly.com/kinzabaig995/30min" target="_blank" class="btn">
+BOOK A CALL →
+</a>
+</div>
+</section>
+
 <!-- PORTFOLIO -->
 <section id="portfolio">
 
@@ -7,38 +250,92 @@ FEATURED PROJECTS
 
 <div class="portfolio-grid">
 
-<!-- PROJECT 1 -->
 <div class="portfolio-card">
 <div class="portfolio-img"></div>
 <h3>SaaS Explainer Video</h3>
-<p>Boosted conversions by 45%</p>
-<a href="#">VIEW PROJECT →</a>
+<p>Boosted conversions</p>
 </div>
 
-<!-- PROJECT 2 -->
 <div class="portfolio-card">
 <div class="portfolio-img"></div>
-<h3>Product Demo Video</h3>
-<p>Improved onboarding experience</p>
-<a href="#">VIEW PROJECT →</a>
+<h3>Product Demo</h3>
+<p>Improved onboarding</p>
 </div>
 
-<!-- PROJECT 3 -->
 <div class="portfolio-card">
 <div class="portfolio-img"></div>
-<h3>SaaS Promo Ad</h3>
-<p>Scaled paid ads performance</p>
-<a href="#">VIEW PROJECT →</a>
+<h3>SaaS Promo</h3>
+<p>Ad performance scale</p>
 </div>
 
-<!-- PROJECT 4 -->
 <div class="portfolio-card">
 <div class="portfolio-img"></div>
-<h3>VSL Funnel Video</h3>
-<p>Generated high-ticket sales</p>
-<a href="#">VIEW PROJECT →</a>
+<h3>VSL Funnel</h3>
+<p>High ticket conversions</p>
 </div>
 
 </div>
 
 </section>
+
+<!-- CTA -->
+<section class="cta">
+<h1>LET’S WORK TOGETHER</h1>
+
+<a href="https://calendly.com/kinzabaig995/30min" target="_blank" class="btn">
+BOOK A CALL →
+</a>
+</section>
+
+<!-- BLOG -->
+<section id="blog">
+
+<h1>INSIGHTS & TIPS</h1>
+
+<div class="blog-grid">
+
+<div class="blog-main"></div>
+
+<div class="blog-small">
+<div class="blog-card">UI/UX Trends</div>
+<div class="blog-card">Design Tips</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+<footer id="contact">
+
+<div class="footer-top">
+
+<div class="footer-left">
+<h1>KINZA</h1>
+
+<p style="margin-top:20px;">
+Email: kinza@email.com<br>
+Phone: +92 XXX XXX XXX<br>
+Instagram: @kinza.creates
+</p>
+</div>
+
+<div>
+<h3>Quick Links</h3>
+<p>Home</p>
+<p>Portfolio</p>
+<p>Services</p>
+<p>Blog</p>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+<p>© 2026 Kinza. All Rights Reserved.</p>
+<p>Instagram • LinkedIn • YouTube</p>
+</div>
+
+</footer>
+
+</body>
+</html>
