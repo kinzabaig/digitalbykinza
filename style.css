@@ -1,0 +1,57 @@
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+font-family:Arial;
+background:#05070d;
+color:white;
+}
+
+/* NAV */
+header{
+display:flex;
+justify-content:space-between;
+padding:20px 8%;
+background:#000;
+}
+
+nav a{
+margin:0 10px;
+color:#aaa;
+text-decoration:none;
+}
+
+nav a:hover{color:white;}
+
+.btn{
+background:#ff5a3c;
+padding:10px 20px;
+border-radius:20px;
+color:white;
+text-decoration:none;
+}
+
+/* SECTION */
+section{padding:80px 8%;}
+
+/* HERO */
+.hero{
+height:70vh;
+display:flex;
+align-items:center;
+background:linear-gradient(90deg,#7a1c1c,#05070d);
+}
+
+.hero h1{font-size:40px;}
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:#111827;
+padding:20px;
+border-radius:10px;
+}
