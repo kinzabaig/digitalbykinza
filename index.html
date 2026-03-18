@@ -28,9 +28,13 @@ top:0;
 display:flex;
 justify-content:space-between;
 padding:20px 8%;
-background:rgba(0,0,0,0.5);
+background:rgba(0,0,0,0.6);
 backdrop-filter:blur(10px);
 z-index:1000;
+}
+
+.logo{
+font-weight:bold;
 }
 
 nav a{
@@ -78,33 +82,31 @@ section{
 padding:120px 8%;
 }
 
-/* STATS */
-.stats-grid{
-display:flex;
-justify-content:space-around;
+/* SERVICES */
+.services{
+text-align:center;
+}
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
 margin-top:40px;
 }
 
-/* WORK */
-.work{
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
-
-.card{
+.service-card{
 background:#0b0f18;
-padding:30px;
-border-radius:20px;
-display:flex;
-gap:20px;
+padding:25px;
+border-radius:15px;
 }
 
-.img{
-width:250px;
-height:180px;
-background:#ccc;
-border-radius:10px;
+.service-card h3{
+margin-bottom:10px;
+}
+
+.service-card p{
+color:#aaa;
+font-size:14px;
 }
 
 /* PORTFOLIO */
@@ -112,18 +114,13 @@ border-radius:10px;
 display:grid;
 grid-template-columns:repeat(2,1fr);
 gap:30px;
+margin-top:40px;
 }
 
 .portfolio-card{
 background:#0b0f18;
 padding:20px;
 border-radius:15px;
-transition:0.3s;
-}
-
-.portfolio-card:hover{
-transform:translateY(-10px);
-box-shadow:0 0 20px rgba(255,106,61,0.3);
 }
 
 .portfolio-img{
@@ -131,6 +128,32 @@ height:200px;
 background:#ccc;
 border-radius:10px;
 margin-bottom:15px;
+}
+
+/* REVIEWS */
+.reviews{
+display:flex;
+gap:20px;
+margin-top:40px;
+}
+
+.rating-box{
+background:#ff6a3d;
+padding:40px;
+border-radius:15px;
+font-weight:bold;
+}
+
+.review-card{
+background:#0b0f18;
+padding:20px;
+border-radius:10px;
+flex:1;
+}
+
+.review-card p{
+color:#aaa;
+margin-top:10px;
 }
 
 /* CTA */
@@ -142,45 +165,6 @@ text-align:center;
 font-size:50px;
 }
 
-/* REVIEWS */
-.reviews{
-display:flex;
-gap:20px;
-}
-
-.review-card{
-background:#0b0f18;
-padding:20px;
-border-radius:10px;
-flex:1;
-}
-
-/* BLOG */
-.blog-grid{
-display:flex;
-gap:20px;
-}
-
-.blog-main{
-flex:2;
-height:300px;
-background:#ccc;
-border-radius:10px;
-}
-
-.blog-small{
-flex:1;
-display:flex;
-flex-direction:column;
-gap:20px;
-}
-
-.blog-card{
-background:#0b0f18;
-padding:15px;
-border-radius:10px;
-}
-
 /* FOOTER */
 footer{
 background:linear-gradient(135deg,#7b1fa2,#05070d);
@@ -190,10 +174,6 @@ padding:80px 8%;
 .footer-top{
 display:flex;
 justify-content:space-between;
-}
-
-.footer-left h1{
-font-size:50px;
 }
 
 .footer-links p{
@@ -216,13 +196,13 @@ font-size:13px;
 
 <!-- HEADER -->
 <header>
-<div>KINZA</div>
+<div class="logo">KINZA</div>
 
 <nav>
 <a href="#hero">Home</a>
-<a href="#portfolio">Portfolio</a>
 <a href="#services">Services</a>
-<a href="#blog">Blog</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#reviews">Clients</a>
 <a href="#contact">Contact</a>
 <a href="https://calendly.com/kinzabaig995/30min" target="_blank">Book Call</a>
 </nav>
@@ -233,7 +213,9 @@ font-size:13px;
 <div>
 <p>SaaS Video Specialist</p>
 
-<h1>I Create High-Converting SaaS Videos That Drive Sales & Growth</h1>
+<h1>
+I Create High-Converting SaaS Videos That Turn Viewers Into Customers.
+</h1>
 
 <a href="https://calendly.com/kinzabaig995/30min" target="_blank" class="btn">
 BOOK A CALL →
@@ -241,37 +223,101 @@ BOOK A CALL →
 </div>
 </section>
 
+<!-- SERVICES -->
+<section id="services" class="services">
+
+<h1>Services I Offer</h1>
+
+<div class="services-grid">
+
+<div class="service-card">
+<h3>SaaS Explainer Videos</h3>
+<p>Clear, engaging videos that simplify your product and increase conversions.</p>
+</div>
+
+<div class="service-card">
+<h3>Product Demo Videos</h3>
+<p>Showcase your SaaS product features in a clean and professional way.</p>
+</div>
+
+<div class="service-card">
+<h3>SaaS Promo Videos</h3>
+<p>High-impact promotional videos for ads and landing pages.</p>
+</div>
+
+<div class="service-card">
+<h3>VSL (Sales Videos)</h3>
+<p>Conversion-focused video sales letters that drive revenue.</p>
+</div>
+
+<div class="service-card">
+<h3>Reels / Short Videos</h3>
+<p>Short-form content optimized for Instagram, TikTok & ads.</p>
+</div>
+
+<div class="service-card">
+<h3>YouTube Video Editing</h3>
+<p>Professional editing for SaaS YouTube content & growth.</p>
+</div>
+
+</div>
+
+</section>
+
 <!-- PORTFOLIO -->
 <section id="portfolio">
 
-<h1 style="text-align:center; margin-bottom:60px;">
-FEATURED PROJECTS
-</h1>
+<h1>Featured Work</h1>
 
 <div class="portfolio-grid">
 
 <div class="portfolio-card">
 <div class="portfolio-img"></div>
-<h3>SaaS Explainer Video</h3>
-<p>Boosted conversions</p>
+<h3>SaaS Explainer</h3>
+<p>Boosted conversions by 40%</p>
 </div>
 
 <div class="portfolio-card">
 <div class="portfolio-img"></div>
 <h3>Product Demo</h3>
-<p>Improved onboarding</p>
+<p>Improved onboarding flow</p>
 </div>
 
 <div class="portfolio-card">
 <div class="portfolio-img"></div>
 <h3>SaaS Promo</h3>
-<p>Ad performance scale</p>
+<p>High-performing ad creatives</p>
 </div>
 
 <div class="portfolio-card">
 <div class="portfolio-img"></div>
 <h3>VSL Funnel</h3>
-<p>High ticket conversions</p>
+<p>Generated high-ticket sales</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- CLIENTS / REVIEWS -->
+<section id="reviews">
+
+<h1>Client Stories & Feedback</h1>
+
+<div class="reviews">
+
+<div class="rating-box">
+4.9 ⭐<br>Average Rating
+</div>
+
+<div class="review-card">
+<h4>Ryan Anderson</h4>
+<p>"The videos significantly improved our conversions."</p>
+</div>
+
+<div class="review-card">
+<h4>Michael Brown</h4>
+<p>"Professional, clean work with great communication."</p>
 </div>
 
 </div>
@@ -280,28 +326,12 @@ FEATURED PROJECTS
 
 <!-- CTA -->
 <section class="cta">
-<h1>LET’S WORK TOGETHER</h1>
+
+<h1>Let’s Work Together</h1>
 
 <a href="https://calendly.com/kinzabaig995/30min" target="_blank" class="btn">
 BOOK A CALL →
 </a>
-</section>
-
-<!-- BLOG -->
-<section id="blog">
-
-<h1>INSIGHTS & TIPS</h1>
-
-<div class="blog-grid">
-
-<div class="blog-main"></div>
-
-<div class="blog-small">
-<div class="blog-card">UI/UX Trends</div>
-<div class="blog-card">Design Tips</div>
-</div>
-
-</div>
 
 </section>
 
@@ -310,22 +340,21 @@ BOOK A CALL →
 
 <div class="footer-top">
 
-<div class="footer-left">
+<div>
 <h1>KINZA</h1>
-
 <p style="margin-top:20px;">
 Email: kinza@email.com<br>
 Phone: +92 XXX XXX XXX<br>
-Instagram: @kinza.creates
+Instagram: @digitalbykinza
 </p>
 </div>
 
-<div>
+<div class="footer-links">
 <h3>Quick Links</h3>
 <p>Home</p>
-<p>Portfolio</p>
 <p>Services</p>
-<p>Blog</p>
+<p>Portfolio</p>
+<p>Contact</p>
 </div>
 
 </div>
