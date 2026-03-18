@@ -11,7 +11,7 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family: 'Segoe UI', sans-serif;
+font-family:Poppins, sans-serif;
 scroll-behavior:smooth;
 }
 
@@ -23,8 +23,8 @@ color:white;
 /* HEADER */
 header{
 position:fixed;
-width:100%;
 top:0;
+width:100%;
 display:flex;
 justify-content:space-between;
 padding:20px 8%;
@@ -33,28 +33,33 @@ backdrop-filter:blur(10px);
 z-index:1000;
 }
 
-.logo{
-font-weight:bold;
-}
-
 nav a{
 margin-left:25px;
 color:white;
 text-decoration:none;
-font-size:14px;
 }
 
-nav a:hover{
-color:#ff6a3d;
+nav a:hover{color:#ff6a3d;}
+
+.btn{
+background:#ff6a3d;
+padding:12px 25px;
+border-radius:25px;
+color:white;
+text-decoration:none;
+display:inline-block;
+margin-top:20px;
 }
+
+/* SECTION */
+section{padding:120px 8%;}
 
 /* HERO */
 .hero{
 height:100vh;
-padding:120px 8%;
-background: radial-gradient(circle at 40% 40%, #a020f0, #05070d 60%);
 display:flex;
 align-items:center;
+background: radial-gradient(circle at 40% 40%, #a020f0, #05070d 60%);
 }
 
 .hero h1{
@@ -62,31 +67,14 @@ font-size:60px;
 max-width:600px;
 }
 
-.hero p{
-color:#ff6a3d;
-margin-bottom:10px;
-}
-
-.btn{
-background:#ff6a3d;
-padding:12px 25px;
-border-radius:25px;
-display:inline-block;
-margin-top:20px;
-color:white;
-text-decoration:none;
-}
-
-/* SECTION */
-section{
-padding:120px 8%;
+/* STATS */
+.stats-grid{
+display:flex;
+justify-content:space-around;
+margin-top:50px;
 }
 
 /* SERVICES */
-.services{
-text-align:center;
-}
-
 .services-grid{
 display:grid;
 grid-template-columns:repeat(3,1fr);
@@ -94,19 +82,23 @@ gap:25px;
 margin-top:40px;
 }
 
-.service-card{
+.card{
 background:#0b0f18;
 padding:25px;
 border-radius:15px;
 }
 
-.service-card h3{
-margin-bottom:10px;
+/* PROCESS */
+.process{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
 }
 
-.service-card p{
-color:#aaa;
-font-size:14px;
+.step{
+background:#0b0f18;
+padding:20px;
+border-radius:10px;
 }
 
 /* PORTFOLIO */
@@ -114,7 +106,6 @@ font-size:14px;
 display:grid;
 grid-template-columns:repeat(2,1fr);
 gap:30px;
-margin-top:40px;
 }
 
 .portfolio-card{
@@ -127,7 +118,14 @@ border-radius:15px;
 height:200px;
 background:#ccc;
 border-radius:10px;
-margin-bottom:15px;
+margin-bottom:10px;
+}
+
+/* WHY CHOOSE */
+.why{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
 }
 
 /* REVIEWS */
@@ -137,32 +135,36 @@ gap:20px;
 margin-top:40px;
 }
 
-.rating-box{
-background:#ff6a3d;
-padding:40px;
-border-radius:15px;
-font-weight:bold;
-}
-
-.review-card{
+.review{
 background:#0b0f18;
 padding:20px;
 border-radius:10px;
 flex:1;
 }
 
-.review-card p{
-color:#aaa;
-margin-top:10px;
+/* BLOG */
+.blog{
+display:grid;
+grid-template-columns:2fr 1fr;
+gap:20px;
+}
+
+.blog-main{
+height:300px;
+background:#ccc;
+border-radius:10px;
+}
+
+.blog-card{
+background:#0b0f18;
+padding:15px;
+border-radius:10px;
+margin-bottom:15px;
 }
 
 /* CTA */
 .cta{
 text-align:center;
-}
-
-.cta h1{
-font-size:50px;
 }
 
 /* FOOTER */
@@ -176,17 +178,11 @@ display:flex;
 justify-content:space-between;
 }
 
-.footer-links p{
-color:#aaa;
-margin-top:8px;
-}
-
 .footer-bottom{
 margin-top:40px;
 display:flex;
 justify-content:space-between;
 color:#aaa;
-font-size:13px;
 }
 
 </style>
@@ -196,172 +192,170 @@ font-size:13px;
 
 <!-- HEADER -->
 <header>
-<div class="logo">KINZA</div>
+<h3>KINZA</h3>
 
 <nav>
-<a href="#hero">Home</a>
 <a href="#services">Services</a>
 <a href="#portfolio">Portfolio</a>
+<a href="#process">Process</a>
 <a href="#reviews">Clients</a>
-<a href="#contact">Contact</a>
+<a href="#blog">Blog</a>
 <a href="https://calendly.com/kinzabaig995/30min" target="_blank">Book Call</a>
 </nav>
 </header>
 
 <!-- HERO -->
-<section id="hero" class="hero">
+<section class="hero">
 <div>
-<p>SaaS Video Specialist</p>
+<h1>I Create High-Converting SaaS Videos That Drive Growth</h1>
+<a href="https://calendly.com/kinzabaig995/30min" target="_blank" class="btn">Book a Call</a>
+</div>
+</section>
 
-<h1>
-I Create High-Converting SaaS Videos That Turn Viewers Into Customers.
-</h1>
+<!-- STATS -->
+<section>
+<h2>Helping SaaS Brands Grow</h2>
 
-<a href="https://calendly.com/kinzabaig995/30min" target="_blank" class="btn">
-BOOK A CALL →
-</a>
+<div class="stats-grid">
+<div><h2>250+</h2><p>Projects</p></div>
+<div><h2>120+</h2><p>Clients</p></div>
+<div><h2>5+</h2><p>Years</p></div>
+<div><h2>1000+</h2><p>Satisfied Clients</p></div>
 </div>
 </section>
 
 <!-- SERVICES -->
-<section id="services" class="services">
-
-<h1>Services I Offer</h1>
+<section id="services">
+<h2>Services</h2>
 
 <div class="services-grid">
 
-<div class="service-card">
-<h3>SaaS Explainer Videos</h3>
-<p>Clear, engaging videos that simplify your product and increase conversions.</p>
+<div class="card"><h3>SaaS Explainer</h3><p>Explain your product clearly</p></div>
+<div class="card"><h3>Product Demo</h3><p>Show features in action</p></div>
+<div class="card"><h3>SaaS Promo</h3><p>Ads & landing page videos</p></div>
+<div class="card"><h3>VSL</h3><p>Sales videos</p></div>
+<div class="card"><h3>Reels</h3><p>Short form content</p></div>
+<div class="card"><h3>YouTube Editing</h3><p>Long form content</p></div>
+
+</div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+<h2>My Process</h2>
+
+<div class="process">
+
+<div>
+<div class="step">01 Research & Strategy</div>
+<div class="step">02 Script Writing</div>
+<div class="step">03 Editing</div>
 </div>
 
-<div class="service-card">
-<h3>Product Demo Videos</h3>
-<p>Showcase your SaaS product features in a clean and professional way.</p>
-</div>
-
-<div class="service-card">
-<h3>SaaS Promo Videos</h3>
-<p>High-impact promotional videos for ads and landing pages.</p>
-</div>
-
-<div class="service-card">
-<h3>VSL (Sales Videos)</h3>
-<p>Conversion-focused video sales letters that drive revenue.</p>
-</div>
-
-<div class="service-card">
-<h3>Reels / Short Videos</h3>
-<p>Short-form content optimized for Instagram, TikTok & ads.</p>
-</div>
-
-<div class="service-card">
-<h3>YouTube Video Editing</h3>
-<p>Professional editing for SaaS YouTube content & growth.</p>
+<div>
+<div class="step">04 Sound Design</div>
+<div class="step">05 Revisions (3 included)</div>
+<div class="step">06 Final Delivery</div>
 </div>
 
 </div>
-
 </section>
 
 <!-- PORTFOLIO -->
 <section id="portfolio">
-
-<h1>Featured Work</h1>
+<h2>Portfolio</h2>
 
 <div class="portfolio-grid">
 
 <div class="portfolio-card">
 <div class="portfolio-img"></div>
 <h3>SaaS Explainer</h3>
-<p>Boosted conversions by 40%</p>
 </div>
 
 <div class="portfolio-card">
 <div class="portfolio-img"></div>
 <h3>Product Demo</h3>
-<p>Improved onboarding flow</p>
 </div>
 
 <div class="portfolio-card">
 <div class="portfolio-img"></div>
-<h3>SaaS Promo</h3>
-<p>High-performing ad creatives</p>
+<h3>SaaS Ad</h3>
 </div>
 
 <div class="portfolio-card">
 <div class="portfolio-img"></div>
-<h3>VSL Funnel</h3>
-<p>Generated high-ticket sales</p>
+<h3>VSL</h3>
 </div>
 
 </div>
-
 </section>
 
-<!-- CLIENTS / REVIEWS -->
-<section id="reviews">
+<!-- WHY CHOOSE -->
+<section>
+<h2>Why Choose Me</h2>
 
-<h1>Client Stories & Feedback</h1>
+<div class="why">
+<div class="card">Conversion Focused</div>
+<div class="card">Fast Delivery</div>
+<div class="card">Premium Editing</div>
+<div class="card">SaaS Specialist</div>
+</div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews">
+<h2>Client Feedback</h2>
 
 <div class="reviews">
+<div class="review">Amazing results</div>
+<div class="review">Highly recommended</div>
+<div class="review">Great communication</div>
+</div>
+</section>
 
-<div class="rating-box">
-4.9 ⭐<br>Average Rating
+<!-- BLOG -->
+<section id="blog">
+<h2>Insights</h2>
+
+<div class="blog">
+<div class="blog-main"></div>
+
+<div>
+<div class="blog-card">SaaS Video Strategy</div>
+<div class="blog-card">Conversion Tips</div>
 </div>
 
-<div class="review-card">
-<h4>Ryan Anderson</h4>
-<p>"The videos significantly improved our conversions."</p>
 </div>
-
-<div class="review-card">
-<h4>Michael Brown</h4>
-<p>"Professional, clean work with great communication."</p>
-</div>
-
-</div>
-
 </section>
 
 <!-- CTA -->
 <section class="cta">
-
-<h1>Let’s Work Together</h1>
-
-<a href="https://calendly.com/kinzabaig995/30min" target="_blank" class="btn">
-BOOK A CALL →
-</a>
-
+<h2>Let’s Work Together</h2>
+<a href="https://calendly.com/kinzabaig995/30min" target="_blank" class="btn">Book a Call</a>
 </section>
 
 <!-- FOOTER -->
-<footer id="contact">
+<footer>
 
 <div class="footer-top">
 
 <div>
-<h1>KINZA</h1>
-<p style="margin-top:20px;">
-Email: kinza@email.com<br>
-Phone: +92 XXX XXX XXX<br>
-Instagram: @digitalbykinza
-</p>
+<h2>KINZA</h2>
+<p>Email: your@email.com</p>
+<p>Instagram: @digitalbykinza</p>
 </div>
 
-<div class="footer-links">
-<h3>Quick Links</h3>
+<div>
 <p>Home</p>
 <p>Services</p>
 <p>Portfolio</p>
-<p>Contact</p>
 </div>
 
 </div>
 
 <div class="footer-bottom">
-<p>© 2026 Kinza. All Rights Reserved.</p>
-<p>Instagram • LinkedIn • YouTube</p>
+<p>© 2026 Kinza</p>
+<p>All rights reserved</p>
 </div>
 
 </footer>
