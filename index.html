@@ -1,271 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>DigitalByKinza</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap" rel="stylesheet">
-
-<style>
-*{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:Poppins;}
-
-/* COLORS */
-.dark{background:#0b0f19;color:white;}
-.light{background:#f5f5f5;color:#111;}
-
-section{padding:90px 8%;}
-
-/* NAV */
-header{
-position:fixed;
-top:0;width:100%;
-background:#0b0f19;
-color:white;
-display:flex;
-justify-content:space-between;
-padding:18px 8%;
-z-index:1000;
-}
-
-nav a{margin:0 15px;color:#ccc;text-decoration:none;}
-
-.btn{
-background:#ec4899;
-color:white;
-padding:12px 20px;
-border-radius:6px;
-display:inline-block;
-margin-top:20px;
-}
-
-/* HERO */
-.hero{
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:40px;
-padding-top:140px;
-}
-
-.hero h1{font-size:48px;}
-.hero span{color:#ec4899;}
-
-/* GRID */
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
-}
-
-/* CARDS */
-.card{
-background:white;
-padding:20px;
-border-radius:10px;
-}
-
-.dark .card{background:#111827;color:white;}
-
-/* PROCESS */
-.process{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:40px;
-}
-
-.process-list{
-display:flex;
-flex-direction:column;
-gap:15px;
-}
-
-.process-item{
-background:rgba(255,255,255,0.05);
-padding:14px 18px;
-border-radius:10px;
-border:1px solid rgba(255,255,255,0.08);
-transition:0.3s;
-}
-
-.process-item:hover{
-background:#ec4899;
-transform:translateX(8px);
-}
-
-/* REVIEW */
-.review{
-background:#111827;
-color:white;
-padding:20px;
-border-radius:10px;
-}
-
-/* FAQ */
-.faq{
-background:white;
-padding:20px;
-border-radius:8px;
-margin:10px 0;
-}
-
-.faq strong{
-display:block;
-margin-bottom:5px;
-}
-
-/* FOOTER */
-footer{
-background:#0b0f19;
-color:#aaa;
-padding:40px;
-text-align:center;
-}
-</style>
+<title>Home</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-<h3>DIGITALBYKINZA</h3>
+<h3>DBK</h3>
 <nav>
-<a href="#">Work</a>
-<a href="#">Services</a>
-<a href="#">Process</a>
-<a href="#">Reviews</a>
-
-<a href="https://calendly.com/kinzabaig995/30min" target="_blank" class="btn">
-Book a Call
-</a>
-
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="portfolio.html">Work</a>
+<a href="contact.html">Contact</a>
+<a href="https://calendly.com/kinzabaig995/30min" target="_blank" class="btn">Book</a>
 </nav>
 </header>
 
-<!-- HERO -->
-<section class="dark hero">
+<section class="hero">
 <div>
-<h1>
-Most SaaS Video Agencies <br>
-Blend In <br>
-<span>Yours Won’t.</span>
-</h1>
-
-<p>
-We create high-converting SaaS videos that turn viewers into users.
-</p>
-
-<a href="https://calendly.com/kinzabaig995/30min" target="_blank" class="btn">
-Book a Call
-</a>
-
+<h1>High-Converting SaaS Videos</h1>
+<p>We turn viewers into users</p>
+<br>
+<a class="btn" href="https://calendly.com/kinzabaig995/30min" target="_blank">Book a Call</a>
 </div>
 </section>
 
-<!-- SERVICES -->
-<section class="light">
+<section>
 <h2>Our Services</h2>
 <div class="grid">
-<div class="card">SaaS Explainer Videos</div>
-<div class="card">Product Demo Videos</div>
-<div class="card">SaaS Ads</div>
+<div class="card">Explainer Videos</div>
+<div class="card">VSL</div>
+<div class="card">Reels</div>
+<div class="card">YouTube Editing</div>
 </div>
 </section>
-
-<!-- PROCESS -->
-<section class="dark">
-<h2>SaaS Video Process</h2>
-
-<div class="process">
-
-<div>
-<p>
-We follow a proven structure to deliver high-converting SaaS videos.
-</p>
-</div>
-
-<div class="process-list">
-<div class="process-item">01 Discovery</div>
-<div class="process-item">02 Script Writing</div>
-<div class="process-item">03 Storyboard</div>
-<div class="process-item">04 SaaS Explainer / Product Demo</div>
-<div class="process-item">05 Sound Design & Final Polish</div>
-<div class="process-item">06 Delivery</div>
-</div>
-
-</div>
-</section>
-
-<!-- ADDITIONAL SERVICES -->
-<section class="light">
-<h2>Additional Video Services</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>VSL (Video Sales Letter)</h3>
-<p>High-converting sales videos to generate leads.</p>
-</div>
-
-<div class="card">
-<h3>Reels & Short Form Content</h3>
-<p>Instagram Reels & TikTok content for growth.</p>
-</div>
-
-<div class="card">
-<h3>YouTube Video Editing</h3>
-<p>Professional editing focused on retention.</p>
-</div>
-
-</div>
-</section>
-
-<!-- REVIEWS -->
-<section class="light">
-<h2>Client Reviews</h2>
-<div class="grid">
-<div class="review">★★★★★ Excellent work</div>
-<div class="review">★★★★★ Amazing experience</div>
-<div class="review">★★★★★ Fast delivery</div>
-<div class="review">★★★★★ Highly recommended</div>
-</div>
-</section>
-
-<!-- FAQ -->
-<section class="light">
-<h2>FAQ</h2>
-
-<div class="faq">
-<strong>How long is delivery?</strong>
-10–15 days depending on project.
-</div>
-
-<div class="faq">
-<strong>Pricing?</strong>
-Depends on project scope. Book a call.
-</div>
-
-<div class="faq">
-<strong>Revisions?</strong>
-Up to 3 revisions included.
-</div>
-
-</section>
-
-<!-- CTA -->
-<section class="dark">
-<h2>Ready to scale your SaaS?</h2>
-
-<a href="https://calendly.com/kinzabaig995/30min" target="_blank" class="btn">
-Book a Call
-</a>
-
-</section>
-
-<footer>
-<p>© DigitalByKinza</p>
-</footer>
 
 </body>
 </html>
