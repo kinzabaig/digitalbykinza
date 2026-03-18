@@ -1,4 +1,199 @@
-<!-- STATS SECTION -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SaaS Agency</title>
+
+<style>
+
+/* RESET */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:sans-serif;
+}
+
+body{
+background:#05070d;
+color:white;
+}
+
+/* HERO */
+.hero{
+height:100vh;
+padding:80px;
+background: radial-gradient(circle at 40% 40%, #a020f0, #05070d 60%);
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.hero-left h1{
+font-size:60px;
+line-height:1.1;
+max-width:600px;
+}
+
+.hero-left p{
+margin-bottom:20px;
+color:#ff6a3d;
+}
+
+.btn{
+background:#ff6a3d;
+padding:12px 24px;
+border-radius:25px;
+color:white;
+text-decoration:none;
+display:inline-block;
+margin-top:20px;
+}
+
+/* STATS */
+.stats-section{
+padding:120px 8%;
+text-align:center;
+}
+
+.stats-title{
+font-size:34px;
+font-weight:800;
+max-width:900px;
+margin:auto;
+margin-bottom:60px;
+}
+
+.stats-wrapper{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.side{
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.box{
+width:140px;
+height:100px;
+background:#ccc;
+border-radius:10px;
+}
+
+.small{height:80px;}
+.wide{width:180px;height:90px;}
+
+.center{
+display:flex;
+flex-direction:column;
+gap:40px;
+}
+
+.row{
+display:flex;
+gap:80px;
+}
+
+.center p{
+color:#aaa;
+}
+
+.center h2{
+font-size:42px;
+}
+
+/* LATEST WORK */
+.work-section{
+padding:120px 8%;
+display:flex;
+align-items:center;
+justify-content:space-between;
+position:relative;
+}
+
+.work-title-left{
+font-size:80px;
+font-weight:800;
+opacity:0.9;
+}
+
+.work-title-right{
+font-size:80px;
+font-weight:800;
+opacity:0.9;
+}
+
+.work-card{
+background:#0b0f18;
+padding:30px;
+border-radius:20px;
+display:flex;
+gap:20px;
+align-items:center;
+box-shadow:0 0 30px rgba(0,0,0,0.5);
+}
+
+.work-image{
+width:260px;
+height:200px;
+background:#ccc;
+border-radius:15px;
+}
+
+.work-content{
+max-width:300px;
+}
+
+.work-content h3{
+font-size:22px;
+margin-bottom:10px;
+}
+
+.work-content p{
+color:#aaa;
+font-size:14px;
+margin-bottom:15px;
+}
+
+.work-btn{
+background:#1a1f2b;
+padding:10px 20px;
+border-radius:20px;
+display:inline-block;
+font-size:13px;
+}
+
+.counter{
+margin-top:20px;
+color:#aaa;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+
+<div class="hero-left">
+<p>MOST SAAS VIDEO AGENCIES BLEND IN — YOUR WON’T</p>
+
+<h1>
+WE CREATE HIGH-CONVERTING SAAS VIDEOS THAT TURN VIEWERS INTO USERS.
+</h1>
+
+<a href="https://calendly.com/kinzabaig995/30min" target="_blank" class="btn">
+BOOK A CALL →
+</a>
+</div>
+
+</section>
+
+<!-- STATS -->
 <section class="stats-section">
 
 <h1 class="stats-title">
@@ -7,15 +202,12 @@ SCALING SAAS BRANDS WITH HIGH-CONVERTING VIDEOS THAT DRIVE SIGNUPS, SALES & GROW
 
 <div class="stats-wrapper">
 
-<!-- LEFT BOXES -->
-<div class="side left">
+<div class="side">
 <div class="box"></div>
 <div class="box small"></div>
 </div>
 
-<!-- CENTER STATS -->
 <div class="center">
-
 <div class="row">
 <div>
 <p>Creative Projects Completed</p>
@@ -39,11 +231,9 @@ SCALING SAAS BRANDS WITH HIGH-CONVERTING VIDEOS THAT DRIVE SIGNUPS, SALES & GROW
 <h2>15+</h2>
 </div>
 </div>
-
 </div>
 
-<!-- RIGHT BOXES -->
-<div class="side right">
+<div class="side">
 <div class="box"></div>
 <div class="box wide"></div>
 </div>
@@ -51,3 +241,37 @@ SCALING SAAS BRANDS WITH HIGH-CONVERTING VIDEOS THAT DRIVE SIGNUPS, SALES & GROW
 </div>
 
 </section>
+
+<!-- LATEST WORK -->
+<section class="work-section">
+
+<div class="work-title-left">LATEST</div>
+
+<div class="work-card">
+
+<div class="work-image"></div>
+
+<div class="work-content">
+<h3>HIGH-CONVERTING SAAS EXPLAINER VIDEO</h3>
+
+<p>
+Watch how we turn complex SaaS products into simple, engaging videos that drive conversions.
+</p>
+
+<p>Year: 2026</p>
+<p>Category: SaaS</p>
+
+<div class="work-btn">VIEW ALL PROJECT →</div>
+
+<div class="counter">05 / 05</div>
+
+</div>
+
+</div>
+
+<div class="work-title-right">WORK</div>
+
+</section>
+
+</body>
+</html>
