@@ -11,7 +11,7 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:sans-serif;
+font-family: 'Segoe UI', sans-serif;
 }
 
 body{
@@ -50,7 +50,7 @@ text-decoration:none;
 
 /* STATS */
 .stats{
-padding:100px 8%;
+padding:120px 8%;
 text-align:center;
 }
 
@@ -71,14 +71,14 @@ font-size:40px;
 
 /* WORK */
 .work{
-padding:100px 8%;
+padding:120px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
 }
 
 .work h1{
-font-size:70px;
+font-size:80px;
 }
 
 .card{
@@ -90,13 +90,13 @@ gap:20px;
 }
 
 .img{
-width:250px;
-height:180px;
+width:260px;
+height:200px;
 background:#ccc;
 border-radius:10px;
 }
 
-/* SERVICES SECTION */
+/* SERVICES */
 .services{
 padding:120px 8%;
 position:relative;
@@ -107,10 +107,9 @@ font-size:40px;
 max-width:600px;
 }
 
-.services .top{
+.services-top{
 display:flex;
 justify-content:space-between;
-align-items:center;
 margin-bottom:60px;
 }
 
@@ -120,7 +119,6 @@ padding:12px 25px;
 border-radius:25px;
 }
 
-/* BIG TEXT DESIGN */
 .bg-text{
 position:absolute;
 top:50%;
@@ -129,17 +127,14 @@ transform:translate(-50%,-50%);
 font-size:120px;
 color:rgba(255,255,255,0.05);
 text-align:center;
-line-height:1;
 }
 
-/* SERVICE BOXES */
 .service-box{
 position:absolute;
 background:#ccc;
 border-radius:12px;
 }
 
-/* positioning */
 .box1{top:200px; left:5%; width:150px; height:100px;}
 .box2{top:200px; right:15%; width:150px; height:100px;}
 .box3{bottom:80px; left:10%; width:250px; height:150px;}
@@ -154,9 +149,106 @@ font-size:50px;
 font-weight:bold;
 }
 
-.small-text{
-font-size:14px;
-color:#aaa;
+/* TEAM */
+.team{
+padding:120px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.team-left{
+display:flex;
+gap:20px;
+}
+
+.team-card{
+width:250px;
+height:300px;
+background:#ccc;
+border-radius:20px;
+}
+
+.team-card.main{
+width:300px;
+height:320px;
+}
+
+.team-title{
+font-size:60px;
+max-width:500px;
+}
+
+.team-buttons{
+margin-top:20px;
+}
+
+.team-buttons a{
+background:white;
+color:black;
+padding:10px 20px;
+border-radius:20px;
+margin-right:10px;
+text-decoration:none;
+}
+
+.team-buttons a:last-child{
+background:#1a1f2b;
+color:white;
+}
+
+/* CTA SECTION */
+.cta{
+padding:140px 8%;
+text-align:center;
+position:relative;
+background: radial-gradient(circle, #1a1f2b, #05070d);
+}
+
+.cta h1{
+font-size:60px;
+margin-top:40px;
+}
+
+/* floating boxes */
+.cta-box{
+position:absolute;
+background:#ccc;
+border-radius:15px;
+}
+
+.cta-box.center{
+width:300px;
+height:180px;
+top:40px;
+left:50%;
+transform:translateX(-50%);
+}
+
+.cta-box.left{
+width:120px;
+height:180px;
+top:60px;
+left:20%;
+transform:rotate(-20deg);
+}
+
+.cta-box.right{
+width:120px;
+height:120px;
+top:60px;
+right:20%;
+transform:rotate(20deg);
+}
+
+.cta-btn{
+background:white;
+color:black;
+padding:12px 25px;
+border-radius:25px;
+display:inline-block;
+margin-top:20px;
+text-decoration:none;
 }
 
 </style>
@@ -181,25 +273,10 @@ BOOK A CALL →
 <h2>Scaling SaaS brands with high-converting videos that drive signups & growth</h2>
 
 <div class="stats-grid">
-<div>
-<p>Projects</p>
-<h3>250+</h3>
-</div>
-
-<div>
-<p>Clients</p>
-<h3>120+</h3>
-</div>
-
-<div>
-<p>Experts</p>
-<h3>250+</h3>
-</div>
-
-<div>
-<p>Awards</p>
-<h3>15+</h3>
-</div>
+<div><p>Projects</p><h3>250+</h3></div>
+<div><p>Clients</p><h3>120+</h3></div>
+<div><p>Experts</p><h3>250+</h3></div>
+<div><p>Awards</p><h3>15+</h3></div>
 </div>
 </section>
 
@@ -210,14 +287,9 @@ BOOK A CALL →
 
 <div class="card">
 <div class="img"></div>
-
 <div>
-<h3>High-Converting SaaS Explainer Video</h3>
-<p class="small-text">
-We turn complex SaaS products into simple videos that convert viewers into paying users.
-</p>
-<p>Year: 2026</p>
-<p>Category: SaaS</p>
+<h3>SaaS Explainer Video</h3>
+<p>We turn complex SaaS into high-converting videos.</p>
 </div>
 </div>
 
@@ -228,27 +300,54 @@ We turn complex SaaS products into simple videos that convert viewers into payin
 <!-- SERVICES -->
 <section class="services">
 
-<div class="top">
+<div class="services-top">
 <h2>VIDEO SOLUTIONS DESIGNED TO GROW SAAS BRANDS</h2>
-
 <div class="services-btn">VIEW ALL DETAILS →</div>
 </div>
 
-<!-- BIG BACKGROUND TEXT -->
-<div class="bg-text">
-VISUAL & <br> DESIGN <br> GUIDELINES
-</div>
+<div class="bg-text">VISUAL & DESIGN GUIDELINES</div>
+<div class="app-text">APP DESIGN</div>
 
-<!-- CENTER TEXT -->
-<div class="app-text">
-APP <span class="small-text">INTERFACE DESIGN</span>
-</div>
-
-<!-- BOXES -->
 <div class="service-box box1"></div>
 <div class="service-box box2"></div>
 <div class="service-box box3"></div>
 <div class="service-box box4"></div>
+
+</section>
+
+<!-- TEAM -->
+<section class="team">
+
+<div class="team-left">
+<div class="team-card"></div>
+<div class="team-card main"></div>
+<div class="team-card"></div>
+</div>
+
+<div>
+<h1 class="team-title">THE MINDS BEHIND OUR DESIGNS</h1>
+
+<div class="team-buttons">
+<a href="https://calendly.com/kinzabaig995/30min" target="_blank">MEET OUR TEAM →</a>
+<a href="#">JOIN COMMUNITY →</a>
+</div>
+
+</div>
+
+</section>
+
+<!-- CTA -->
+<section class="cta">
+
+<div class="cta-box center"></div>
+<div class="cta-box left"></div>
+<div class="cta-box right"></div>
+
+<h1>LET’S WORK TOGETHER</h1>
+
+<a href="https://calendly.com/kinzabaig995/30min" target="_blank" class="cta-btn">
+MEET OUR TEAM →
+</a>
 
 </section>
 
