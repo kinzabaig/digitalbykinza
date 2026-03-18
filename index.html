@@ -10,7 +10,6 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-
 body{
 font-family:Poppins;
 background:#05070d;
@@ -20,12 +19,13 @@ color:white;
 /* NAV */
 header{
 position:fixed;
-top:0;
 width:100%;
+top:0;
 display:flex;
 justify-content:space-between;
 padding:20px 8%;
-background:#000;
+background:rgba(0,0,0,0.6);
+backdrop-filter:blur(10px);
 z-index:1000;
 }
 
@@ -34,19 +34,15 @@ margin:0 15px;
 color:#aaa;
 text-decoration:none;
 }
-
 nav a:hover{color:white;}
 
 .btn{
 background:linear-gradient(45deg,#ff5a3c,#ff2e80);
 padding:12px 22px;
-border-radius:25px;
+border-radius:30px;
 color:white;
 text-decoration:none;
 }
-
-/* SECTION */
-section{padding:100px 8%;}
 
 /* HERO */
 .hero{
@@ -54,41 +50,61 @@ height:100vh;
 display:flex;
 align-items:center;
 justify-content:space-between;
-background:linear-gradient(90deg,#7a1c1c,#05070d);
+padding:0 8%;
+background:
+radial-gradient(circle at 30% 30%, rgba(255,60,0,0.4), transparent 50%),
+radial-gradient(circle at 70% 20%, rgba(255,0,120,0.3), transparent 50%),
+#05070d;
 }
 
 .hero h1{
-font-size:55px;
+font-size:52px;
 line-height:1.2;
 }
 
 .hero span{color:#ff5a3c;}
 
-/* GRID */
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+.right{
+display:flex;
+gap:30px;
+align-items:center;
 }
 
-.card{
+/* STACK */
+.stack{
+position:relative;
+width:300px;
+height:200px;
+}
+.stack div{
+position:absolute;
+width:100%;
+height:100%;
+background:#ccc;
+border-radius:12px;
+}
+.stack div:nth-child(1){top:0;}
+.stack div:nth-child(2){top:10px;left:10px;}
+.stack div:nth-child(3){top:20px;left:20px;}
+
+.stats-box{
 background:#111827;
 padding:20px;
-border-radius:10px;
+border-radius:12px;
+text-align:center;
 }
+.stats-box h2{font-size:40px;color:#ff5a3c;}
+
+section{padding:100px 8%;}
 
 /* STATS */
 .stats{
 display:grid;
 grid-template-columns:repeat(4,1fr);
-text-align:center;
 gap:20px;
+text-align:center;
 }
-
-.stats h2{
-color:#ff5a3c;
-font-size:40px;
-}
+.stats h2{color:#ff5a3c;font-size:36px;}
 
 /* WORK */
 .work{
@@ -97,42 +113,32 @@ justify-content:space-between;
 align-items:center;
 }
 
-/* PROCESS */
-.process{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:40px;
-}
-
-.step{
+.work-card{
 background:#111827;
-padding:15px;
-border-radius:8px;
-margin-bottom:10px;
+padding:20px;
+border-radius:12px;
+width:280px;
 }
 
-/* REVIEWS */
-.reviews{
+/* SERVICES */
+.grid{
 display:grid;
-grid-template-columns:repeat(3,1fr);
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
 }
-
-.review{
+.card{
 background:#111827;
 padding:20px;
 border-radius:10px;
 }
 
 /* CTA */
-.cta{
-text-align:center;
-}
+.cta{text-align:center;}
 
 footer{
-text-align:center;
-padding:40px;
 background:#000;
+padding:40px;
+text-align:center;
 color:#777;
 }
 </style>
@@ -140,9 +146,8 @@ color:#777;
 
 <body>
 
-<!-- NAV -->
 <header>
-<h3>DIGITALBYKINZA</h3>
+<h3>DBK</h3>
 <nav>
 <a href="#">Work</a>
 <a href="#">Services</a>
@@ -161,101 +166,77 @@ We Create High-Converting <br>
 <span>SaaS Videos</span> That Turn <br>
 Viewers Into Users
 </h1>
-
 <br>
-
-<a href="https://calendly.com/kinzabaig995/30min" target="_blank" class="btn">
-Book a Call
-</a>
+<a href="https://calendly.com/kinzabaig995/30min" target="_blank" class="btn">Start Project</a>
 </div>
 
-</section>
-
-<!-- SERVICES -->
-<section>
-<h2>Our Services</h2>
-
-<div class="grid">
-
-<div class="card">SaaS Explainer Videos</div>
-<div class="card">SaaS Product Demo Videos</div>
-<div class="card">SaaS Promo Videos</div>
-
-<div class="card">VSL (Video Sales Letter)</div>
-<div class="card">Reels & Short Form Content</div>
-<div class="card">YouTube Video Editing</div>
-
+<div class="right">
+<div class="stack">
+<div></div>
+<div></div>
+<div></div>
 </div>
+
+<div class="stats-box">
+<h2>99%</h2>
+<p>Client Satisfaction</p>
+</div>
+</div>
+
 </section>
 
 <!-- STATS -->
 <section>
-<h2>Scaling SaaS Brands</h2>
-
+<h2>Scaling SaaS Brands With High-Converting Videos</h2>
+<br><br>
 <div class="stats">
-<div><h2>100+</h2><p>Projects</p></div>
-<div><h2>50+</h2><p>Clients</p></div>
-<div><h2>99%</h2><p>Satisfaction</p></div>
-<div><h2>3+</h2><p>Years</p></div>
+<div><h2>250+</h2><p>Projects</p></div>
+<div><h2>120+</h2><p>Clients</p></div>
+<div><h2>250+</h2><p>Experts</p></div>
+<div><h2>15+</h2><p>Awards</p></div>
 </div>
 </section>
 
 <!-- WORK -->
 <section>
 <div class="work">
+
 <h1>LATEST</h1>
 
-<div class="card">
-<h3>SaaS Explainer</h3>
-<p>High converting video</p>
+<div class="work-card">
+<h3>SaaS Explainer Video</h3>
+<p>High-converting product video</p>
+<a class="btn">View</a>
 </div>
 
 <h1>WORK</h1>
-</div>
-</section>
-
-<!-- PROCESS -->
-<section>
-<h2>SaaS Video Process</h2>
-
-<div class="process">
-
-<div>
-<p>We follow a proven structure to deliver results.</p>
-</div>
-
-<div>
-<div class="step">01 Discovery</div>
-<div class="step">02 Script Writing</div>
-<div class="step">03 Storyboard</div>
-<div class="step">04 Editing</div>
-<div class="step">05 Sound Design</div>
-<div class="step">06 Delivery</div>
-</div>
 
 </div>
 </section>
 
-<!-- REVIEWS -->
+<!-- SERVICES -->
 <section>
-<h2>Client Reviews</h2>
+<h2>Video Solutions Designed To Grow SaaS Brands</h2>
+<br><br>
 
-<div class="reviews">
-<div class="review">★★★★★ Amazing work</div>
-<div class="review">★★★★★ High quality</div>
-<div class="review">★★★★★ Fast delivery</div>
+<div class="grid">
+
+<div class="card">SaaS Explainer Videos</div>
+<div class="card">SaaS Product Demo</div>
+<div class="card">SaaS Promo Videos</div>
+
+<div class="card">VSL</div>
+<div class="card">Reels</div>
+<div class="card">YouTube Editing</div>
+
 </div>
 </section>
 
 <!-- CTA -->
 <section class="cta">
 <h2>Let’s Work Together</h2>
-
 <br>
-
-<a href="https://calendly.com/kinzabaig995/30min" target="_blank" class="btn">
-Book a Call
-</a>
+<a href="https://calendly.com/kinzabaig995/30min" target="_blank" class="btn">Book a Call</a>
 </section>
 
 <footer>
