@@ -1,42 +1,266 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Home</title>
-<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>DigitalByKinza</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+font-family:Poppins;
+background:#05070d;
+color:white;
+}
+
+/* NAV */
+header{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+padding:20px 8%;
+background:#000;
+z-index:1000;
+}
+
+nav a{
+margin:0 15px;
+color:#aaa;
+text-decoration:none;
+}
+
+nav a:hover{color:white;}
+
+.btn{
+background:linear-gradient(45deg,#ff5a3c,#ff2e80);
+padding:12px 22px;
+border-radius:25px;
+color:white;
+text-decoration:none;
+}
+
+/* SECTION */
+section{padding:100px 8%;}
+
+/* HERO */
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:space-between;
+background:linear-gradient(90deg,#7a1c1c,#05070d);
+}
+
+.hero h1{
+font-size:55px;
+line-height:1.2;
+}
+
+.hero span{color:#ff5a3c;}
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:#111827;
+padding:20px;
+border-radius:10px;
+}
+
+/* STATS */
+.stats{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+text-align:center;
+gap:20px;
+}
+
+.stats h2{
+color:#ff5a3c;
+font-size:40px;
+}
+
+/* WORK */
+.work{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+/* PROCESS */
+.process{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+}
+
+.step{
+background:#111827;
+padding:15px;
+border-radius:8px;
+margin-bottom:10px;
+}
+
+/* REVIEWS */
+.reviews{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.review{
+background:#111827;
+padding:20px;
+border-radius:10px;
+}
+
+/* CTA */
+.cta{
+text-align:center;
+}
+
+footer{
+text-align:center;
+padding:40px;
+background:#000;
+color:#777;
+}
+</style>
 </head>
 
 <body>
 
+<!-- NAV -->
 <header>
-<h3>DBK</h3>
+<h3>DIGITALBYKINZA</h3>
 <nav>
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="services.html">Services</a>
-<a href="portfolio.html">Work</a>
-<a href="contact.html">Contact</a>
-<a href="https://calendly.com/kinzabaig995/30min" target="_blank" class="btn">Book</a>
+<a href="#">Work</a>
+<a href="#">Services</a>
+<a href="#">Process</a>
+<a href="#">Reviews</a>
+<a href="https://calendly.com/kinzabaig995/30min" target="_blank" class="btn">Book a Call</a>
 </nav>
 </header>
 
+<!-- HERO -->
 <section class="hero">
+
 <div>
-<h1>High-Converting SaaS Videos</h1>
-<p>We turn viewers into users</p>
+<h1>
+We Create High-Converting <br>
+<span>SaaS Videos</span> That Turn <br>
+Viewers Into Users
+</h1>
+
 <br>
-<a class="btn" href="https://calendly.com/kinzabaig995/30min" target="_blank">Book a Call</a>
+
+<a href="https://calendly.com/kinzabaig995/30min" target="_blank" class="btn">
+Book a Call
+</a>
+</div>
+
+</section>
+
+<!-- SERVICES -->
+<section>
+<h2>Our Services</h2>
+
+<div class="grid">
+
+<div class="card">SaaS Explainer Videos</div>
+<div class="card">SaaS Product Demo Videos</div>
+<div class="card">SaaS Promo Videos</div>
+
+<div class="card">VSL (Video Sales Letter)</div>
+<div class="card">Reels & Short Form Content</div>
+<div class="card">YouTube Video Editing</div>
+
 </div>
 </section>
 
+<!-- STATS -->
 <section>
-<h2>Our Services</h2>
-<div class="grid">
-<div class="card">Explainer Videos</div>
-<div class="card">VSL</div>
-<div class="card">Reels</div>
-<div class="card">YouTube Editing</div>
+<h2>Scaling SaaS Brands</h2>
+
+<div class="stats">
+<div><h2>100+</h2><p>Projects</p></div>
+<div><h2>50+</h2><p>Clients</p></div>
+<div><h2>99%</h2><p>Satisfaction</p></div>
+<div><h2>3+</h2><p>Years</p></div>
 </div>
 </section>
+
+<!-- WORK -->
+<section>
+<div class="work">
+<h1>LATEST</h1>
+
+<div class="card">
+<h3>SaaS Explainer</h3>
+<p>High converting video</p>
+</div>
+
+<h1>WORK</h1>
+</div>
+</section>
+
+<!-- PROCESS -->
+<section>
+<h2>SaaS Video Process</h2>
+
+<div class="process">
+
+<div>
+<p>We follow a proven structure to deliver results.</p>
+</div>
+
+<div>
+<div class="step">01 Discovery</div>
+<div class="step">02 Script Writing</div>
+<div class="step">03 Storyboard</div>
+<div class="step">04 Editing</div>
+<div class="step">05 Sound Design</div>
+<div class="step">06 Delivery</div>
+</div>
+
+</div>
+</section>
+
+<!-- REVIEWS -->
+<section>
+<h2>Client Reviews</h2>
+
+<div class="reviews">
+<div class="review">★★★★★ Amazing work</div>
+<div class="review">★★★★★ High quality</div>
+<div class="review">★★★★★ Fast delivery</div>
+</div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+<h2>Let’s Work Together</h2>
+
+<br>
+
+<a href="https://calendly.com/kinzabaig995/30min" target="_blank" class="btn">
+Book a Call
+</a>
+</section>
+
+<footer>
+<p>© DigitalByKinza</p>
+</footer>
 
 </body>
 </html>
