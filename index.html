@@ -4,78 +4,76 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>DigitalByKinza</title>
+<title>Hero</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-
 body{
 font-family:Poppins;
 background:#05070d;
 color:white;
 }
 
-/* NAV */
-header{
-position:fixed;
-width:100%;
-top:0;
-display:flex;
-justify-content:space-between;
-padding:20px 8%;
-background:rgba(0,0,0,0.6);
-backdrop-filter:blur(10px);
-z-index:1000;
-}
-
-nav a{
-margin:0 15px;
-color:#aaa;
-text-decoration:none;
-}
-nav a:hover{color:white;}
-
-.btn{
-background:linear-gradient(45deg,#ff5a3c,#ff2e80);
-padding:12px 22px;
-border-radius:30px;
-color:white;
-text-decoration:none;
-}
-
 /* HERO */
 .hero{
 height:100vh;
+padding:60px 8%;
 display:flex;
-align-items:center;
+flex-direction:column;
 justify-content:space-between;
-padding:0 8%;
+
 background:
-radial-gradient(circle at 30% 30%, rgba(255,60,0,0.4), transparent 50%),
-radial-gradient(circle at 70% 20%, rgba(255,0,120,0.3), transparent 50%),
+radial-gradient(circle at 30% 40%, rgba(255,60,0,0.5), transparent 50%),
+radial-gradient(circle at 60% 30%, rgba(255,0,120,0.4), transparent 50%),
 #05070d;
 }
 
-.hero h1{
-font-size:52px;
-line-height:1.2;
-}
-
-.hero span{color:#ff5a3c;}
-
-.right{
+/* TOP BAR */
+.top{
 display:flex;
-gap:30px;
+justify-content:space-between;
 align-items:center;
 }
 
+.menu{
+background:#111827;
+padding:10px 18px;
+border-radius:10px;
+}
+
+/* MAIN */
+.main{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+/* LEFT TEXT */
+.left h4{
+color:#aaa;
+font-weight:500;
+}
+
+.left h1{
+font-size:48px;
+font-weight:800;
+line-height:1.2;
+margin-top:15px;
+}
+
+.highlight{
+color:#ff5a3c;
+}
+
+/* STACK CARDS */
 .stack{
 position:relative;
-width:300px;
+width:320px;
 height:200px;
 }
+
 .stack div{
 position:absolute;
 width:100%;
@@ -83,244 +81,137 @@ height:100%;
 background:#ccc;
 border-radius:12px;
 }
+
 .stack div:nth-child(1){top:0;}
-.stack div:nth-child(2){top:10px;left:10px;}
-.stack div:nth-child(3){top:20px;left:20px;}
+.stack div:nth-child(2){top:12px;left:12px;}
+.stack div:nth-child(3){top:24px;left:24px;}
 
-.stats-box{
-background:#111827;
+/* RIGHT SIDE */
+.right{
+display:flex;
+align-items:center;
+gap:30px;
+}
+
+.rating{
+background:#0f111a;
 padding:20px;
-border-radius:12px;
+border-radius:15px;
 text-align:center;
 }
-.stats-box h2{font-size:40px;color:#ff5a3c;}
 
-section{padding:100px 8%;}
-
-/* STATS */
-.stats{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:20px;
-text-align:center;
+.rating h2{
+font-size:36px;
+color:#ff5a3c;
 }
-.stats h2{color:#ff5a3c;font-size:36px;}
 
-/* WORK */
-.work{
+/* BOTTOM */
+.bottom{
 display:flex;
 justify-content:space-between;
 align-items:center;
-}
-.work-card{
-background:#111827;
-padding:20px;
-border-radius:12px;
-width:280px;
+border-top:1px solid rgba(255,255,255,0.1);
+padding-top:20px;
 }
 
-/* SERVICES */
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-.card{
-background:#111827;
-padding:20px;
-border-radius:10px;
+/* SOCIAL */
+.social{
+display:flex;
+gap:10px;
 }
 
-/* REVIEWS */
-.reviews{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:20px;
-}
-.review{
+.circle{
+width:40px;
+height:40px;
 background:#111827;
-padding:20px;
-border-radius:10px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
 }
 
 /* CTA */
-.cta{text-align:center;}
-
-/* FOOTER */
-footer{
-background:linear-gradient(90deg,#7a1c1c,#1a1a2e,#05070d);
-padding:60px 8%;
-margin-top:50px;
+.cta{
+background:#ff5a3c;
+padding:12px 25px;
+border-radius:30px;
 }
 
-.footer-grid{
-display:grid;
-grid-template-columns:2fr 1fr 1fr;
-gap:40px;
-}
-
-.footer h2{
-font-size:28px;
-margin-bottom:10px;
-}
-
-.footer p{
-color:#bbb;
-font-size:14px;
-}
-
-.footer-links a{
-display:block;
+/* TEXT RIGHT */
+.desc{
+max-width:350px;
 color:#aaa;
-margin-bottom:10px;
-text-decoration:none;
-}
-.footer-links a:hover{color:white;}
-
-.bottom{
-margin-top:40px;
-border-top:1px solid rgba(255,255,255,0.1);
-padding-top:20px;
-display:flex;
-justify-content:space-between;
-color:#777;
-font-size:13px;
+font-size:14px;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-<h3>DBK</h3>
-<nav>
-<a href="#">Work</a>
-<a href="#">Services</a>
-<a href="#">Process</a>
-<a href="#">Reviews</a>
-<a href="https://calendly.com/kinzabaig995/30min" target="_blank" class="btn">Book a Call</a>
-</nav>
-</header>
-
-<!-- HERO -->
 <section class="hero">
-<div>
+
+<!-- TOP -->
+<div class="top">
+<h2>DBK</h2>
+<div class="menu">MENU</div>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+<div class="left">
+<h4>MOST SAAS VIDEO AGENCIES BLEND IN</h4>
+<h4 class="highlight">YOUR WON’T —</h4>
+
 <h1>
-We Create High-Converting <br>
-<span>SaaS Videos</span> That Turn <br>
-Viewers Into Users
+WE CREATE HIGH-CONVERTING <br>
+SAAS VIDEOS THAT TURN <br>
+VIEWERS INTO USERS.
 </h1>
-<br>
-<a href="https://calendly.com/kinzabaig995/30min" target="_blank" class="btn">Start Project</a>
 </div>
 
 <div class="right">
+
 <div class="stack">
-<div></div><div></div><div></div>
+<div></div>
+<div></div>
+<div></div>
 </div>
 
-<div class="stats-box">
+<div class="rating">
+⭐ ⭐ ⭐ ⭐ ⭐
 <h2>99%</h2>
-<p>Client Satisfaction</p>
-</div>
-</div>
-</section>
-
-<!-- STATS -->
-<section>
-<h2>Scaling SaaS Brands With High-Converting Videos</h2>
-<br><br>
-<div class="stats">
-<div><h2>250+</h2><p>Projects</p></div>
-<div><h2>120+</h2><p>Clients</p></div>
-<div><h2>250+</h2><p>Experts</p></div>
-<div><h2>15+</h2><p>Awards</p></div>
-</div>
-</section>
-
-<!-- WORK -->
-<section>
-<div class="work">
-<h1>LATEST</h1>
-
-<div class="work-card">
-<h3>High-Converting SaaS Explainer</h3>
-<p>Product demo that boosts conversion</p>
-<br>
-<a class="btn">View Project</a>
+<p>CLIENT SATISFACTION</p>
 </div>
 
-<h1>WORK</h1>
 </div>
-</section>
 
-<!-- SERVICES -->
-<section>
-<h2>Video Solutions Designed To Grow SaaS Brands</h2>
-<br><br>
-<div class="grid">
-<div class="card">SaaS Explainer Videos</div>
-<div class="card">SaaS Product Demo</div>
-<div class="card">SaaS Promo Videos</div>
-<div class="card">VSL</div>
-<div class="card">Reels</div>
-<div class="card">YouTube Editing</div>
 </div>
-</section>
 
-<!-- REVIEWS -->
-<section>
-<h2>Client Stories & Feedback</h2>
-<br><br>
-<div class="reviews">
-<div class="review">“Amazing SaaS video. Boosted our signups massively.”</div>
-<div class="review">“Clear storytelling and high-quality visuals.”</div>
-<div class="review">“Best video team we’ve worked with.”</div>
-</div>
-</section>
-
-<!-- CTA -->
-<section class="cta">
-<h2>Let’s Work Together</h2>
-<br>
-<a href="https://calendly.com/kinzabaig995/30min" target="_blank" class="btn">Book a Call</a>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-
-<div class="footer-grid">
+<!-- BOTTOM -->
+<div class="bottom">
 
 <div>
-<h2>DigitalByKinza</h2>
-<p>
-We create high-converting SaaS videos that help brands grow, scale, and convert more users.
-</p>
+<p style="color:#aaa">SOCIAL ICON:</p>
+<div class="social">
+<div class="circle">f</div>
+<div class="circle">x</div>
+<div class="circle">in</div>
+<div class="circle">ig</div>
+</div>
 </div>
 
-<div class="footer-links">
-<h3>Quick Links</h3>
-<a href="#">Home</a>
-<a href="#">Services</a>
-<a href="#">Work</a>
-<a href="#">Contact</a>
+<div>
+<div class="cta">START A PROJECT →</div>
 </div>
 
-<div class="footer-links">
-<h3>Contact</h3>
-<a href="#">info@yourdomain.com</a>
-<a href="#">+92 300 0000000</a>
-<a href="#">Pakistan</a>
+<div class="desc">
+We craft meaningful brand identities and digital experiences that inspire, engage, and leave a lasting impression.
 </div>
 
 </div>
 
-<div class="bottom">
-<p>© 2026 DigitalByKinza</p>
-<p>Privacy Policy | Terms</p>
-</div>
-
-</footer>
+</section>
 
 </body>
 </html>
