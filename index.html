@@ -12,13 +12,17 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial, sans-serif;
+font-family: 'Poppins', sans-serif;
 }
 
 body{
-background:#05070d;
+background:#02030a;
 color:white;
+overflow-x:hidden;
 }
+
+/* SMOOTH */
+html{scroll-behavior:smooth;}
 
 /* HEADER */
 header{
@@ -27,43 +31,21 @@ top:0;
 width:100%;
 display:flex;
 justify-content:space-between;
-align-items:center;
 padding:20px 8%;
-background:rgba(0,0,0,0.7);
-backdrop-filter:blur(10px);
-z-index:1000;
-}
-
-.logo{
-font-weight:bold;
-font-size:20px;
+background:rgba(0,0,0,0.5);
+backdrop-filter:blur(15px);
+z-index:999;
 }
 
 nav a{
 margin-left:25px;
-text-decoration:none;
 color:#aaa;
-font-size:14px;
+text-decoration:none;
+transition:0.3s;
 }
 
 nav a:hover{
 color:white;
-}
-
-/* BUTTON */
-.btn{
-background:#ff6a3d;
-padding:12px 25px;
-border-radius:30px;
-color:white;
-text-decoration:none;
-display:inline-block;
-margin-top:20px;
-}
-
-/* SECTIONS */
-section{
-padding:120px 8%;
 }
 
 /* HERO */
@@ -71,92 +53,139 @@ padding:120px 8%;
 height:100vh;
 display:flex;
 align-items:center;
-background: radial-gradient(circle at 40% 40%, #7b1fa2, #05070d 70%);
+padding:0 8%;
+
+background:
+radial-gradient(circle at 30% 30%, rgba(255,0,150,0.4), transparent 40%),
+radial-gradient(circle at 70% 20%, rgba(120,0,255,0.4), transparent 40%),
+#02030a;
 }
 
 .hero h1{
-font-size:60px;
-max-width:650px;
-line-height:1.2;
+font-size:72px;
+line-height:1.1;
+max-width:700px;
 }
 
 .hero p{
-color:#ff6a3d;
+color:#ff4d4d;
 margin-bottom:10px;
 }
 
-/* STATS */
-.stats{
-display:flex;
-justify-content:space-between;
-margin-top:50px;
-text-align:center;
+/* BUTTON */
+.btn{
+background:linear-gradient(45deg,#ff4d4d,#ff0080);
+padding:14px 30px;
+border-radius:40px;
+display:inline-block;
+margin-top:25px;
+text-decoration:none;
+color:white;
+transition:0.3s;
 }
 
-.stat-box{
+.btn:hover{
+transform:translateY(-5px);
+box-shadow:0 0 40px rgba(255,0,120,0.7);
+}
+
+/* FLOATING CARDS */
+.floating{
+position:absolute;
+right:10%;
+top:20%;
+}
+
+.card-float{
+width:220px;
+height:140px;
 background:#0b0f18;
-padding:30px;
 border-radius:15px;
-width:22%;
+position:absolute;
+box-shadow:0 0 40px rgba(255,0,120,0.2);
+animation:float 6s infinite ease-in-out;
+}
+
+.card-float:nth-child(2){top:50px;left:60px;}
+.card-float:nth-child(3){top:100px;left:120px;}
+
+@keyframes float{
+0%{transform:translateY(0px);}
+50%{transform:translateY(-20px);}
+100%{transform:translateY(0px);}
+}
+
+/* SECTION */
+section{
+padding:120px 8%;
 }
 
 /* SERVICES */
-.services-grid{
+.services{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:25px;
-margin-top:40px;
+gap:30px;
 }
 
-.card{
+.service{
 background:#0b0f18;
-padding:25px;
-border-radius:15px;
+padding:30px;
+border-radius:20px;
+transition:0.3s;
+}
+
+.service:hover{
+transform:translateY(-10px);
+box-shadow:0 0 40px rgba(255,0,120,0.4);
 }
 
 /* PORTFOLIO */
-.portfolio-grid{
+.portfolio{
 display:grid;
 grid-template-columns:repeat(2,1fr);
-gap:25px;
-margin-top:40px;
+gap:30px;
 }
 
-.portfolio-card{
+.work{
 background:#0b0f18;
+border-radius:20px;
 padding:20px;
-border-radius:15px;
+transition:0.3s;
 }
 
-.portfolio-img{
-height:200px;
-background:#ccc;
+.work:hover{
+transform:scale(1.03);
+box-shadow:0 0 60px rgba(255,0,120,0.5);
+}
+
+.work img{
+width:100%;
 border-radius:10px;
-margin-bottom:10px;
 }
 
 /* REVIEWS */
 .reviews{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:25px;
-margin-top:40px;
+gap:30px;
 }
 
-.review-card{
+.review{
 background:#0b0f18;
 padding:25px;
-border-radius:15px;
+border-radius:20px;
+transition:0.3s;
+}
+
+.review:hover{
+transform:translateY(-10px);
+box-shadow:0 0 40px rgba(255,0,120,0.4);
 }
 
 .role{
 color:#888;
 font-size:14px;
 margin-bottom:10px;
-}
-
-.review-card p{
-color:#ccc;
 }
 
 .stars{
@@ -167,25 +196,19 @@ margin-top:10px;
 /* CTA */
 .cta{
 text-align:center;
+background:radial-gradient(circle,#ff0040,#02030a);
+padding:150px 8%;
 }
 
 /* FOOTER */
 footer{
-background:linear-gradient(135deg,#7b1fa2,#05070d);
 padding:80px 8%;
+background:#000;
 }
 
-.footer-top{
+.footer{
 display:flex;
 justify-content:space-between;
-}
-
-.footer-bottom{
-margin-top:40px;
-display:flex;
-justify-content:space-between;
-color:#aaa;
-font-size:13px;
 }
 
 </style>
@@ -194,166 +217,97 @@ font-size:13px;
 
 <body>
 
-<!-- HEADER -->
 <header>
-<div class="logo">KINZA</div>
+<h2>KINZA</h2>
 
 <nav>
-<a href="/">Home</a>
+<a href="#home">Home</a>
 <a href="#services">Services</a>
 <a href="#portfolio">Portfolio</a>
 <a href="#reviews">Clients</a>
 <a href="#contact">Contact</a>
-<a href="https://calendly.com/kinzabaig995/30min" target="_blank">Book Call</a>
+<a href="https://calendly.com/kinzabaig995/30min">Book Call</a>
 </nav>
 </header>
 
 <!-- HERO -->
-<section class="hero">
+<section id="home" class="hero">
+
 <div>
 <p>SaaS Video Specialist</p>
 
 <h1>
-I Create High-Converting SaaS Videos That Turn Viewers Into Customers.
+High-Converting SaaS Videos That Turn Viewers Into Customers
 </h1>
 
-<a href="https://calendly.com/kinzabaig995/30min" target="_blank" class="btn">
-Book a Call →
-</a>
-
+<a href="#" class="btn">Book a Call →</a>
 </div>
-</section>
 
-<!-- STATS -->
-<section>
-<h2>Results That Speak</h2>
-
-<div class="stats">
-<div class="stat-box"><h2>250+</h2><p>Projects</p></div>
-<div class="stat-box"><h2>120+</h2><p>Clients</p></div>
-<div class="stat-box"><h2>5+</h2><p>Years</p></div>
-<div class="stat-box"><h2>99%</h2><p>Satisfaction</p></div>
+<!-- FLOATING CARDS -->
+<div class="floating">
+<div class="card-float"></div>
+<div class="card-float"></div>
+<div class="card-float"></div>
 </div>
+
 </section>
 
 <!-- SERVICES -->
 <section id="services">
-<h2>Services</h2>
+<h1>Services</h1>
 
-<div class="services-grid">
+<div class="services">
 
-<div class="card">
-<h3>SaaS Explainer Videos</h3>
-<p>Clear videos that simplify your product and increase conversions.</p>
-</div>
-
-<div class="card">
-<h3>Product Demo Videos</h3>
-<p>Show your product in action with clean UI storytelling.</p>
-</div>
-
-<div class="card">
-<h3>SaaS Promo Videos</h3>
-<p>High-converting ad creatives for landing pages.</p>
-</div>
-
-<div class="card">
-<h3>VSL (Sales Videos)</h3>
-<p>Conversion-focused funnels that generate revenue.</p>
-</div>
-
-<div class="card">
-<h3>Short Form Content</h3>
-<p>Reels & TikTok optimized videos.</p>
-</div>
-
-<div class="card">
-<h3>YouTube Editing</h3>
-<p>Professional long-form content editing.</p>
-</div>
+<div class="service">SaaS Explainer Videos</div>
+<div class="service">Product Demo Videos</div>
+<div class="service">SaaS Promo Videos</div>
+<div class="service">VSL Videos</div>
+<div class="service">Reels & Short Content</div>
+<div class="service">YouTube Editing</div>
 
 </div>
+
 </section>
 
 <!-- PORTFOLIO -->
 <section id="portfolio">
-<h2>Portfolio</h2>
+<h1>Latest Work</h1>
 
-<div class="portfolio-grid">
+<div class="portfolio">
 
-<div class="portfolio-card">
-<div class="portfolio-img"></div>
-<h3>SaaS Explainer</h3>
-<p>Boosted conversions by 40%</p>
-</div>
-
-<div class="portfolio-card">
-<div class="portfolio-img"></div>
-<h3>Product Demo</h3>
-<p>Improved onboarding flow</p>
-</div>
-
-<div class="portfolio-card">
-<div class="portfolio-img"></div>
-<h3>SaaS Ad</h3>
-<p>High-performing ads</p>
-</div>
-
-<div class="portfolio-card">
-<div class="portfolio-img"></div>
-<h3>VSL Funnel</h3>
-<p>Generated sales</p>
-</div>
+<div class="work"><img src="https://via.placeholder.com/400x250"></div>
+<div class="work"><img src="https://via.placeholder.com/400x250"></div>
+<div class="work"><img src="https://via.placeholder.com/400x250"></div>
+<div class="work"><img src="https://via.placeholder.com/400x250"></div>
 
 </div>
+
 </section>
 
-<!-- CLIENT REVIEWS -->
+<!-- REVIEWS -->
 <section id="reviews">
-
-<h2>Client Stories & Feedback</h2>
+<h1>Client Feedback</h1>
 
 <div class="reviews">
 
-<div class="review-card">
+<div class="review">
 <h3>Michael Thompson</h3>
 <p class="role">SaaS Founder</p>
 <p>Conversion increased by 38% after video launch.</p>
 <div class="stars">★★★★★</div>
 </div>
 
-<div class="review-card">
+<div class="review">
 <h3>Emily Carter</h3>
 <p class="role">Marketing Director</p>
-<p>Improved ad performance and reduced CPA.</p>
+<p>Improved ad performance significantly.</p>
 <div class="stars">★★★★★</div>
 </div>
 
-<div class="review-card">
+<div class="review">
 <h3>James Walker</h3>
 <p class="role">Startup Founder</p>
-<p>Helped simplify onboarding for new users.</p>
-<div class="stars">★★★★★</div>
-</div>
-
-<div class="review-card">
-<h3>David Anderson</h3>
-<p class="role">Product Manager</p>
-<p>Clean editing and strong messaging.</p>
-<div class="stars">★★★★★</div>
-</div>
-
-<div class="review-card">
-<h3>Sarah Johnson</h3>
-<p class="role">Growth Manager</p>
-<p>Landing page conversions improved significantly.</p>
-<div class="stars">★★★★★</div>
-</div>
-
-<div class="review-card">
-<h3>Daniel Miller</h3>
-<p class="role">CEO</p>
-<p>Sales funnel performance improved instantly.</p>
+<p>Onboarding improved and churn reduced.</p>
 <div class="stars">★★★★★</div>
 </div>
 
@@ -363,38 +317,27 @@ Book a Call →
 
 <!-- CTA -->
 <section class="cta">
-<h2>Let’s Work Together</h2>
-
-<a href="https://calendly.com/kinzabaig995/30min" class="btn">
-Book a Call →
-</a>
-
+<h1>Let’s Work Together</h1>
+<a href="#" class="btn">Book a Call →</a>
 </section>
 
 <!-- FOOTER -->
 <footer id="contact">
 
-<div class="footer-top">
+<div class="footer">
 
 <div>
 <h2>KINZA</h2>
-<p>Email: kinzakhalid1524@gmail.com</p>
-<p>Instagram: @digitalbykinza</p>
+<p>contact@digitalbykinza.com</p>
+<p>@digitalbykinza</p>
 </div>
 
 <div>
-<h3>Quick Links</h3>
 <p>Home</p>
 <p>Services</p>
 <p>Portfolio</p>
-<p>Contact</p>
 </div>
 
-</div>
-
-<div class="footer-bottom">
-<p>© 2026 Kinza</p>
-<p>All rights reserved</p>
 </div>
 
 </footer>
