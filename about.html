@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>SaaS Agency</title>
+<title>SaaS Video Agency</title>
 
 <style>
 
@@ -25,149 +25,137 @@ height:100vh;
 padding:80px;
 background: radial-gradient(circle at 40% 40%, #a020f0, #05070d 60%);
 display:flex;
-justify-content:space-between;
 align-items:center;
 }
 
-.hero-left h1{
+.hero h1{
 font-size:60px;
-line-height:1.1;
 max-width:600px;
 }
 
-.hero-left p{
-margin-bottom:20px;
+.hero p{
 color:#ff6a3d;
+margin-bottom:15px;
 }
 
 .btn{
 background:#ff6a3d;
-padding:12px 24px;
+padding:12px 25px;
 border-radius:25px;
-color:white;
-text-decoration:none;
 display:inline-block;
 margin-top:20px;
+color:white;
+text-decoration:none;
 }
 
 /* STATS */
-.stats-section{
-padding:120px 8%;
+.stats{
+padding:100px 8%;
 text-align:center;
 }
 
-.stats-title{
-font-size:34px;
-font-weight:800;
-max-width:900px;
+.stats h2{
+max-width:800px;
 margin:auto;
 margin-bottom:60px;
 }
 
-.stats-wrapper{
+.stats-grid{
+display:flex;
+justify-content:space-around;
+}
+
+.stats-grid h3{
+font-size:40px;
+}
+
+/* WORK */
+.work{
+padding:100px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
 }
 
-.side{
-display:flex;
-flex-direction:column;
-gap:20px;
+.work h1{
+font-size:70px;
 }
 
-.box{
-width:140px;
-height:100px;
-background:#ccc;
-border-radius:10px;
-}
-
-.small{height:80px;}
-.wide{width:180px;height:90px;}
-
-.center{
-display:flex;
-flex-direction:column;
-gap:40px;
-}
-
-.row{
-display:flex;
-gap:80px;
-}
-
-.center p{
-color:#aaa;
-}
-
-.center h2{
-font-size:42px;
-}
-
-/* LATEST WORK */
-.work-section{
-padding:120px 8%;
-display:flex;
-align-items:center;
-justify-content:space-between;
-position:relative;
-}
-
-.work-title-left{
-font-size:80px;
-font-weight:800;
-opacity:0.9;
-}
-
-.work-title-right{
-font-size:80px;
-font-weight:800;
-opacity:0.9;
-}
-
-.work-card{
+.card{
 background:#0b0f18;
 padding:30px;
 border-radius:20px;
 display:flex;
 gap:20px;
-align-items:center;
-box-shadow:0 0 30px rgba(0,0,0,0.5);
 }
 
-.work-image{
-width:260px;
-height:200px;
+.img{
+width:250px;
+height:180px;
 background:#ccc;
-border-radius:15px;
+border-radius:10px;
 }
 
-.work-content{
-max-width:300px;
+/* SERVICES SECTION */
+.services{
+padding:120px 8%;
+position:relative;
 }
 
-.work-content h3{
-font-size:22px;
-margin-bottom:10px;
+.services h2{
+font-size:40px;
+max-width:600px;
 }
 
-.work-content p{
-color:#aaa;
+.services .top{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:60px;
+}
+
+.services-btn{
+background:#ff6a3d;
+padding:12px 25px;
+border-radius:25px;
+}
+
+/* BIG TEXT DESIGN */
+.bg-text{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+font-size:120px;
+color:rgba(255,255,255,0.05);
+text-align:center;
+line-height:1;
+}
+
+/* SERVICE BOXES */
+.service-box{
+position:absolute;
+background:#ccc;
+border-radius:12px;
+}
+
+/* positioning */
+.box1{top:200px; left:5%; width:150px; height:100px;}
+.box2{top:200px; right:15%; width:150px; height:100px;}
+.box3{bottom:80px; left:10%; width:250px; height:150px;}
+.box4{bottom:80px; right:10%; width:180px; height:140px;}
+
+.app-text{
+position:absolute;
+top:300px;
+left:50%;
+transform:translateX(-50%);
+font-size:50px;
+font-weight:bold;
+}
+
+.small-text{
 font-size:14px;
-margin-bottom:15px;
-}
-
-.work-btn{
-background:#1a1f2b;
-padding:10px 20px;
-border-radius:20px;
-display:inline-block;
-font-size:13px;
-}
-
-.counter{
-margin-top:20px;
 color:#aaa;
 }
 
@@ -178,98 +166,89 @@ color:#aaa;
 
 <!-- HERO -->
 <section class="hero">
-
-<div class="hero-left">
+<div>
 <p>MOST SAAS VIDEO AGENCIES BLEND IN — YOUR WON’T</p>
-
-<h1>
-WE CREATE HIGH-CONVERTING SAAS VIDEOS THAT TURN VIEWERS INTO USERS.
-</h1>
+<h1>WE CREATE HIGH-CONVERTING SAAS VIDEOS THAT TURN VIEWERS INTO USERS.</h1>
 
 <a href="https://calendly.com/kinzabaig995/30min" target="_blank" class="btn">
 BOOK A CALL →
 </a>
 </div>
-
 </section>
 
 <!-- STATS -->
-<section class="stats-section">
+<section class="stats">
+<h2>Scaling SaaS brands with high-converting videos that drive signups & growth</h2>
 
-<h1 class="stats-title">
-SCALING SAAS BRANDS WITH HIGH-CONVERTING VIDEOS THAT DRIVE SIGNUPS, SALES & GROWTH
-</h1>
-
-<div class="stats-wrapper">
-
-<div class="side">
-<div class="box"></div>
-<div class="box small"></div>
-</div>
-
-<div class="center">
-<div class="row">
+<div class="stats-grid">
 <div>
-<p>Creative Projects Completed</p>
-<h2>250+</h2>
+<p>Projects</p>
+<h3>250+</h3>
 </div>
 
 <div>
-<p>Happy Clients Worldwide</p>
-<h2>120+</h2>
-</div>
-</div>
-
-<div class="row">
-<div>
-<p>Creative Experts</p>
-<h2>250+</h2>
+<p>Clients</p>
+<h3>120+</h3>
 </div>
 
 <div>
-<p>Design Awards Won</p>
-<h2>15+</h2>
+<p>Experts</p>
+<h3>250+</h3>
 </div>
+
+<div>
+<p>Awards</p>
+<h3>15+</h3>
+</div>
+</div>
+</section>
+
+<!-- WORK -->
+<section class="work">
+
+<h1>LATEST</h1>
+
+<div class="card">
+<div class="img"></div>
+
+<div>
+<h3>High-Converting SaaS Explainer Video</h3>
+<p class="small-text">
+We turn complex SaaS products into simple videos that convert viewers into paying users.
+</p>
+<p>Year: 2026</p>
+<p>Category: SaaS</p>
 </div>
 </div>
 
-<div class="side">
-<div class="box"></div>
-<div class="box wide"></div>
-</div>
-
-</div>
+<h1>WORK</h1>
 
 </section>
 
-<!-- LATEST WORK -->
-<section class="work-section">
+<!-- SERVICES -->
+<section class="services">
 
-<div class="work-title-left">LATEST</div>
+<div class="top">
+<h2>VIDEO SOLUTIONS DESIGNED TO GROW SAAS BRANDS</h2>
 
-<div class="work-card">
-
-<div class="work-image"></div>
-
-<div class="work-content">
-<h3>HIGH-CONVERTING SAAS EXPLAINER VIDEO</h3>
-
-<p>
-Watch how we turn complex SaaS products into simple, engaging videos that drive conversions.
-</p>
-
-<p>Year: 2026</p>
-<p>Category: SaaS</p>
-
-<div class="work-btn">VIEW ALL PROJECT →</div>
-
-<div class="counter">05 / 05</div>
-
+<div class="services-btn">VIEW ALL DETAILS →</div>
 </div>
 
+<!-- BIG BACKGROUND TEXT -->
+<div class="bg-text">
+VISUAL & <br> DESIGN <br> GUIDELINES
 </div>
 
-<div class="work-title-right">WORK</div>
+<!-- CENTER TEXT -->
+<div class="app-text">
+APP <span class="small-text">INTERFACE DESIGN</span>
+</div>
+
+<!-- BOXES -->
+<div class="service-box box1"></div>
+<div class="service-box box2"></div>
+<div class="service-box box3"></div>
+<div class="service-box box4"></div>
 
 </section>
 
