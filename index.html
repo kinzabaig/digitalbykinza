@@ -12,6 +12,7 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family: 'Segoe UI', sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
@@ -19,10 +20,40 @@ background:#05070d;
 color:white;
 }
 
+/* HEADER */
+header{
+position:fixed;
+width:100%;
+top:0;
+left:0;
+display:flex;
+justify-content:space-between;
+padding:20px 8%;
+background:rgba(0,0,0,0.5);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+.logo{
+font-weight:bold;
+font-size:22px;
+}
+
+nav a{
+margin-left:25px;
+color:white;
+text-decoration:none;
+font-size:14px;
+}
+
+nav a:hover{
+color:#ff6a3d;
+}
+
 /* HERO */
 .hero{
 height:100vh;
-padding:80px;
+padding:120px 8%;
 background: radial-gradient(circle at 40% 40%, #a020f0, #05070d 60%);
 display:flex;
 align-items:center;
@@ -48,21 +79,16 @@ color:white;
 text-decoration:none;
 }
 
-/* STATS */
-.stats{
+/* SECTIONS */
+section{
 padding:120px 8%;
-text-align:center;
 }
 
-.stats h2{
-max-width:800px;
-margin:auto;
-margin-bottom:60px;
-}
-
+/* STATS */
 .stats-grid{
 display:flex;
 justify-content:space-around;
+margin-top:40px;
 }
 
 .stats-grid h3{
@@ -71,14 +97,9 @@ font-size:40px;
 
 /* WORK */
 .work{
-padding:120px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-}
-
-.work h1{
-font-size:80px;
 }
 
 .card{
@@ -98,68 +119,20 @@ border-radius:10px;
 
 /* SERVICES */
 .services{
-padding:120px 8%;
 position:relative;
-}
-
-.services h2{
-font-size:40px;
-max-width:600px;
-}
-
-.services-top{
-display:flex;
-justify-content:space-between;
-margin-bottom:60px;
-}
-
-.services-btn{
-background:#ff6a3d;
-padding:12px 25px;
-border-radius:25px;
-}
-
-.bg-text{
-position:absolute;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-font-size:120px;
-color:rgba(255,255,255,0.05);
 text-align:center;
 }
 
-.service-box{
-position:absolute;
-background:#ccc;
-border-radius:12px;
-}
-
-.box1{top:200px; left:5%; width:150px; height:100px;}
-.box2{top:200px; right:15%; width:150px; height:100px;}
-.box3{bottom:80px; left:10%; width:250px; height:150px;}
-.box4{bottom:80px; right:10%; width:180px; height:140px;}
-
-.app-text{
-position:absolute;
-top:300px;
-left:50%;
-transform:translateX(-50%);
-font-size:50px;
-font-weight:bold;
+.bg-text{
+font-size:100px;
+color:rgba(255,255,255,0.05);
 }
 
 /* TEAM */
 .team{
-padding:120px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-}
-
-.team-left{
-display:flex;
-gap:20px;
 }
 
 .team-card{
@@ -169,86 +142,39 @@ background:#ccc;
 border-radius:20px;
 }
 
-.team-card.main{
-width:300px;
-height:320px;
-}
-
-.team-title{
-font-size:60px;
-max-width:500px;
-}
-
-.team-buttons{
-margin-top:20px;
-}
-
-.team-buttons a{
-background:white;
-color:black;
-padding:10px 20px;
-border-radius:20px;
-margin-right:10px;
-text-decoration:none;
-}
-
-.team-buttons a:last-child{
-background:#1a1f2b;
-color:white;
-}
-
-/* CTA SECTION */
+/* CTA */
 .cta{
-padding:140px 8%;
 text-align:center;
-position:relative;
-background: radial-gradient(circle, #1a1f2b, #05070d);
 }
 
 .cta h1{
-font-size:60px;
-margin-top:40px;
+font-size:50px;
 }
 
-/* floating boxes */
-.cta-box{
-position:absolute;
-background:#ccc;
+/* REVIEWS */
+.reviews{
+display:flex;
+gap:20px;
+align-items:center;
+}
+
+.rating-box{
+background:#ff6a3d;
+padding:40px;
+border-radius:20px;
+font-weight:bold;
+}
+
+.review-card{
+background:#0b0f18;
+padding:25px;
 border-radius:15px;
+flex:1;
 }
 
-.cta-box.center{
-width:300px;
-height:180px;
-top:40px;
-left:50%;
-transform:translateX(-50%);
-}
-
-.cta-box.left{
-width:120px;
-height:180px;
-top:60px;
-left:20%;
-transform:rotate(-20deg);
-}
-
-.cta-box.right{
-width:120px;
-height:120px;
-top:60px;
-right:20%;
-transform:rotate(20deg);
-}
-
-.cta-btn{
-background:white;
-color:black;
-padding:12px 25px;
-border-radius:25px;
-display:inline-block;
-margin-top:20px;
-text-decoration:none;
+.review-card p{
+color:#aaa;
+margin-top:10px;
 }
 
 </style>
@@ -256,11 +182,28 @@ text-decoration:none;
 
 <body>
 
+<!-- HEADER -->
+<header>
+<div class="logo">DBK</div>
+
+<nav>
+<a href="#hero">Home</a>
+<a href="#services">Services</a>
+<a href="#work">Work</a>
+<a href="#team">Team</a>
+<a href="#reviews">Reviews</a>
+<a href="https://calendly.com/kinzabaig995/30min" target="_blank">Book Call</a>
+</nav>
+</header>
+
 <!-- HERO -->
-<section class="hero">
+<section id="hero" class="hero">
 <div>
 <p>MOST SAAS VIDEO AGENCIES BLEND IN — YOUR WON’T</p>
-<h1>WE CREATE HIGH-CONVERTING SAAS VIDEOS THAT TURN VIEWERS INTO USERS.</h1>
+
+<h1>
+WE CREATE HIGH-CONVERTING SAAS VIDEOS THAT TURN VIEWERS INTO USERS.
+</h1>
 
 <a href="https://calendly.com/kinzabaig995/30min" target="_blank" class="btn">
 BOOK A CALL →
@@ -270,18 +213,18 @@ BOOK A CALL →
 
 <!-- STATS -->
 <section class="stats">
-<h2>Scaling SaaS brands with high-converting videos that drive signups & growth</h2>
+<h2>Scaling SaaS brands with high-converting videos</h2>
 
 <div class="stats-grid">
-<div><p>Projects</p><h3>250+</h3></div>
-<div><p>Clients</p><h3>120+</h3></div>
-<div><p>Experts</p><h3>250+</h3></div>
-<div><p>Awards</p><h3>15+</h3></div>
+<div><h3>250+</h3><p>Projects</p></div>
+<div><h3>120+</h3><p>Clients</p></div>
+<div><h3>250+</h3><p>Experts</p></div>
+<div><h3>15+</h3><p>Awards</p></div>
 </div>
 </section>
 
 <!-- WORK -->
-<section class="work">
+<section id="work" class="work">
 
 <h1>LATEST</h1>
 
@@ -289,7 +232,7 @@ BOOK A CALL →
 <div class="img"></div>
 <div>
 <h3>SaaS Explainer Video</h3>
-<p>We turn complex SaaS into high-converting videos.</p>
+<p>High converting video for SaaS growth</p>
 </div>
 </div>
 
@@ -298,40 +241,31 @@ BOOK A CALL →
 </section>
 
 <!-- SERVICES -->
-<section class="services">
+<section id="services" class="services">
 
-<div class="services-top">
-<h2>VIDEO SOLUTIONS DESIGNED TO GROW SAAS BRANDS</h2>
-<div class="services-btn">VIEW ALL DETAILS →</div>
-</div>
+<h2>VIDEO SOLUTIONS FOR SAAS</h2>
 
-<div class="bg-text">VISUAL & DESIGN GUIDELINES</div>
-<div class="app-text">APP DESIGN</div>
+<p>SaaS Explainer • SaaS Product Demo • SaaS Promo • VSL • Reels • YouTube Editing</p>
 
-<div class="service-box box1"></div>
-<div class="service-box box2"></div>
-<div class="service-box box3"></div>
-<div class="service-box box4"></div>
+<div class="bg-text">DESIGN</div>
 
 </section>
 
 <!-- TEAM -->
-<section class="team">
+<section id="team" class="team">
 
-<div class="team-left">
+<div style="display:flex; gap:20px;">
 <div class="team-card"></div>
-<div class="team-card main"></div>
+<div class="team-card"></div>
 <div class="team-card"></div>
 </div>
 
 <div>
-<h1 class="team-title">THE MINDS BEHIND OUR DESIGNS</h1>
+<h1>THE MINDS BEHIND OUR DESIGNS</h1>
 
-<div class="team-buttons">
-<a href="https://calendly.com/kinzabaig995/30min" target="_blank">MEET OUR TEAM →</a>
-<a href="#">JOIN COMMUNITY →</a>
-</div>
-
+<a href="https://calendly.com/kinzabaig995/30min" target="_blank" class="btn">
+MEET TEAM →
+</a>
 </div>
 
 </section>
@@ -339,15 +273,38 @@ BOOK A CALL →
 <!-- CTA -->
 <section class="cta">
 
-<div class="cta-box center"></div>
-<div class="cta-box left"></div>
-<div class="cta-box right"></div>
-
 <h1>LET’S WORK TOGETHER</h1>
 
-<a href="https://calendly.com/kinzabaig995/30min" target="_blank" class="cta-btn">
-MEET OUR TEAM →
+<a href="https://calendly.com/kinzabaig995/30min" target="_blank" class="btn">
+BOOK A CALL →
 </a>
+
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews">
+
+<h1 style="text-align:center; margin-bottom:40px;">
+CLIENT STORIES & DESIGN FEEDBACK
+</h1>
+
+<div class="reviews">
+
+<div class="rating-box">
+4.9 ⭐ <br> Average Rating
+</div>
+
+<div class="review-card">
+<h4>Ryan Anderson</h4>
+<p>"Amazing SaaS video work. Highly recommend."</p>
+</div>
+
+<div class="review-card">
+<h4>Michael Brown</h4>
+<p>"Clean design and smooth communication."</p>
+</div>
+
+</div>
 
 </section>
 
